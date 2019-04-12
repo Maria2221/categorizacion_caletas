@@ -25,7 +25,9 @@ SECRET_KEY = '-9!@q8vb31e_ecpe==srjob=9cc^*cbzm3-=uy(ly%64#!kd5b'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'categorizacion-caletas.herokuapp.com'
+]
 
 
 # Application definition
