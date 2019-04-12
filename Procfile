@@ -1,1 +1,1 @@
-web: gunicorn categorizacion_caletas --log-file -
+web: gunicorn categorizacion_caletas.wsgi --log-file -
