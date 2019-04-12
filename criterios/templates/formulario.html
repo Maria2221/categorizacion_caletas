@@ -18,6 +18,7 @@
 </head>
 
 <body>
+  {% csrf_token %}
   <div id="content" class="container">
     <div id="crit_head" class="row">
       <h2> FORMULARIO DE EVALUACION DE CALETA </h2>
@@ -34,7 +35,12 @@
                 <h3 class="crit1_title"> Criterio 1: {{ items.nombre }}</h3>
                 {% else %}
                   {% for item in items %}
-                    
+
+                    {% if item.nombre %}
+                    <div class="section_crit2">
+
+                    <h4 class="crit2_title" > Criterio 2: {{ item.nombre }}</h4>
+                    {% endif %}
                   {% endfor %}
                 {% endif %}
               {% endfor %}
