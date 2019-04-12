@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="{% static 'css/form_crit.css' %}" />
+	
+
+</head>
+
+<body>
+	
+	<h4>Bienvenid@:{{user}}</h4>
+	
+	<div id="content" class="container"> 
+		<div id="crit_head" class="row">
+			<h2>Evaluación de Desembarcaderos Pesqueros Artesanales</h2>	
+		</div>
+		<hr>
+		<div id ="results">
+				{% for formulario in user.usuario.formulario_set.all %}
+    				<ul>
+    				<a href="{% url 'result_desembarco' formulario.pk %}">
+					{{ formulario.nombreFormulario }}
+					</a>
+					</ul>
+				{% endfor %}			
+				<div id = "center">
+					<a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="form_eval" role= "button">Nuevo Formulario</a>
+					<a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="resultadoxls" role= "button">Resultados</a>
+				</div>
+		</div>
+	</div>
+
+	
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+    "name": "categorizacion_caletas",
+    "scripts": {
+      "postdeploy": "python manage.py migrate --noinput"
+    },
+    "env": {
+    },
+    "formation": {
+    },
+    "addons": [
+  
+    ],
+    "buildpacks": [
+  
+    ]
+  }

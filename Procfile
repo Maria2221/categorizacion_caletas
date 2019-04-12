@@ -1,0 +1,1 @@
+web: gunicorn categorizacion_caletas --log-file -

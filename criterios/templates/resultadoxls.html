@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+ <head>
+    <link rel="stylesheet" href="{% static 'css/xls.css' %}" />
+ </head>
+
+ <body>
+  {% csrf_token %}
+
+  <div class="table-users">
+    <div class="header">Resultado</div>
+   
+    <table cellspacing="0">
+      <tr>
+         <th>Nombre DPA</th>
+         <th>Tipo</th>
+         <th>Nivel</th>
+         <th>Ponderado</th>
+      </tr>
+    {% for formulario in user.usuario.formulario_set.all %}
+      <tr>
+         <td>{{ formulario.nombreFormulario }}</td>
+         <td>{{ formulario.tipo}}</td>
+         <td>{{ formulario.nivel}}</td>
+         <td>{{ formulario.ponderado }}</td>
+      </tr>
+    {% endfor %}
+    </table>
+    <div id = "center">
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{% url 'reporte_formularios' %}" role= "button"> Descargar</a>  
+    </div>
+  </div>
+</body>
+</html>

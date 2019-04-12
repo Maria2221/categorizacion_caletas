@@ -1,0 +1,65 @@
+{% load customer_template %}
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  
+  <meta charset="UTF-8">
+</head>
+<body>
+   <h1>Reporte de Formulario</h1>
+   <table  style="width:100%">
+      <!--
+     <thead>
+       <tr>
+         <th>Criterio 1</th>
+         <th>Criterio 2</th>
+         <th>Criterio 3</th>
+         <th>Condicion</th>
+       </tr>
+     </thead>-->
+       {% for criterio in criterios %}
+            {% if criterio.nivel == 0 %} 
+            <tr>
+              <td rowspan="{{ criterio.children|add:'1'}}"> {{criterio.nombre}}</td>    
+              <td> </td>
+            </tr>
+            {% for criterio2 in criterios %}
+               {% if criterio2.nivel == 1 and criterio2.idCriterioPadre.idCriterio == criterio.idCriterio %}
+                <tr>
+                  <td rowspan="{{ criterio2.children|add:'1'}}"> {{criterio2.nombre}}</td>    
+                  <td> </td>
+                </tr>
+                {% for criterio3 in criterios %}
+                  {% if criterio3.nivel == 2 and criterio3.idCriterioPadre.idCriterio == criterio2.idCriterio %}
+                  <tr>
+                    <td>{{criterio3.nombre}}</td>
+                  </tr>
+                  {%endif%}
+                {% endfor %}
+               {%endif%}
+            {% endfor %}
+            {%endif%} 
+       {% endfor %}    
+     
+   </table>
+
+   <table style="width:100%">
+  <tr>
+    <td rowspan="3"> General </td>
+    <td> Operacional </td>
+  </tr>
+ 
+  <tr>
+    <td>Entorno</td> 
+  </tr>
+  <tr>
+    <td>Entorno</td> 
+  </tr>
+ <tr>
+  
+  
+</table>
+ </body>
+ </html>

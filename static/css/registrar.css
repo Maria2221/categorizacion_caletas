@@ -1,0 +1,133 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../img/login.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment:scroll;
+}
+
+.login {
+  max-width: 320px;
+  min-height: 700px;
+  margin: 80px auto;
+  background-color: rgba(29,29,29,0.6);
+}
+
+.login-icon-field {
+  height: 250px;
+  width: 90%;
+  margin-left:15px;
+  /*background-color: red;*/
+}
+
+.login-icon {
+  margin: 50px 65px;
+}
+
+.login-form {
+  padding: 8px 20px 20px;
+  width: 100%;
+  margin: 5px;
+  /*background-color: green;*/
+}
+
+.username-row {
+  position: relative;
+  height: 40px;
+  /*background-color: pink;*/
+  border-bottom: 1px solid;
+  margin-bottom: 12px;
+  margin-right: 3px;
+}
+
+.password-row {
+  position: relative;
+  height: 40px;
+ /* background-color: grey;*/
+  border-bottom: 1px solid;
+  margin-bottom: 12px;
+  margin-right: 3px;
+}
+
+.password-icon,
+.user-icon {
+  margin: 5px;
+}
+
+input {
+  position: absolute;
+  width: 195px;
+  height: 30px;
+  margin: 5px 0;
+  background: transparent;
+  color: white;
+  border: none;
+}
+
+input:focus,
+button:focus {
+  outline: none;
+}
+
+input::-webkit-input-placeholder {
+  color: rgba(255,255,255,.6);
+}
+
+input::-moz-placeholder {
+  color: rgba(255,255,255,.6);
+}
+
+.call-to-action {
+  margin: 22px 0;
+  height: 100px;
+  width: 100%;
+  /*background-color: blue;*/
+  padding-left: 55px;
+}
+
+p {
+  display: inline-block;
+  width: 200px;
+  margin: 0 40px;
+  font-size: .8rem;
+  color: rgba(191, 189, 189);
+  /*background-color: yellow;*/
+}
+
+p a {
+  color: #fff;
+}
+
+label,
+p a:hover {
+  -webkit-cursor: pointer;
+  cursor: pointer;
+}
+
+.btn {
+ font-family:Montserrat,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
+ font-weight:700
+}
+.btn-xl {
+ font-size:18px;
+ padding:20px 40px
+}
+.btn-primary {
+ background-color:#7597b7;
+ border-color:#7597b7
+}
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:hover {
+ background-color:#6585a3!important;
+ border-color:#6585a3!important;
+ color:#fff
+}
+
+}
+
+

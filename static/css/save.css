@@ -1,0 +1,87 @@
+body{
+	background-color:  #f1f1f1;
+}
+#content{
+	background-color:  white;
+	margin: 50px 100px 25px 100px;	
+    border: 1px solid #BFBFBF;
+    padding: 25px 50px;
+    box-shadow: 5px 5px 5px #aaaaaa;
+}
+
+.section_crit1{
+	padding-top: 0px;
+}
+.section_crit1 h3{
+	font-weight: bold;
+}
+
+.section_crit2{
+	width: 100%;
+	float: left;
+
+}
+
+
+.crit1_title{
+	background-color: #f2dede;
+	font-weight: bold;
+	padding: 10px 20px;	
+	box-sizing: border-box;
+
+}
+
+.crit3_cont{
+	padding: 10px 20px;	
+	box-sizing: border-box;	
+	float: left;
+}
+
+
+.crit2_title{
+	background-color: #d9edf7;
+	font-weight: bold;
+	padding: 10px 20px;
+	box-sizing: border-box;
+
+}
+
+
+#crit_head{
+	text-align: center;
+	font-weight: bold;	
+	padding: 15px 15px 10px 15px;
+}
+
+#crit_head h2{
+	font-weight: bold;
+}
+
+#crits_footer{
+	float: right;
+	padding: 10px 0px;
+
+}
+
+#crits_footer button{
+	margin: 0px 10px;
+	height: 50px;
+	width: 150px;
+	
+	font-weight: bold;
+
+}
+
+
+#form_eval{
+	padding: 0px 50px;
+}
+
+#form_eval p{
+	color:red;
+	font-weight: bold;
+}
+
+.msm_err{
+	color:red;
+}

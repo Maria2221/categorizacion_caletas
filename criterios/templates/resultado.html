@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Webslesson Tutorial | Bootstrap Multi Select Dropdown with Checkboxes using Jquery in PHP</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css" />
+  <link rel="stylesheet" href="{% static 'css/myStyle.css' %}" />
+  
+  <!--script type="text/javascript">
+    function valor(){
+  nuevototal = 0.345; //totEval
+  document.getElementById("ponderado").value = nuevototal;
+  }
+  </script-->
+
+ </head>
+ <body>
+
+<form action="{% url 'save'%}" method="post">
+  {% csrf_token %}
+  <div id="res_content" class="container"> 
+
+    <div class="row" id="res_title">
+
+      <h2> Resultado de la Evaluacion del Desembarcadero</h2>
+    </div>
+    
+    <div class="row" >
+      <div class="col-sm-6 res_label">
+        <h4> Tipo de Categoria: </h4>
+      </div>
+      <div class="col-sm-6 res_desc">
+        <h4> {{ tipo }} </h4>
+        <input type="hidden" name="tipo" value="{{tipo}}"/>
+      </div>      
+    </div>
+
+    <div class="row" id="">
+      <div class="col-sm-6 res_label">
+        <h4> Nivel Riesgo Productivo: </h4>
+      </div>
+      <div class="col-sm-6 res_desc">
+        <h4> {{ nivel }} </h4>
+        <input type="hidden" name="nivel" value="{{nivel}}"/>
+      </div>    
+    </div>
+    <div class="row" id="">
+      <div class="col-sm-6 res_label">
+        <h4> Ponderado: </h4>
+      </div>
+      <div class="col-sm-6 res_desc">
+        <h4>{{ ponderado }}</h4>
+        <input type="hidden" name="ponderado" value="{{ponderado}}"/>
+        <input type="hidden" name="condicion" value="{{condicion}}"/>
+      </div>    
+    </div>
+
+    <div class="avgrund-cover"></div>
+
+    <aside class="avgrund-popup">
+    <!--div class = "row" id="ventanaflot"-->
+        <h4>¿Con qué nombre le gustaría guardarlo?</h4>
+        <hr>
+        <div class="username-row row">
+        {{form.nombreFormulario}}
+        </div>
+        <input type="submit" class="btn btn-primary" value="Guardar"></input>
+    <!--/div--> 
+    </aside>
+    <div class="row" id="res_btn">  
+      <button type="button" class="btn btn-success btn-xl" onclick="avgrund.activate()">Guardar</button>
+      <button type="button" class="btn btn-success btn-xl" onclick="RedirectToForm()">Realizar otra Evaluacion</button>
+    </div>
+  </div>
+ </form>
+
+<script type="text/javascript" src="{% static 'js/criterios.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/resultado.js' %}"></script>
+
+ </body>
+</html>
+
+

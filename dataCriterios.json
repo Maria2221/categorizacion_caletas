@@ -1,0 +1,1170 @@
+[
+{
+  "_comment": "CRITERIO_1",
+  "model": "criterios.criterio",
+  "pk": 19,
+  "fields": {
+    "idCriterioPadre": null,
+    "nombre": "General",
+    "porcentaje": 55,
+    "nivel": 0,
+    "multipleOptions": false,
+    "children":3
+  }
+},
+{
+  "model": "criterios.criterio",
+  "pk": 20,
+  "fields": {
+    "idCriterioPadre": null,
+    "nombre": "Infraestructura y Servicios",
+    "porcentaje": 45,
+    "nivel": 0,
+    "multipleOptions": false,
+    "children":1
+  }
+},
+{
+  "_comment": "CRITERIO_2",
+  "model": "criterios.criterio",
+  "pk": 21,
+  "fields": {
+    "idCriterioPadre":19,
+    "nombre": "Operacionales",
+    "porcentaje": 55,
+    "nivel": 0,
+    "multipleOptions": false,
+    "children":9
+  }
+},
+{
+  "model": "criterios.criterio",
+  "pk": 22,
+  "fields": {
+    "idCriterioPadre":19 ,
+    "nombre": "Entorno",
+    "porcentaje": 20,
+    "nivel": 0,
+    "multipleOptions": false,
+    "children":5
+  }
+},
+{
+  "model": "criterios.criterio",
+  "pk": 23,
+  "fields": {
+    "idCriterioPadre":19 ,
+    "nombre": "Organizacion",
+    "porcentaje": 25,
+    "nivel": 0,
+    "multipleOptions": false,
+    "children":6
+  }
+},
+{
+  "model": "criterios.criterio",
+  "pk": 24,
+  "fields": {
+    "idCriterioPadre":20 ,
+    "nombre": "Infraestructura y Servicio",
+    "porcentaje": 100,
+    "nivel": 0,
+    "multipleOptions": false,
+    "children":6
+  }
+},
+{
+  "_comment": "CRITERIO_3",
+  "model": "criterios.criterio",
+  "pk": 25,
+  "fields": {
+    "idCriterioPadre":21,
+    "nombre": "Actividad",
+    "porcentaje": 10,
+    "nivel": 0,
+    "multipleOptions": false,
+    "children":2
+  }
+},
+{
+  "model": "criterios.criterio",
+  "pk": 26,
+  "fields": {
+    "idCriterioPadre":21,
+    "nombre": "Punto de Desembarque",
+    "porcentaje": 5,
+    "nivel": 0,
+    "multipleOptions": false,
+    "children":2
+  }
+},
+{
+  "model": "criterios.criterio",
+  "pk": 27,
+  "fields": {
+    "idCriterioPadre":21,
+    "nombre": "Migracion de pescadores de la caleta",
+    "porcentaje": 5,
+    "nivel": 0,
+    "multipleOptions": false,
+    "children":2
+  }
+},
+{
+  "model": "criterios.criterio",
+  "pk": 28,
+  "fields": {
+    "idCriterioPadre":21,
+    "nombre": "Diversidad de Recursos desembarcados",
+    "porcentaje": 10,
+    "nivel": 0,
+    "multipleOptions": false,
+    "children":2
+  }
+},
+{
+  "model": "criterios.criterio",
+  "pk": 29,
+  "fields": {
+    "idCriterioPadre":21,
+    "nombre": "Diversidad de actividades del Pescador",
+    "porcentaje": 5,
+    "nivel": 0,
+    "multipleOptions": false,
+    "children":2
+  }
+},
+{
+  "model": "criterios.criterio",
+  "pk": 30,
+  "fields": {
+    "idCriterioPadre":21,
+    "nombre": "Tipo de embarcaciones en la caleta",
+    "porcentaje": 10,
+    "nivel": 0,
+    "multipleOptions": false,
+    "children":2
+  }
+},
+{
+  "model": "criterios.criterio",
+  "pk": 31,
+  "fields": {
+    "idCriterioPadre":21,
+    "nombre": "volumenes de desembarque",
+    "porcentaje": 15,
+    "nivel": 0,
+    "multipleOptions": false,
+    "children":3
+  }
+},
+{
+  "model": "criterios.criterio",
+  "pk": 32,
+  "fields": {
+    "idCriterioPadre":21,
+    "nombre": "Numero de Pescadores",
+    "porcentaje": 25,
+    "nivel": 0,
+    "multipleOptions": false,
+    "children":2
+  }
+},
+{
+  "model": "criterios.criterio",
+  "pk": 33,
+  "fields": {
+    "idCriterioPadre":21,
+    "nombre": "Numero de Embarcaciones",
+    "porcentaje": 15,
+    "nivel": 0,
+    "multipleOptions": false,
+    "children":2
+  }
+},
+{
+  "model": "criterios.criterio",
+  "pk": 34,
+  "fields": {
+    "idCriterioPadre":22,
+    "nombre": "localizacion",
+    "porcentaje": 30,
+    "nivel": 0,
+    "multipleOptions": false,
+    "children":2
+  }
+},
+{
+  "model": "criterios.criterio",
+  "pk": 35,
+  "fields": {
+    "idCriterioPadre":22,
+    "nombre": "vias de acceso",
+    "porcentaje": 30,
+    "nivel": 0,
+    "multipleOptions": false,
+    "children":2
+  }
+},
+{
+  "model": "criterios.criterio",
+  "pk": 36,
+  "fields": {
+    "idCriterioPadre":22,
+    "nombre": "Disponibilidad de terreno para intervencion de mejoras",
+    "porcentaje": 20,
+    "nivel": 0,
+    "multipleOptions": false,
+    "children":3
+  }
+},
+{
+  "model": "criterios.criterio",
+  "pk": 37,
+  "fields": {
+    "idCriterioPadre":22,
+    "nombre": "Actividad turistica aledania",
+    "porcentaje": 10,
+    "nivel": 0,
+    "multipleOptions": false,
+    "children":3
+  }
+},
+{
+  "model": "criterios.criterio",
+  "pk": 38,
+  "fields": {
+    "idCriterioPadre":22,
+    "nombre": "Relacion de la caleta con el turismo",
+    "porcentaje": 10,
+    "nivel": 0,
+    "multipleOptions": false,
+    "children":3
+  }
+},
+{
+  "model": "criterios.criterio",
+  "pk": 39,
+  "fields": {
+    "idCriterioPadre":23,
+    "nombre": "comercializacion",
+    "porcentaje": 15,
+    "nivel": 0,
+    "multipleOptions": false,
+    "children":2
+  }
+},
+{
+  "model": "criterios.criterio",
+  "pk": 40,
+  "fields": {
+    "idCriterioPadre":23,
+    "nombre": "Tipo de Comercializacion",
+    "porcentaje": 10,
+    "nivel": 0,
+    "multipleOptions": false,
+    "children":2
+  }
+},
+{
+  "model": "criterios.criterio",
+  "pk": 41,
+  "fields": {
+    "idCriterioPadre":23,
+    "nombre": "Otras actividades que no realiza",
+    "porcentaje": 15,
+    "nivel": 0,
+    "multipleOptions": true,
+    "children":4
+  }
+},
+{
+  "model": "criterios.criterio",
+  "pk": 42,
+  "fields": {
+    "idCriterioPadre":23,
+    "nombre": "cursos de capacitacion no realizados",
+    "porcentaje": 15,
+    "nivel": 0,
+    "multipleOptions": true,
+    "children":3
+  }
+},
+{
+  "model": "criterios.criterio",
+  "pk": 43,
+  "fields": {
+    "idCriterioPadre":23,
+    "nombre": "comportamiento organizacional",
+    "porcentaje": 40,
+    "nivel": 0,
+    "multipleOptions": false,
+    "children":2
+  }
+},
+{
+  "model": "criterios.criterio",
+  "pk": 44,
+  "fields": {
+    "idCriterioPadre":23,
+    "nombre": "comisiones y actividades en otras areas que no se practican en las caletas",
+    "porcentaje": 5,
+    "nivel": 0,
+    "multipleOptions": true,
+    "children":5
+  }
+},
+{
+  "model": "criterios.criterio",
+  "pk": 45,
+  "fields": {
+    "idCriterioPadre":24,
+    "nombre": "Infraestructura portuaria existente",
+    "porcentaje": 25,
+    "nivel": 0,
+    "multipleOptions": false,
+    "children":5
+  }
+},
+{
+  "model": "criterios.criterio",
+  "pk": 46,
+  "fields": {
+    "idCriterioPadre":24,
+    "nombre": "Infraestructura Complementaria que disponen",
+    "porcentaje": 20,
+    "nivel": 0,
+    "multipleOptions": false,
+    "children":10
+  }
+},
+{
+  "model": "criterios.criterio",
+  "pk": 47,
+  "fields": {
+    "idCriterioPadre":24,
+    "nombre": "Equipos que no poseen",
+    "porcentaje": 15,
+    "nivel": 0,
+    "multipleOptions": false,
+    "children":3
+  }
+},
+{
+  "model": "criterios.criterio",
+  "pk": 48,
+  "fields": {
+    "idCriterioPadre":24,
+    "nombre": "Servicios basicos que no dispone la caleta",
+    "porcentaje": 15,
+    "nivel": 0,
+    "multipleOptions": false,
+    "children":6
+  }
+},
+{
+  "model": "criterios.criterio",
+  "pk": 49,
+  "fields": {
+    "idCriterioPadre":24,
+    "nombre": "Disponibilidad de Espacio en la caleta",
+    "porcentaje": 15,
+    "nivel": 0,
+    "multipleOptions": false,
+    "children":2
+  }
+},
+{
+  "model": "criterios.criterio",
+  "pk": 50,
+  "fields": {
+    "idCriterioPadre":24,
+    "nombre": "Estado de Infraestructura Existente",
+    "porcentaje": 10,
+    "nivel": 0,
+    "multipleOptions": false,
+    "children":2
+  }
+},
+{
+  "_comment": "CONDICION",
+  "model": "criterios.condicion",
+  "pk": 2,
+  "fields": {
+    "idCriterio": 25,
+    "nombre": "Permanente",
+    "porcentaje": 40,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 3,
+  "fields": {
+    "idCriterio": 25,
+    "nombre": "Temporal",
+    "porcentaje": 60,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 4,
+  "fields": {
+    "idCriterio": 26,
+    "nombre": "Local y de Otras Caletas",
+    "porcentaje": 30,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 5,
+  "fields": {
+    "idCriterio": 26,
+    "nombre": "Local Solamente",
+    "porcentaje": 70,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 6,
+  "fields": {
+    "idCriterio": 27,
+    "nombre": "Alta",
+    "porcentaje": 40,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 7,
+  "fields": {
+    "idCriterio": 27,
+    "nombre": "Baja",
+    "porcentaje": 60,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 8,
+  "fields": {
+    "idCriterio": 28,
+    "nombre": "Pesca de Alta Variedad",
+    "porcentaje": 30,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 9,
+  "fields": {
+    "idCriterio": 28,
+    "nombre": "Pesca Monoespecifica",
+    "porcentaje": 70,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 10,
+  "fields": {
+    "idCriterio": 29,
+    "nombre": "Pesca exclusiva",
+    "porcentaje": 35,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 11,
+  "fields": {
+    "idCriterio": 29,
+    "nombre": "Alterna la pesca con otras actividades",
+    "porcentaje": 65,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 12,
+  "fields": {
+    "idCriterio": 30,
+    "nombre": "Lanchas y naves mayores",
+    "porcentaje": 40,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 13,
+  "fields": {
+    "idCriterio": 30,
+    "nombre": "Embarcaciones Menores",
+    "porcentaje": 60,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 14,
+  "fields": {
+    "idCriterio": 31,
+    "nombre": "Alto Volumen > 30%",
+    "porcentaje": 25,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 15,
+  "fields": {
+    "idCriterio": 31,
+    "nombre": "Volumen Medio <30; >20",
+    "porcentaje": 35,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 16,
+  "fields": {
+    "idCriterio": 31,
+    "nombre": "Volumen Bajo",
+    "porcentaje": 40,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 17,
+  "fields": {
+    "idCriterio": 32,
+    "nombre": "Alto numero",
+    "porcentaje": 40,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 18,
+  "fields": {
+    "idCriterio": 32,
+    "nombre": "Bajo numero",
+    "porcentaje": 60,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 19,
+  "fields": {
+    "idCriterio": 33,
+    "nombre": "Alto numero",
+    "porcentaje": 35,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 20,
+  "fields": {
+    "idCriterio": 33,
+    "nombre": "Bajo numero",
+    "porcentaje": 65,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 21,
+  "fields": {
+    "idCriterio": 34,
+    "nombre": "Urbana",
+    "porcentaje": 35,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 22,
+  "fields": {
+    "idCriterio": 34,
+    "nombre": "Rural",
+    "porcentaje": 65,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 23,
+  "fields": {
+    "idCriterio": 35,
+    "nombre": "Pavimentadas",
+    "porcentaje": 40,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 24,
+  "fields": {
+    "idCriterio": 35,
+    "nombre": "Trocha carrosable",
+    "porcentaje": 60,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 25,
+  "fields": {
+    "idCriterio": 36,
+    "nombre": "No disponen",
+    "porcentaje": 60,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 26,
+  "fields": {
+    "idCriterio": 36,
+    "nombre": "Limitado",
+    "porcentaje": 30,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 27,
+  "fields": {
+    "idCriterio": 36,
+    "nombre": "Amplia area disponible",
+    "porcentaje": 10,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 28,
+  "fields": {
+    "idCriterio": 37,
+    "nombre": "Alta",
+    "porcentaje": 20,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 29,
+  "fields": {
+    "idCriterio": 37,
+    "nombre": "Baja",
+    "porcentaje": 30,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 30,
+  "fields": {
+    "idCriterio": 37,
+    "nombre": "Nula",
+    "porcentaje": 50,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 31,
+  "fields": {
+    "idCriterio": 38,
+    "nombre": "Positiva",
+    "porcentaje": 10,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 32,
+  "fields": {
+    "idCriterio": 38,
+    "nombre": "Nula",
+    "porcentaje": 40,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 33,
+  "fields": {
+    "idCriterio": 38,
+    "nombre": "Negativa",
+    "porcentaje": 50,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 34,
+  "fields": {
+    "idCriterio": 39,
+    "nombre": "Local e Intermediados",
+    "porcentaje": 30,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 35,
+  "fields": {
+    "idCriterio": 39,
+    "nombre": "Local",
+    "porcentaje": 70,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 36,
+  "fields": {
+    "idCriterio": 40,
+    "nombre": "Grupal",
+    "porcentaje": 30,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 37,
+  "fields": {
+    "idCriterio": 40,
+    "nombre": "Individual",
+    "porcentaje": 70,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 38,
+  "fields": {
+    "idCriterio": 41,
+    "nombre": "Proyectos PNIPA en ejecucion",
+    "porcentaje": 25,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 39,
+  "fields": {
+    "idCriterio": 41,
+    "nombre": "Consecion de acuicultura",
+    "porcentaje": 25,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 40,
+  "fields": {
+    "idCriterio": 41,
+    "nombre": "Planta  de proceso",
+    "porcentaje": 25,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 41,
+  "fields": {
+    "idCriterio": 41,
+    "nombre": "Restaurante",
+    "porcentaje": 25,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 42,
+  "fields": {
+    "idCriterio": 42,
+    "nombre": "Administracion o Gestion",
+    "porcentaje": 33,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 43,
+  "fields": {
+    "idCriterio": 42,
+    "nombre": "Comercializacion",
+    "porcentaje": 34,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 44,
+  "fields": {
+    "idCriterio": 42,
+    "nombre": "Manipuleo y Proceso",
+    "porcentaje": 33,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 45,
+  "fields": {
+    "idCriterio": 43,
+    "nombre": "Fuerte",
+    "porcentaje": 30,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 46,
+  "fields": {
+    "idCriterio": 43,
+    "nombre": "Debil",
+    "porcentaje": 70,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 47,
+  "fields": {
+    "idCriterio": 44,
+    "nombre": "Aseo",
+    "porcentaje": 20,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 48,
+  "fields": {
+    "idCriterio": 44,
+    "nombre": "Deporte",
+    "porcentaje": 20,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 49,
+  "fields": {
+    "idCriterio": 44,
+    "nombre": "Fiscalizacion",
+    "porcentaje": 20,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 50,
+  "fields": {
+    "idCriterio": 44,
+    "nombre": "Ordenamiento",
+    "porcentaje": 20,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 51,
+  "fields": {
+    "idCriterio": 44,
+    "nombre": "Organizacion Grupal",
+    "porcentaje": 20,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 52,
+  "fields": {
+    "idCriterio": 45,
+    "nombre": "Muelle",
+    "porcentaje": 5,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 53,
+  "fields": {
+    "idCriterio": 45,
+    "nombre": "Varadero",
+    "porcentaje": 5,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 54,
+  "fields": {
+    "idCriterio": 45,
+    "nombre": "Zona de abrigo",
+    "porcentaje": 20,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 55,
+  "fields": {
+    "idCriterio": 45,
+    "nombre": "Explanada de Trabajo",
+    "porcentaje": 30,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 56,
+  "fields": {
+    "idCriterio": 45,
+    "nombre": "Panioles o bodegas",
+    "porcentaje": 40,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 57,
+  "fields": {
+    "idCriterio": 46,
+    "nombre": "Camara de Refrigeracion",
+    "porcentaje": 5,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 58,
+  "fields": {
+    "idCriterio": 46,
+    "nombre": "Planta de procesamiento primario",
+    "porcentaje": 5,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 59,
+  "fields": {
+    "idCriterio": 46,
+    "nombre": "Oficinas de administracion",
+    "porcentaje": 5,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 60,
+  "fields": {
+    "idCriterio": 46,
+    "nombre": "Puestos de Venta",
+    "porcentaje": 5,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 61,
+  "fields": {
+    "idCriterio": 46,
+    "nombre": "Redes de incendio",
+    "porcentaje": 10,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 62,
+  "fields": {
+    "idCriterio": 46,
+    "nombre": "Comisaria",
+    "porcentaje": 10,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 63,
+  "fields": {
+    "idCriterio": 46,
+    "nombre": "Local social y sede",
+    "porcentaje": 10,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 64,
+  "fields": {
+    "idCriterio": 46,
+    "nombre": "Servicio de Combustible",
+    "porcentaje": 10,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 65,
+  "fields": {
+    "idCriterio": 46,
+    "nombre": "Talleres",
+    "porcentaje": 20,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 66,
+  "fields": {
+    "idCriterio": 46,
+    "nombre": "Galpon",
+    "porcentaje": 20,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 67,
+  "fields": {
+    "idCriterio": 47,
+    "nombre": "Planta de Hielo",
+    "porcentaje": 40,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 68,
+  "fields": {
+    "idCriterio": 47,
+    "nombre": "Winche",
+    "porcentaje": 30,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 69,
+  "fields": {
+    "idCriterio": 47,
+    "nombre": "Grupo electrogeno y pluma",
+    "porcentaje": 30,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 70,
+  "fields": {
+    "idCriterio": 48,
+    "nombre": "Agua potable",
+    "porcentaje": 20,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 71,
+  "fields": {
+    "idCriterio": 48,
+    "nombre": "Electricidad",
+    "porcentaje": 20,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 72,
+  "fields": {
+    "idCriterio": 48,
+    "nombre": "Alcantarillado",
+    "porcentaje": 20,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 73,
+  "fields": {
+    "idCriterio": 48,
+    "nombre": "Comunicaciones",
+    "porcentaje": 15,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 74,
+  "fields": {
+    "idCriterio": 48,
+    "nombre": "Posta sanitaria",
+    "porcentaje": 15,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 75,
+  "fields": {
+    "idCriterio": 48,
+    "nombre": "Agencia Bancaria",
+    "porcentaje": 10,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 76,
+  "fields": {
+    "idCriterio": 49,
+    "nombre": "Amplia",
+    "porcentaje": 30,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 77,
+  "fields": {
+    "idCriterio": 49,
+    "nombre": "Escasa",
+    "porcentaje": 70,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 78,
+  "fields": {
+    "idCriterio": 50,
+    "nombre": "Con mantenimiento",
+    "porcentaje": 30,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 79,
+  "fields": {
+    "idCriterio": 50,
+    "nombre": "Muy Deterioradas",
+    "porcentaje": 70,
+    "isSelected": false
+  }
+}
+]

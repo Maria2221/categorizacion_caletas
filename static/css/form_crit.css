@@ -1,0 +1,244 @@
+body{
+	background-color:  #f1f1f1;
+}
+
+#popup {
+		visibility: hidden;
+		opacity: 0;
+		margin-top: -200px;
+	}
+	#popup:target {
+		visibility:visible;
+		opacity: 1;
+		background-color: rgba(0,0,0,0.8);
+		position: fixed;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		margin:0;
+		z-index: 999;
+		-webkit-transition:all 1s;
+		-moz-transition:all 1s;
+		transition:all 1s;
+	}
+	.popup-contenedor {
+		position: relative;
+		margin:7% auto;
+		padding:30px 50px;
+		background-color: #fafafa;
+		color:#333;
+		border-radius: 3px;
+		width:50%;
+	}
+	a.popup-cerrar {
+		position: absolute;
+		top:3px;
+		right:3px;
+		background-color: #333;
+		padding:7px 10px;
+		font-size: 20px;
+		text-decoration: none;
+		line-height: 1;
+		color:#fff;
+	}
+ 
+    /* estilos para el enlace */
+	a.popup-link {
+	    
+	}
+#content{
+	background-color:  white;
+	margin: 50px 200px 100px 200px;	
+    border: 1px solid #BFBFBF;
+    padding: 25px 50px;
+    box-shadow: 5px 5px 5px #aaaaaa;
+}
+
+#crit_head{
+	text-align: center;
+	font-weight: bold;	
+	padding: 15px 15px 10px 15px;
+}
+
+#crit_head h2{
+	font-weight: bold;
+}
+
+#results{
+	padding: 50px 10px;
+}
+
+#center{
+    position: absolute;
+    /*padding: inherit;*/
+    left:70%;
+}
+
+#izquierda{
+	padding-top:15px;
+	position:absolute;
+	right:20%;
+}
+
+.section_crit1{
+	padding-top: 0px;
+}
+.section_crit1 h3{
+	font-weight: bold;
+}
+
+.section_crit2{
+	width: 100%;
+	float: left;
+
+}
+
+.crit1_title{
+	background-color: #f2dede;
+	font-weight: bold;
+	padding: 10px 20px;	
+	box-sizing: border-box;
+
+}
+
+.crit3_cont{
+	padding: 15px 20px;	
+	box-sizing: border-box;	
+	float: left;
+}
+
+
+.crit2_title{
+	background-color: #d9edf7;
+	font-weight: bold;
+	padding: 10px 20px;
+	box-sizing: border-box;
+
+}
+.formPersonal span{
+  display: block;
+  margin-bottom: 20px;
+}
+
+.formPersonal .labelsex{
+  padding: 6px 30px;
+  border-radius: 20px;
+  border: 2px solid #ccc;
+}
+
+.boxSexo:checked + label{
+  background: purple;
+  color: white;
+  border: 2px solid purple;
+}
+
+.boxSexo{
+  display: none;
+}
+
+/*label{
+display: inline-block;
+max-width: 100%;
+margin-bottom: 30px;
+font-weight: 700;
+}*/
+
+#crits_footer{
+	float: right;
+	padding: 10px 0px;
+
+}
+
+#crits_footer button{
+	margin: 0px 10px;
+	height: 50px;
+	width: 150px;
+	
+	font-weight: bold;
+
+}
+
+#form_eval{
+	padding: 0px 50px;
+}
+
+#form_eval p{
+	color:red;
+	font-weight: bold;
+}
+
+.msm_err{
+	color:red;
+}
+a {
+/*text-align: center;
+display: block;
+margin: 30px 0;*/
+color:#007bff;
+ text-decoration:none;
+ background-color:transparent;
+ -webkit-text-decoration-skip:objects
+}
+a:hover {
+ color:#0056b3;
+ text-decoration:underline
+}
+a:not([href]):not([tabindex]) {
+ color:inherit;
+ text-decoration:none
+}
+a:not([href]):not([tabindex]):focus,
+a:not([href]):not([tabindex]):hover {
+ color:inherit;
+ text-decoration:none
+}
+a:not([href]):not([tabindex]):focus {
+ outline:0
+}
+
+.btn {
+ font-family:Montserrat,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
+ font-weight:500
+}
+.btn-xl {
+ font-size:16px;
+ padding:20px 20px
+}
+.btn-primary {
+ background-color:#47617e;
+ border-color:#47617e;
+}
+
+.btn-primary {
+ color:#fff;
+ background-color:#47617e;
+ border-color:#47617e
+}
+.btn-primary:hover {
+ color:#fff;
+ background-color:#47615e;
+ border-color:#0062cc
+}
+.btn-primary.focus,
+.btn-primary:focus {
+ box-shadow:0 0 0 .2rem rgba(0,123,255,.5)
+}
+.btn-primary.disabled,
+.btn-primary:disabled {
+ color:#fff;
+ background-color:#007bff;
+ border-color:#007bff
+}
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show>.btn-primary.dropdown-toggle {
+ color:#fff;
+ background-color:#0062cc;
+ border-color:#005cbf
+}
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.show>.btn-primary.dropdown-toggle:focus {
+ box-shadow:0 0 0 .2rem rgba(0,123,255,.5)
+}

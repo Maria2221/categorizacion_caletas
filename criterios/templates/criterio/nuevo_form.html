@@ -1,0 +1,146 @@
+{% load customer_template %}
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  
+  <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css" />
+
+  <link rel="stylesheet" href="{% static 'css/form_crit.css' %}" />
+
+
+  
+</head>
+
+<body>
+
+  
+
+  <div id="content" class="container"> 
+    <div id="crit_head" class="row">
+      <h2> FORMULARIO DE EVALUACION DE CALETA </h2>
+      
+    </div>
+    <hr>
+
+
+    <div class="row" id="form_eval">
+      <p> * Complete todos los campos ya que son obligatorios! </p>
+  <form>  
+
+  {% if criterios %}
+    
+  {% for criterio in criterios %}
+  <div class="row section_crit1" >
+    {% for items in criterio %}   
+
+      {% if items.nombre %}         
+        <h3 class="crit1_title"> Criterio 1: {{ items.nombre }}</h3>        
+      {% else %}
+
+        {% for item in items %}
+          {% if item.nombre %}
+          <div class="section_crit2">
+
+              <h4 class="crit2_title" > Criterio 2: {{ item.nombre }}</h4>
+
+          {% else %}
+              {% counting -1 as count %}
+            {% for it in item %}
+            {% counting count as count %} 
+
+
+              <div class="form-group" >
+
+                <div class="col-sm-6 crit3_cont">
+                <label > {{ count }}. {{ it.nombre }} : </label>        
+                {% any_function condiciones it.idCriterio as listaCond %}
+                              
+                {% if it.multipleOptions %}
+
+                
+                <select class="form-control mul_select" multiple >
+                {% for condicion in listaCond %}
+                  <option  value="{{ condicion.ponderado  }}"> {{ condicion }} </option><!--varios-->
+                {% endfor %}
+                </select>
+                </div>                          
+
+                {% else %}
+                  
+                <select class="form-control uni_select" style="text-align: center;"  > <!--una opcion-->
+                  <option value="none" disabled selected > --- Elija una Opcion --- </option>
+                {% for condicion in listaCond %}
+                  <option  value="{{ condicion.ponderado }}"> {{ condicion }} </option>
+                {% endfor %}
+                </select>
+                 <div class="m_options js_quizz_question">
+
+                </div>
+
+                {% endif%}
+
+              </div>
+            
+            {% endfor %}
+          </div>
+
+          {% endif %}
+
+        {% endfor %}        
+
+      {% endif %}
+    
+    {% endfor %}
+    <br>
+  </div>
+  
+  {% endfor %}
+  {% endif %}
+
+  <hr>
+
+
+
+  <div class="row" id="crits_footer" >
+
+    <button class="btn btn btn-light" onclick="restaurar()">Restaurar</button>
+    <button type="button" class="btn btn-primary pull-right"  onclick="evaluar()" >EVALUAR CALETA</button>
+    </div>
+
+
+
+    </form>
+
+    <div id="test"> </div>
+
+    </div>
+
+</div>
+
+
+  
+</body>
+<script type="text/javascript" src="{% static 'js/criterios.js' %}"></script>
+<script>
+$(document).ready(function(){
+
+ $('.mul_select').multiselect({
+  nonSelectedText: '--- Seleccione Varios ---',
+  buttonWidth:'100%'
+ });
+
+ 
+
+ 
+});
+</script>
+
+<html>

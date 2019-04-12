@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{% static 'css/registrar.css' %}" />
+  
+</head>
+
+<body>
+<form action="{% url 'addUser'%}" method="post">
+  {% csrf_token %}
+<div class="container">
+  <div id="login" class="login">
+    <div class="login-icon-field">
+      <img class="login-icon-field" src="{% static 'img/barco.png' %}" alt="My image">
+    </div>
+    <div class="login-form">
+      <div class="username-row row">
+        {{form.nombre}}
+      </div>
+      <div class="username-row row">
+        {{form.apellido}}
+      </div>
+      <div class="username-row row">
+        {{form.usuario}}
+      </div>
+      <div class="username-row row">
+        {{form.dni}}
+      </div>
+      <div class="username-row row">
+       {{form.correo}}
+      </div>
+      <div class="password-row row">
+        {{form.password}}
+      </div>
+      <div class="username-row row">
+        {{form.instituto}}
+      </div>
+    </div>
+    <div class="call-to-action">
+      <input type="submit" class="btn btn-primary" value="Registrar"></input>
+    </div>
+  </div>  
+</div>
+ </form>
+<script type="text/javascript" src="{% static 'js/iniciar.js' %}"></script>
+</body>
+</html>    
+      

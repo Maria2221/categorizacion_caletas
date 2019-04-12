@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{% static 'css/iniciar.css' %}" />
+  
+</head>
+
+<body>
+<form action="{% url 'login'%}" method="post">
+  {% csrf_token %}
+<div class="container">
+
+  <div id="login" class="login">
+    <div class="login-icon-field">
+      <img class="login-icon-field" src="{% static 'img/barco.png' %}" alt="My image">
+    </div>
+    <div class="login-form">
+      <div class="username-row row">
+       <input type="text" placeholder="usuario" name="username" required>
+      </div>
+      <div class="password-row row">
+      <input type="password" placeholder="contraseña" name="password" required>
+      </div>
+    </div>
+    <div class="call-to-action">
+      <input type="submit" class="btn btn-primary" value="Iniciar"></input>
+      <p>¿No tienes una cuenta?<a class="nav js-scroll-trigger" href="register">Registrate</a></p>
+    </div>
+  </div>
+</div>
+</form>
+<script type="text/javascript" src="{% static 'js/iniciar.js' %}"></script>
+</body>
+</html>
+
