@@ -128,4 +128,4 @@ STATICFILES_DIRS=(
 )
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-LOGIN_REDIRECT_URL = '/criterios/dash'n-
+LOGIN_REDIRECT_URL = '/criterios/dash'
