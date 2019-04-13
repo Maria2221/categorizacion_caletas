@@ -26,6 +26,7 @@ SECRET_KEY = '-9!@q8vb31e_ecpe==srjob=9cc^*cbzm3-=uy(ly%64#!kd5b'
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    '127.0.0.1',
     'categorizacion-caletas.herokuapp.com'
 ]
 
@@ -58,7 +59,7 @@ ROOT_URLCONF = 'categorizacion_caletas.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

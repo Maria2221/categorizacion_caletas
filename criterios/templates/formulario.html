@@ -1,3 +1,4 @@
+{% load customer_template %}
 {% load static %}
 
 <!DOCTYPE html>
@@ -18,7 +19,6 @@
 </head>
 
 <body>
-  {% csrf_token %}
   <div id="content" class="container">
     <div id="crit_head" class="row">
       <h2> FORMULARIO DE EVALUACION DE CALETA </h2>
@@ -35,11 +35,36 @@
                 <h3 class="crit1_title"> Criterio 1: {{ items.nombre }}</h3>
                 {% else %}
                   {% for item in items %}
-
                     {% if item.nombre %}
                     <div class="section_crit2">
-
                     <h4 class="crit2_title" > Criterio 2: {{ item.nombre }}</h4>
+                    {% else %}
+                      {% counting -1 as count %}
+                        {% for it in item %}
+                          {% counting count as count %}     
+                          <div class="form-group" >
+                          <div class="col-sm-6 crit3_cont">
+                          <label > {{ count }}. {{ it.nombre }} : </label>        
+                          {% any_function condiciones it.idCriterio as listaCond %}           
+                          {% if it.multipleOptions %}
+                            <select class="form-control mul_select" multiple >
+                            {% for condicion in listaCond %}
+                              <option  value="{{condicion.ponderado}}/{{condicion.idCondicion}}"> {{ condicion }} </option>
+                            {% endfor %}
+                            </select>
+                          </div>                          
+                          {% else %}
+                            <select class="form-control uni_select" style="text-align: center;"  >
+                            <option value="none" disabled selected > --- Elija una Opcion --- </option>
+                            {% for condicion in listaCond %}
+                              <option  value="{{condicion.ponderado}}/{{condicion.idCondicion}}"> {{ condicion }} </option>
+                            {% endfor %}
+                            </select>
+                          </div>
+                        {% endif%}
+                          </div>
+                        {% endfor %}
+                    </div>     
                     {% endif %}
                   {% endfor %}
                 {% endif %}
