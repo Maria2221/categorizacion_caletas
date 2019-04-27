@@ -3,7 +3,6 @@ from django.http import Http404, HttpResponse ,HttpResponseRedirect
 from .models import Criterio, Condicion, Usuario, Formulario
 from .forms import RegistrationForm, LoginForm , ResultForm
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth import authenticate, login
 from django.contrib.auth.hashers import make_password
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, _get_user_session_key
@@ -193,7 +192,7 @@ def addUsuario(request):
 
 		register.save()
 	return redirect(index)
-
+	
 def dash(request):
 	return render(request,'dashboard.html')
 	#devolver solo los ultimos 25 o 30 
@@ -409,14 +408,13 @@ class ReporteFormulariosPDF(View):
 			return response
 
 
-
+"""
 #PDF VERSION 2 
 from django.http import HttpResponse
 from django.template.loader import render_to_string
 # from weasyprint import HTML
 import tempfile
 
-"""
 def generate_pdf(request):
   
     # Model data

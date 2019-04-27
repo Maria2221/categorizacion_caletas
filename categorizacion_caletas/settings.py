@@ -130,3 +130,6 @@ STATICFILES_DIRS=(
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 LOGIN_REDIRECT_URL = '/criterios/dash'
+LOGOUT_REDIRECT_URL = '/login'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

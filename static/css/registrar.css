@@ -20,7 +20,8 @@ body {
 .login-icon-field {
   height: 250px;
   width: 90%;
-  margin-left:15px;
+  margin-left:13px;
+  margin-top: 10px;
   /*background-color: red;*/
 }
 
@@ -126,8 +127,6 @@ p a:hover {
  background-color:#6585a3!important;
  border-color:#6585a3!important;
  color:#fff
-}
-
 }
 
 

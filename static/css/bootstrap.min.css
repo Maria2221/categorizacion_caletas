@@ -193,6 +193,16 @@ img {
  width: 100px;
  height:100px;
 }
+.largas{
+  margin-top: 10px;
+  width: 240px;
+  height: 75px;
+}
+.largasunsa{
+  margin-top: 10px;
+  width: 270px;
+  height: 75px;
+}
 svg {
  overflow:hidden;
  vertical-align:middle
@@ -512,7 +522,7 @@ pre code {
 }
 @media (min-width:1200px) {
  .container {
-  max-width:1140px
+  max-width:1140px;
  }
 }
 .container-fluid {
@@ -528,7 +538,8 @@ pre code {
  -ms-flex-wrap:wrap;
  flex-wrap:wrap;
  margin-right:-15px;
- margin-left:-15px
+ margin-left:-15px;
+ height: 100px;
 }
 .no-gutters {
  margin-right:0;
@@ -7995,6 +8006,7 @@ button.bg-dark:hover {
 .text-center {
   height: 80px;
   width: 1000px;
+  padding-left: 5%;
   text-align:center!important
 
 }

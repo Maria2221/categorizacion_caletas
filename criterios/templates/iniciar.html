@@ -16,7 +16,7 @@
 
   <div id="login" class="login">
     <div class="login-icon-field">
-      <img class="login-icon-field" src="{% static 'img/barco.png' %}" alt="My image">
+      <img class="login-icon-field" src="{% static 'img/logo.png' %}" alt="My image">
     </div>
     <div class="login-form">
       <div class="username-row row">
@@ -25,10 +25,12 @@
       <div class="password-row row">
       <input type="password" placeholder="contraseña" name="password" required>
       </div>
+      <p class ="contra"><a class="nav js-scroll-trigger" href="{% url 'password_reset'%}">¿Te olvidaste tu contraseña?</a></p>
     </div>
     <div class="call-to-action">
+      
       <input type="submit" class="btn btn-primary" value="Iniciar"></input>
-      <p>¿No tienes una cuenta?<a class="nav js-scroll-trigger" href="register">Registrate</a></p>
+      <p class = "cuenta">¿No tienes una cuenta?<a class="nav js-scroll-trigger" href="register">Registrate</a></p>
     </div>
   </div>
 </div>

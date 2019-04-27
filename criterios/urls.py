@@ -13,17 +13,26 @@ urlpatterns = [
     re_path(r'resultado/categoryD/', views.resultadoD),
     re_path(r'form_eval$', views.criterios_list),
     re_path(r'prossc_eval$', views.prossc_eval),
+
     #botones de página principal 
     re_path(r'register$', views.register),     
     re_path(r'addUsuario$', views.addUsuario, name='addUser'),
-    #login
-    url( r'^login/$',auth_views.LoginView.as_view(template_name="iniciar.html"), name="login"),    
+    
+    #login y logout
+    url( r'^login/$',auth_views.LoginView.as_view(template_name="iniciar.html"), name="login"),
+    url( r'^logout/$',auth_views.LoginView.as_view(template_name="iniciar.html"), name="logout"),
+
+    #olvidado password
+    url(r'^',include('django.contrib.auth.urls')),
+    
     #dashboard
     re_path(r'dash$', views.dash),
     re_path(r'^(?P<formulario_id>[1-9]+)/result_desembarco/$',views.re_desembarco, name='result_desembarco'),
-    #result
+    
+    #result de agregar usuarios
     re_path(r'saveResult$', views.saveResult, name='save'),
-    #resultadosxls
+    
+    #resultadosxls y pdf
     re_path(r'resultadoxls$',views.re_xls),
     re_path(r'^reporte_formularios/$', views.ReporteFormulariosExcel.as_view(), name="reporte_formularios"),
     re_path(r'^reporte_formularios_pdf/(?P<formulario_id>[1-9]+)/$', views.ReporteFormulariosPDF.as_view(), name="reporte_formularios_pdf"),

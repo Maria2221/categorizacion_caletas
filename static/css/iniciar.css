@@ -21,7 +21,8 @@ body {
 .login-icon-field {
   height: 250px;
   width: 90%;
-  margin-left:15px;
+  margin-left:13px;
+  margin-top: 10px;
   /*background-color: red;*/
 }
 
@@ -51,6 +52,7 @@ body {
   height: 40px;
  /* background-color: grey;*/
   border-bottom: 1px solid;
+  margin-bottom: 12px;
   margin-right: 3px;
 }
 
@@ -60,10 +62,10 @@ body {
 }
 
 input {
-  position: absolute;
-  width: 195px;
+  position: relative;
+  width: 200px;
   height: 30px;
-  margin: 5px 0;
+  margin: 8px 0;
   background: transparent;
   color: white;
   border: none;
@@ -83,20 +85,23 @@ input::-moz-placeholder {
 }
 
 .call-to-action {
-  margin: 22px 0;
-  /*height: 130px;*/
+  margin: 20px 0px 10px 0px;
+ /* height: 130px;*/
   width: 100%;
-  padding-left: 55px;
+  padding-left: 30px;
   /*background-color: blue;*/
 }
 
-p {
+.contra , .cuenta{
   display: inline-block;
   width: 200px;
-  margin: 45px 30px;
+  margin: 1px 1px;
   font-size: .8rem;
   color: rgba(191, 189, 189);
   /*background-color: yellow;*/
+}
+.cuenta{
+  padding-left: 25px;
 }
 
 p a {
@@ -119,7 +124,9 @@ p a:hover {
 }
 .btn-primary {
  background-color:#7597b7;
- border-color:#7597b7
+ border-color:#7597b7;
+ margin-left: 20px;
+
 }
 .btn-primary:active,
 .btn-primary:focus,
@@ -128,5 +135,5 @@ p a:hover {
  border-color:#6585a3!important;
  color:#fff
 }
-}
+
 
