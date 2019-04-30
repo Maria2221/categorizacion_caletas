@@ -1,0 +1,94 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  
+  <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/cssParaTablas.css' %}" />
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class = "row text-center">
+    <div class = "col-md-12 ">
+        <h1>
+        Clasificación de embarcaciones
+
+    </h1>
+</div>
+    </div>
+
+  {% if uploaded_file_url %}
+    <div class="row">
+       <div class="col-md-6">
+
+        <div class="table-wrapper-scroll-y my-custom-scrollbar">
+
+  <table class="table table-bordered table-striped mb-0">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Eslora</th>
+        <th scope="col">Capacidad de Bodega</th>
+
+      </tr>
+    </thead>
+    <tbody>
+{% for i,x1,y1 in z %}
+
+      <tr>
+        <th scope="row">{{i}}</th>
+        <td>{{x1}}</td>
+        <td>{{y1}}</td>
+      </tr>
+    {% endfor %}
+
+    </tbody>
+  </table>
+            </div>
+
+       <p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
+<ul >
+<li>Eliminación de datos imposibles son la
+negatividad de las variables, valores
+vacio . y el valor altamente amplio del
+puntal:{{e1}}</li>
+ <li>Eliminación de datos ilógicos por
+razones de lógica descrito en la relación
+entre la manga y la eslora  {{e2}}</li>
+ <li>Eliminación de datos que pertenezcan a
+embarcaciones no clasificadas en
+artesanales:{{e3}}</li>
+ <li>Eliminación de datos que contradicen las
+medidas descritas en el paper:{{e4}} </li>
+</ul>
+ </div>
+
+<div class="col-md-3">
+<img src="{% static 'img/histograma.png' %}">
+</div>
+
+    </div>
+    {% endif %}
+<div class="row">
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+      <input type="file" name="myfile">
+    <button type="submit">Upload</button>
+</form>
+</div>
+</div>
+
+{% block js %}
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+{% endblock %}
+{% block extrajs %}
+{% endblock %}
+</body>
+</html>    
+      

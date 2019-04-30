@@ -20,13 +20,13 @@ urlpatterns = [
     
     #login y logout
     url( r'^login/$',auth_views.LoginView.as_view(template_name="iniciar.html"), name="login"),
-    url( r'^logout/$',auth_views.LoginView.as_view(template_name="iniciar.html"), name="logout"),
-
+    #url( r'^logout/$',auth_views.LoginView.as_view(template_name="iniciar.html"), name="logout"),
+    re_path(r'logout/', views.logout_request, name="logout"),
     #olvidado password
     url(r'^',include('django.contrib.auth.urls')),
     
     #dashboard
-    re_path(r'dash$', views.dash),
+    re_path(r'dash$', views.dash, name='dash'),
     re_path(r'^(?P<formulario_id>[1-9]+)/result_desembarco/$',views.re_desembarco, name='result_desembarco'),
     
     #result de agregar usuarios
@@ -35,6 +35,14 @@ urlpatterns = [
     #resultadosxls y pdf
     re_path(r'resultadoxls$',views.re_xls),
     re_path(r'^reporte_formularios/$', views.ReporteFormulariosExcel.as_view(), name="reporte_formularios"),
+    url(r'^upload/csv/$', views.upload_csv, name='upload_csv'),
+  #  re_path(r'^ingresoBarco/$', views.ReporteFormulariosExcel.as_view(), name="ingresoBarco"),
+    re_path(r'^csv/ingresoCSV/$', views.getBarcosParaCSV, name="ingresoCSV"),
+ #   re_path(r'^reporte_formularios/$', views.ReporteFormulariosExcel.as_view(), name="reporte_formularios"),
+
+    url(r'^vistaBarco$', views.getVistaCSV),
+
+    url(r'^documentos/(?P<path>.*)$', views.downloadCSV),
     re_path(r'^reporte_formularios_pdf/(?P<formulario_id>[1-9]+)/$', views.ReporteFormulariosPDF.as_view(), name="reporte_formularios_pdf"),
     # url(r'^generate/pdf/$', views.generate_pdf, name='generate_pdf'),
 ]

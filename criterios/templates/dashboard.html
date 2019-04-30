@@ -5,16 +5,87 @@
 	
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="{% static 'css/form_crit.css' %}" />
-	
+	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
 
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
+<style>
+.hidden{
+    display:none;
+}
+
+.unhidden{
+    display:block;
+}
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+  var contarMaria = 0 ;
+  $("#funciona").click(function(){
+    contarMaria = contarMaria +1 ;
+    if (contarMaria %2 ==1){
+    $("#maria").addClass("unhidden");
+    $("#maria").removeClass("hidden");
+    $("#funciona").addClass("btn-secondary");
+    $("#funciona").removeClass("btn-primary");
+
+    }
+
+    else{
+
+    $("#maria").addClass("hidden");
+    $("#maria").removeClass("unhidden");
+    $("#funciona").addClass("btn-primary");
+    $("#funciona").removeClass("btn-secondary");
+
+
+    }
+
+$("#maria").attr("disabled", true);
+  });
+    var contarElvis = 0 ;
+    $("#funciona2").click(function(){
+    contarElvis = contarElvis +1;
+    if (contarElvis % 2==1){
+    $("#elvis").addClass("unhidden");
+    $("#elvis").removeClass("hidden");
+    $("#funciona2").addClass("btn-secondary");
+    $("#funciona2").removeClass("btn-primary");
+
+      }else{
+    $("#elvis").addClass("hidden");
+    $("#elvis").removeClass("unhidden");
+
+    $("#funciona2").addClass("btn-primary");
+    $("#funciona2").removeClass("btn-secondary");
+  }
+  });
+  var category;
+
+    $('radio[name="category"]').click(function(){
+      category=this.value;
+    });
+});
+</script>
 
 <body>
 	
-	<h4>Bienvenid@:{{user}}</h4>
-	<a href="{% url 'logout'%}" >Salir</a>
-	<div id="content" class="container"> 
-		<div id="crit_head" class="row">
+	<nav class="navbar navbar-light bg-light">
+		<a class="navbar-brand">Bienvenid@:{{user}}</a>
+		<form class="form-inline">
+			<a href="{% url 'logout'%}" >Salir</a>
+		</form>
+	</nav>
+	<div id="content" class="container">
+     <div class="row">
+        <input id ="funciona" type="button" class ="btn btn-primary" onclick="unhide(this, 'about') " value="evaluar">
+
+            <input id ="funciona2" type="button"  class ="btn btn-primary" onclick="unhide(this, 'about') " value="clasificar">
+
+
+     </div>
+		<div id="maria" class="hidden">
+        <div id="crit_head" class="row">
 			<h2>Evaluación de Desembarcaderos Pesqueros Artesanales</h2>	
 		</div>
 		<hr>
@@ -26,13 +97,28 @@
 					</a>
 					</ul>
 				{% endfor %}			
-				<div id = "center">
+				<div class="d-flex justify-content-around">
 					<a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="form_eval" role= "button">Nuevo Formulario</a>
 					<a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="resultadoxls" role= "button">Resultados</a>
 				</div>
 		</div>
-	</div>
+        </div>
 
-	
+        <div id="elvis" class="hidden">
+            <div id="crit_head" class ="row" >
+			    <h2>Clasificación de barcos</h2>
+		    </div>
+		    <hr>
+            <div id = "result">
+            <div class="d-flex justify-content-around">
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{%url 'upload_csv'%}" role= "button">Clasificar Embarcaciones</a>
+
+				</div>
+            </div>
+        </div>
+        </div>
 </body>
 </html>
+
+
+

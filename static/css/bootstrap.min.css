@@ -525,6 +525,12 @@ pre code {
   max-width:1140px;
  }
 }
+@media (min-width:1200px) {
+  .containerprimero {
+   max-width:1450px;
+  }
+ }
+
 .container-fluid {
  width:100%;
  padding-right:15px;
