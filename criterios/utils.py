@@ -200,7 +200,7 @@ def procesar(archivoNombre):
     plt.xlabel('eslora m')
     plt.ylabel('Capacidad de bodega m3')
 
-    plt.title("Ventas en Europa")
+    plt.title(" Grafico ")
     # Make fake dataset
     height = [1.09,2.17,10.87, 32.6]
     colors = (0, 0, 0)
