@@ -161,3 +161,35 @@ class Formulario(models.Model):
 
     def __str__(self):
          return self.nombreFormulario
+
+
+class CSV(models.Model):
+    idCSV = models.AutoField(primary_key=True)
+
+    nombreArchivo = models.CharField(max_length=50)
+    eliminados1 = models.IntegerField(default=0)
+    eliminados2 = models.IntegerField(default=0)
+    eliminados3 = models.IntegerField(default=0)
+    eliminados4 = models.IntegerField(default=0)
+
+    def __str__(self):
+         return str("{:10.4f}".format(self.eslora))+str("{:10.4f}".format(self.manga))+str("{:10.4f}".format(self.puntal))
+
+
+
+
+class Barco(models.Model):
+    matricula = models.CharField(max_length=50)
+    csv = models.ForeignKey(CSV, on_delete=models.CASCADE, blank=True, null=True)
+
+    casco = models.CharField(max_length=50)
+    regimen =  models.CharField(max_length=50)
+    tipo =  models.CharField(max_length=50)
+    eslora  =  models.DecimalField(max_digits=5, decimal_places=2)
+    manga  =models.DecimalField(max_digits=5, decimal_places=2)
+    puntal =models.DecimalField(max_digits=5, decimal_places=2)
+#    usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE, blank=True, null=True)
+
+    def __str__(self):
+         return str("{:10.4f}".format(self.eslora))+str("{:10.4f}".format(self.manga))+str("{:10.4f}".format(self.puntal))
+

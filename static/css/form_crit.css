@@ -44,10 +44,8 @@ body{
 	}
  
     /* estilos para el enlace */
-	a.popup-link {
-	    
-	}
-#content{
+
+#contentprimero{
 	background-color:  white;
 	margin: 50px 200px 100px 200px;	
     border: 1px solid #BFBFBF;
@@ -67,12 +65,6 @@ body{
 
 #results{
 	padding: 50px 10px;
-}
-
-#center{
-    position: absolute;
-    /*padding: inherit;*/
-    left:70%;
 }
 
 #izquierda{
@@ -147,14 +139,16 @@ font-weight: 700;
 #crits_footer{
 	float: right;
 	padding: 10px 0px;
+}
 
+#crits_footerprimero{
+	float: right;
 }
 
 #crits_footer button{
 	margin: 0px 10px;
 	height: 50px;
 	width: 150px;
-	
 	font-weight: bold;
 
 }
@@ -217,8 +211,8 @@ a:not([href]):not([tabindex]):focus {
 }
 .btn-primary:hover {
  color:#fff;
- background-color:#47615e;
- border-color:#0062cc
+ background-color:#5683ad;
+ border-color:#0062cc;
 }
 .btn-primary.focus,
 .btn-primary:focus {
@@ -227,15 +221,15 @@ a:not([href]):not([tabindex]):focus {
 .btn-primary.disabled,
 .btn-primary:disabled {
  color:#fff;
- background-color:#007bff;
- border-color:#007bff
+ background-color:#5d8bbd;
+ border-color:#5d8bbd;
 }
 .btn-primary:not(:disabled):not(.disabled).active,
 .btn-primary:not(:disabled):not(.disabled):active,
 .show>.btn-primary.dropdown-toggle {
  color:#fff;
- background-color:#0062cc;
- border-color:#005cbf
+ background-color:#3a73af;
+ border-color:#3a73af;
 }
 .btn-primary:not(:disabled):not(.disabled).active:focus,
 .btn-primary:not(:disabled):not(.disabled):active:focus,
