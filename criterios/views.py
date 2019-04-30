@@ -510,7 +510,7 @@ def upload_csv(request):
         #userdjango = request.user.get_username()
        # nombreArchivo =  CSV.objects.get(nombreArchivo=filename)
 
-        eliminadosLogica,eliminadosEsloraManga,eliminadosNoArtesanales,eliminadosPaper,eliminadosRegresion, total,x,y = procesar(filename)
+        eliminadosLogica,eliminadosEsloraManga,eliminadosNoArtesanales,eliminadosPaper,eliminadosRegresion, total,x,y,l1,l2,l3,l4,resto = procesar(filename)
         csv = CSV(nombreArchivo= filename,eliminados1 = eliminadosLogica ,eliminados2=eliminadosEsloraManga,eliminados3=eliminadosNoArtesanales,eliminados4 =eliminadosPaper)
         csv.save()
 
@@ -523,6 +523,12 @@ def upload_csv(request):
             'e3':eliminadosNoArtesanales,
             'e4':eliminadosPaper,
             'z':list(zip(id,x,y)),
+
+            'l1':l1,
+            'l2':l2,
+            'l3':l3,
+            'l4':l4,
+            'resto':resto,
 
         })
     return render(request, "barcosParaCSV.html", data)

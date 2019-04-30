@@ -164,14 +164,43 @@ def procesar(archivoNombre):
     print('Total de embarcaciones eliminadas')
     eliminadosFinal =initlen - newlen
     print(initlen - newlen)
-
+    
     print('Total de embarcaciones usadas')
     print(newlen)
     total =newlen
 
     print('Total de embarcaciones usadas')
     print(newlen)
+    i = 0
 
+    data = np.delete(data, a, axis=0)
+    print('Embarcaciones eliminadas')
+    print(newlen - len(data))
+    eliminadosPaper = newlen - len(data)
+    newlen = len(data)
+
+    cat1 = []
+    for x in np.nditer(data):
+        if x['es'] < 2 and  x['bo'] <1.09:
+            cat1.append(x)
+
+    cat2 = []
+    for x in np.nditer(data):
+        if x['es'] > 2 and x['es'] <= 3 and  x['bo'] <2.17:
+            cat2.append(x)
+    cat3 = []
+    for x in np.nditer(data):
+        if x['es'] > 3 and x['es'] <= 9 and  x['bo'] <10.87:
+            cat3.append(x)
+    cat4 = []
+    for x in np.nditer(data):
+        if x['es'] > 9 and x['es'] <= 18 and  x['bo'] <32.6:
+            cat4.append(x)
+    l1 = len(cat1)
+    l2 = len(cat2)
+    l3 = len(cat3)
+    l4 = len(cat4)
+    resto = len(data)-l1-l2-l3-l4
     x = data['es']
     y = data['bo']
 
@@ -232,7 +261,7 @@ def procesar(archivoNombre):
 
     # Show graphic
 #    plt.show()
-    return eliminadosLogica,eliminadosEsloraManga,eliminadosNoArtesanales,eliminadosPaper,eliminadosRegresion, total,x,y
+    return eliminadosLogica,eliminadosEsloraManga,eliminadosNoArtesanales,eliminadosPaper,eliminadosRegresion, total,x,y,l1,l2,l3,l4,resto
  #  X = np.stack((x, y), axis=-1)
 
     # #############################################################################
