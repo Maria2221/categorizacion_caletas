@@ -6,7 +6,7 @@ from django.contrib.auth import views as auth_views
 
 
 urlpatterns = [
-    re_path(r'^$', views.index),
+    re_path(r'^$', views.index, name='index'),
     re_path(r'resultado/categoryA/', views.resultadoA),
     re_path(r'resultado/categoryB/', views.resultadoB),
     re_path(r'resultado/categoryC/', views.resultadoC),

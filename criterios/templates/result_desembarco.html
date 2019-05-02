@@ -14,6 +14,12 @@
  <body>
 
   {% csrf_token %}
+  <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand">Bienvenid@:{{user}}</a>
+      <form class="form-inline">
+        <a href="{% url 'logout'%}" >Salir</a>
+      </form>
+  </nav>
 
   <div id="res_content" class="container"> 
 

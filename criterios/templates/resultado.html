@@ -10,6 +10,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css" />
   <link rel="stylesheet" href="{% static 'css/myStyle.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
+
   
   <!--script type="text/javascript">
     function valor(){
@@ -20,8 +22,26 @@
 
  </head>
  <body>
-
-<form action="{% url 'save'%}" method="post">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand">Bienvenid@:{{user}}</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto">
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <a class="btn btn-primary btn-lg text-uppercase js-scroll-trigger" href="{%url 'index'%}">Home</a>
+                        <a href="{% url 'logout'%}" >Salir</a>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+  <form action="{% url 'save'%}" method="post">
   {% csrf_token %}
   <div id="res_content" class="container"> 
 
@@ -66,7 +86,7 @@
     <!--div class = "row" id="ventanaflot"-->
         <h4>¿Con qué nombre le gustaría guardarlo?</h4>
         <hr>
-        <div class="username-row row">
+        <div class="username-row">
         {{form.nombreFormulario}}
         </div>
         <input type="submit" class="btn btn-primary" value="Guardar"></input>

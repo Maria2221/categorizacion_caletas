@@ -10,7 +10,12 @@
 </head>
 
 <body>
-
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand">Bienvenid@:{{user}}</a>
+        <form class="form-inline">
+          <a href="{% url 'logout'%}" >Salir</a>
+        </form>
+      </nav>
 <div class="container">
 
     <div class = "row text-center">

@@ -329,7 +329,7 @@ from io import BytesIO
 from reportlab.pdfgen import canvas
 from django.views.generic import View
 from reportlab.platypus import SimpleDocTemplate, Paragraph, TableStyle
-from reportlab.lib.styles import getSampleStyleSheet
+from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib import colors
 from reportlab.lib.pagesizes import letter
 from reportlab.platypus import Table
@@ -357,6 +357,11 @@ class ReporteFormulariosPDF(View):
         #	condic[condi]=[Condicion.objects.get(idCondicion=condi)]
 
         styles = getSampleStyleSheet()
+        style = ParagraphStyle(name='right', parent=styles['Normal'], fontName='Helvetica',
+                fontSize=8.2,leading=8)
+        stylecondi = ParagraphStyle(name='right', parent=styles['Normal'], fontName='Helvetica',
+                fontSize=8,leading=5)
+        
         # Creamos una tupla de encabezados para neustra tabla
         encabezados = ('Criterio 1', 'Criterio 2', 'Parámetro y criterio 3', 'Condición')
         # Creamos una lista de tuplas que van a contener a las personas
@@ -375,7 +380,7 @@ class ReporteFormulariosPDF(View):
                         if Condicion.objects.filter(idCondicion=valor, idCriterio=criterios3.idCriterio).exists():
                             nuevovalor = Condicion.objects.get(idCondicion=valor)
 
-                            C4 = Paragraph(nuevovalor.nombre, styles['Normal'])
+                            C4 = Paragraph(nuevovalor.nombre, stylecondi)
                             tabla4 = tabla4 + [(C4, '')]
 
                     if not tabla4:
@@ -395,7 +400,7 @@ class ReporteFormulariosPDF(View):
                             ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
                         ]
                     ))
-                    c3 = Paragraph(criterios3.nombre, styles['Normal'])
+                    c3 = Paragraph(criterios3.nombre, style)
                     tabla3 = tabla3 + [(c3, tablaCriterio4)]
                     tabla4 = []
 
@@ -413,7 +418,7 @@ class ReporteFormulariosPDF(View):
                         ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
                     ]
                 ))
-                c2 = Paragraph(criterios2.nombre, styles['Normal'])
+                c2 = Paragraph(criterios2.nombre, style)
                 tabla2 = tabla2 + [(c2, tablaCriterio3)]
                 tabla3 = []
 
@@ -430,7 +435,7 @@ class ReporteFormulariosPDF(View):
                     ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
                 ]
             ))
-            c1 = Paragraph(criterios1.nombre, styles['Normal'])
+            c1 = Paragraph(criterios1.nombre, style)
             tabla1 = tabla1 + [(c1, tablaCriterio2, '', '')]
             tabla2 = []
 
@@ -463,7 +468,7 @@ class ReporteFormulariosPDF(View):
             pdf = canvas.Canvas(buffer)
             # Llamo al método cabecera donde están definidos los datos que aparecen en la cabecera del reporte.
             self.cabecera(pdf)
-            y = 15
+            y = 12
             self.tabla(pdf, y, userdjango, formulario_id)
             # Con show page hacemos un corte de página para pasar a la siguiente
             pdf.showPage()
