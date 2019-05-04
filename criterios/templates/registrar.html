@@ -5,6 +5,7 @@
 <head>
   
   <meta charset="UTF-8">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="{% static 'css/registrar.css' %}" />
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
@@ -16,7 +17,7 @@
  <!-- Navigation -->
  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">CiteSoft</a>
+        <a class="navbar-brand js-scroll-trigger" href="{%url 'index'%}">CiteSoft</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
             data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -26,7 +27,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav text-uppercase ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#entidad">Entidades</a>
+                    <a class="nav-link js-scroll-trigger" href="entidad">Entidades</a>
                 </li>
                 <div class="btn-group" role="group" aria-label="Basic example">
                     <a class="btn btn-primary btn-lg text-uppercase js-scroll-trigger" href="login">Iniciar</a>

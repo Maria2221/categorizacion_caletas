@@ -2,17 +2,10 @@
 <!DOCTYPE html>
 <html>
  <head>
-  <title>Webslesson Tutorial | Bootstrap Multi Select Dropdown with Checkboxes using Jquery in PHP</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>  
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css" />
-  <link rel="stylesheet" href="{% static 'css/myStyle.css' %}" />
+  <title>Resultado del formulario</title>
   <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
-
-  
+  <link rel="stylesheet" href="{% static 'css/myStyle.css' %}" />
+    
   <!--script type="text/javascript">
     function valor(){
   nuevototal = 0.345; //totEval
@@ -22,59 +15,49 @@
 
  </head>
  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand">Bienvenid@:{{user}}</a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                aria-label="Toggle navigation">
-                Menu
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav text-uppercase ml-auto">
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                        <a class="btn btn-primary btn-lg text-uppercase js-scroll-trigger" href="{%url 'index'%}">Home</a>
-                        <a href="{% url 'logout'%}" >Salir</a>
-                    </div>
-                </ul>
-            </div>
-        </div>
+    {% csrf_token %}
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand">Bienvenid@:{{user}}</a>
+        <form class="form-inline">
+          <a id="resultado" class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{% url 'dash'%}" role= "button">Dashboard</a>
+          <a href="{% url 'logout'%}" >Salir</a>
+        </form>
     </nav>
+
   <form action="{% url 'save'%}" method="post">
-  {% csrf_token %}
+
   <div id="res_content" class="container"> 
 
-    <div class="row" id="res_title">
+    <div class="fila" id="res_title">
 
-      <h2> Resultado de la Evaluacion del Desembarcadero</h2>
+      <h2 class="titulo"> Resultado de la Evaluacion del Desembarcadero</h2>
     </div>
     
     <div class="row" >
       <div class="col-sm-6 res_label">
-        <h4> Tipo de Categoria: </h4>
+        <h4 class="subtitulo"> Tipo de Categoria: </h4>
       </div>
       <div class="col-sm-6 res_desc">
-        <h4> {{ tipo }} </h4>
+        <h4 class="subtitulo"> {{ tipo }} </h4>
         <input type="hidden" name="tipo" value="{{tipo}}"/>
       </div>      
     </div>
 
-    <div class="row" id="">
+    <div class="row" >
       <div class="col-sm-6 res_label">
-        <h4> Nivel Riesgo Productivo: </h4>
+        <h4 class="subtitulo"> Nivel Riesgo Productivo: </h4>
       </div>
       <div class="col-sm-6 res_desc">
-        <h4> {{ nivel }} </h4>
+        <h4 class="subtitulo"> {{ nivel }} </h4>
         <input type="hidden" name="nivel" value="{{nivel}}"/>
       </div>    
     </div>
-    <div class="row" id="">
+    <div class="row" >
       <div class="col-sm-6 res_label">
-        <h4> Ponderado: </h4>
+        <h4 class="subtitulo"> Ponderado: </h4>
       </div>
       <div class="col-sm-6 res_desc">
-        <h4>{{ ponderado }}</h4>
+        <h4 class="subtitulo">{{ ponderado }}</h4>
         <input type="hidden" name="ponderado" value="{{ponderado}}"/>
         <input type="hidden" name="condicion" value="{{condicion}}"/>
       </div>    
@@ -84,7 +67,7 @@
 
     <aside class="avgrund-popup">
     <!--div class = "row" id="ventanaflot"-->
-        <h4>¿Con qué nombre le gustaría guardarlo?</h4>
+        <h4 class="subtitulo">¿Con qué nombre le gustaría guardarlo?</h4>
         <hr>
         <div class="username-row">
         {{form.nombreFormulario}}
@@ -93,8 +76,8 @@
     <!--/div--> 
     </aside>
     <div class="row" id="res_btn">  
-      <button type="button" class="btn btn-success btn-xl" onclick="avgrund.activate()">Guardar</button>
-      <button type="button" class="btn btn-success btn-xl" onclick="RedirectToForm()">Realizar otra Evaluacion</button>
+      <button type="button" class="btn btn-success btn-xl" id="botonverde" onclick="avgrund.activate()">Guardar</button>
+      <button type="button" class="btn btn-success btn-xl" id="botonverde" onclick="RedirectToForm()">Realizar otra Evaluacion</button>
     </div>
   </div>
  </form>
