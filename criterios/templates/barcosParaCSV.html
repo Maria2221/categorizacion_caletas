@@ -1,5 +1,4 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,43 +6,205 @@
   <meta charset="UTF-8">
     <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
   <link rel="stylesheet" href="{% static 'css/cssParaTablas.css' %}" />
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<style>
+
+.hidden{
+    display:none;
+}
+.unhidden{
+    display:block;
+}
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.main {
+  padding: 16px;
+  margin-top: 30px;
+}
+</style>
+
+   <script type="text/javascript">
+function goToByScroll(id) {
+    // Remove "link" from the ID
+    id = id.replace("link", "");
+    // Scroll
+    $('html,body').animate({
+        scrollTop: $("#" + id).offset().top
+    }, 'slow');
+}
+
+$(document).ready(function(){
+  var contarDatos = 0 ;
+
+  $("#ingresoDatosbtn").click(function(){
+    $("#ingresoDatos").addClass("unhidden");
+    $("#ingresoDatos").removeClass("hidden");
+    $("#ingresoDatosbtn").addClass("btn-primary");
+    $("#ingresoDatosbtn").removeClass("btn-default");
+    $("#ingresoDatos").focus();
+
+
+    $("#mostrar").addClass("hidden");
+    $("#mostrar").removeClass("unhidden");
+    $("#mostrarbtn").addClass("btn-default");
+    $("#mostrarbtn").removeClass("btn-primary");
+    $("#visualizar").addClass("hidden");
+    $("#visualizar").removeClass("unhidden");
+    $("#visualizarbtn").addClass("btn-default");
+    $("#visualizarbtn").removeClass("btn-primary");
+
+  });
+   var contarMostrar = 0 ;
+
+  $("#mostrarbtn").click(function(){
+    $("#mostrar").addClass("unhidden");
+    $("#mostrar").removeClass("hidden");
+    $("#mostrarbtn").addClass("btn-primary");
+    $("#mostrarbtn").removeClass("btn-default");
+    $("#visualizar").addClass("hidden");
+    $("#visualizar").removeClass("unhidden");
+    $("#visualizarbtn").addClass("btn-default");
+    $("#visualizarbtn").removeClass("btn-primary");
+    $("#ingresoDatos").addClass("hidden");
+    $("#ingresoDatos").removeClass("unhidden");
+    $("#ingresoDatosbtn").addClass("btn-default");
+    $("#ingresoDatosbtn").removeClass("btn-primary");
+
+
+
+
+  });
+   var contarVisualizar = 0 ;
+  $("#visualizarbtn").click(function(){
+    $("#visualizar").addClass("unhidden");
+    $("#visualizar").removeClass("hidden");
+    $("#visualizarbtn").addClass("btn-primary");
+    $("#visualizarbtn").removeClass("btn-default");
+    $("#mostrar").addClass("hidden");
+    $("#mostrar").removeClass("unhidden");
+    $("#mostrarbtn").addClass("btn-default");
+    $("#mostrarbtn").removeClass("btn-primary");
+    $("#ingresoDatos").addClass("hidden");
+    $("#ingresoDatos").removeClass("unhidden");
+    $("#ingresoDatosbtn").addClass("btn-default");
+    $("#ingresoDatosbtn").removeClass("btn-primary");
+
+
+
+  });
+
+});
+</script>
 </head>
 
 <body>
+<nav class="navbar fixed-top  navbar-light bg-light">
+   <div class="col-md-12 d-flex justify-content-center">
+    <h2>Clasificación de Embarcaciones</h2>
+   </div>
+    <div class="col-md-12 d-flex justify-content-center">
+<div class="btn-group btn-group-justified" role="group" aria-label="...">
 
-<div class="container">
 
-    <div class = "row text-center">
-    <div class = "col-md-12 ">
-        <h1>
-        Clasificación de embarcaciones
+    {% if uploaded_file_url %}
+     <button id ="ingresoDatosbtn"  type="button" class="btn btn-default">Ingreso de datos </button>
+  <button id = "mostrarbtn" type="button" class="btn btn-default">Mostrar Información Filtrada</button>
+  <button id = "visualizarbtn" type="button" class="btn btn-default">Graficar Data</button>
 
-    </h1>
+
+    {% endif %}
+
 </div>
+        </div>
+</nav>
+<div class="container">
+<div class = "row text-center">
+        <div class = "col-md-12 ">
+            <h1>
+                Clasificación de embarcaciones
+
+            </h1>
+        </div>
     </div>
 
+
+  {% if uploaded_file_url == None  %}
+<br>
+    <br>
+    <div id = "ingresoDatos" class="row">
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+      <input type="file" name="myfile">
+
+    <button type="submit">Subir</button>
+</form>
+               <p>Data de muestra en : <a href="../../documentos/databarcos.csv">databarcos.csv</a></p>
+
+
+</div>
+
+    {% endif %}
+
+
+
+
   {% if uploaded_file_url %}
-    <div class="row">
-       <div class="col-md-6">
+
+
+    <div id = "ingresoDatos" class="row hidden">
+
+                    <h2>Ingreso de datos</h2>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+      <input type="file" name="myfile">
+
+    <button type="submit">Subir</button>
+</form>
+               <p>Data de muestra en : <a href="../../documentos/databarcos.csv">databarcos.csv</a></p>
+
+
+</div>
+        <p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
+
+    <div id ="mostrar" class="row hidden">
+
 
         <div class="table-wrapper-scroll-y my-custom-scrollbar">
 
   <table class="table table-bordered table-striped mb-0">
     <thead>
       <tr>
-        <th scope="col">#</th>
+        <th scope="col">Nombre de Embarcacion</th>
+        <th scope="col">Matricula</th>
+        <th scope="col">Regimen</th>
         <th scope="col">Eslora</th>
+        <th scope="col">Manga</th>
+        <th scope="col">Puntal</th>
         <th scope="col">Capacidad de Bodega</th>
+        <th scope="col">Permiso de Pesca</th>
 
       </tr>
     </thead>
     <tbody>
-{% for i,x1,y1 in z %}
-
+{% for nombre,matricula,regimen,eslora,manga,puntal,bodega,permiso in z %}
       <tr>
-        <th scope="row">{{i}}</th>
-        <td>{{x1}}</td>
-        <td>{{y1}}</td>
+        <th scope="row">{{nombre}}</th>
+        <td>{{matricula}}</td>
+          <td>{{regimen}}</td>
+        <td>{{eslora}}</td>
+          <td>{{manga}}</td>
+        <td>{{puntal}}</td>
+                    <td>{{bodega}}</td>
+        <td>{{permiso}}</td>
       </tr>
     {% endfor %}
 
@@ -51,7 +212,8 @@
   </table>
             </div>
 
-       <p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
+            <div class="col-md-6">
+
 <ul >
 <li>Eliminación de datos imposibles son la
 negatividad de las variables, valores
@@ -66,26 +228,64 @@ artesanales:{{e3}}</li>
  <li>Eliminación de datos que contradicen las
 medidas descritas en el paper:{{e4}} </li>
 </ul>
+
+       </div>
+    </div>
+ <div id = "visualizar" class="hidden">
+
+
+
+<div class="row">
+
+<div class="col-md-8">
+<img src="{% static 'img/histograma.png' %}" class="img-fluid" alt="Responsive image">
+</div>
+
+<div class="col-md-4">
+    <br>
+    <br>
+    <br>
+    <h4> Distribución de Embarcaciones</h4>
+    <table class="table">
+
+  <tbody>
+    <tr class = "categoria1">
+      <th scope="row">Categoria 1 </th>
+      <td>{{l1}}</td>
+    </tr>
+    <tr class = "categoria2">
+      <th scope="row">Categoria 2 </th>
+      <td>{{l2}}</td>
+    </tr>
+    <tr class = "categoria3">
+      <th scope="row">Categoria 3 </th>
+      <td>{{l3}}</td>
+    </tr>
+    <tr class = "categoria4">
+      <th scope="row">Categoria 4 </th>
+      <td>{{l4}}</td>
+    </tr>
+    <tr class = "categoria5">
+      <th scope="row">Sin Categoria </th>
+      <td>{{l5}}</td>
+    </tr>
+<tr class = "categoria5">
+      <th scope="row">Total </th>
+      <td>{{total}}</td>
+    </tr>
+
+   </tbody>
+</table>
+
+</div>
+</div>
+
  </div>
 
-<div class="col-md-3">
-<img src="{% static 'img/histograma.png' %}">
-</div>
+    {% endif %}
 
     </div>
-    {% endif %}
-<div class="row">
-<form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-
-      <input type="file" name="myfile">
-    <button type="submit">Upload</button>
-</form>
-</div>
-</div>
-
 {% block js %}
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 {% endblock %}
 {% block extrajs %}
 {% endblock %}

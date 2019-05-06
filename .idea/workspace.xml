@@ -1,19 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/criterios/views.py" line="568" mnemonic="2" />
+    <bookmark url="file://$PROJECT_DIR$/criterios/views.py" line="575" mnemonic="2" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd3b5cdf-9b7b-47e1-b1ed-6a17b006d519" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/criterios/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/criterios/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/criterios/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/criterios/templates/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/criterios/templates/formulario.html" beforeDir="false" afterPath="$PROJECT_DIR$/criterios/templates/formulario.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/criterios/templates/iniciar.html" beforeDir="false" afterPath="$PROJECT_DIR$/criterios/templates/iniciar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/categorizacion_caletas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/categorizacion_caletas.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/categorizacion_caletas/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/categorizacion_caletas/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/categorizacion_caletas/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/categorizacion_caletas/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/criterios/templates/barcosParaCSV.html" beforeDir="false" afterPath="$PROJECT_DIR$/criterios/templates/barcosParaCSV.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/criterios/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/criterios/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/criterios/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/criterios/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/criterios/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/criterios/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databarcos.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/databarcos_JK0bLFN.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/databarcos_OcQdPYe.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/databarcos_S5LFJwZ.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/databarcos_frb94zq.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/form_crit.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/form_crit.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_0P6g6Fk.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_3I3XSFq.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_4XeO7hm.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_5M8TZ25.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_5PIbUOt.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_5RSGUQ0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_5Tv9aeJ.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_5mO10ei.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_7jTNVof.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_8dwyMD8.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_8tuuJja.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_9pqZGm9.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_A5d5an0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_ASDeH46.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_ButtnLv.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_D3L0Kcx.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_FsQsiU1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_G13aKVo.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_GSz1CkR.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_JTLDXvH.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_NHXlA5z.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_Nj8nd6O.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_NmtOVcu.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_P48SBgx.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_PMLan8Q.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_PR2QuVX.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_SBvO9Yg.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_SmoIKgt.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_SoHbw44.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_VtJ5xZr.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_W6ITCn9.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_XLNJbs6.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_Y0FYqI4.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_aNQeNIO.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_bn60v4h.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_brjyQ8d.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_cDZpyRf.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_cchFGjQ.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_cuSGwgm.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_d16wrSE.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_d9DKf3a.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_e4s25bc.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_eCXd7NL.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_esVSVRY.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_f9IIoYA.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_g0Rq33o.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_gBViVKv.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_gR9WJ7g.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_gsOftxo.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_hEW3lxp.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_hddf1pX.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_itez0IJ.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_j1H8k8u.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_j30HxkU.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_j52kIsg.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_jYtlMNr.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_kcnvzgy.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_n84W2nO.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_np4DaQt.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_oJb4YsP.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_oPAjHrc.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_pBtKPoE.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_qVvlGr3.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_sAh4OKg.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_vRaabXd.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_vaAEOX0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_voXt1sr.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_woXuLfN.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_y4MfWf4.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_ySWDPXi.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/databarcos_ypHFVFU.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/plot3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentos/plot3_CnBqGXm.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/cssParaTablas.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/cssParaTablas.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/histograma.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/histograma.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/kiwisolver-1.1.0.dist-info/INSTALLER" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/kiwisolver-1.1.0.dist-info/METADATA" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/kiwisolver-1.1.0.dist-info/RECORD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/kiwisolver-1.1.0.dist-info/WHEEL" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/kiwisolver-1.1.0.dist-info/top_level.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/kiwisolver.cpython-36m-x86_64-linux-gnu.so" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/kiwisolver.cpython-36m-x86_64-linux-gnu.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib-3.0.3-py3.6-nspkg.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib-3.0.3.dist-info/INSTALLER" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib-3.0.3.dist-info/METADATA" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib-3.0.3.dist-info/RECORD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib-3.0.3.dist-info/WHEEL" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib-3.0.3.dist-info/namespace_packages.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib-3.0.3.dist-info/top_level.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/_color_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/_color_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/_path.cpython-36m-x86_64-linux-gnu.so" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/_path.cpython-36m-x86_64-linux-gnu.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/_png.cpython-36m-x86_64-linux-gnu.so" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/_png.cpython-36m-x86_64-linux-gnu.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/_version.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/_version.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/artist.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/artist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/axes/_axes.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/axes/_axes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/backends/_backend_agg.cpython-36m-x86_64-linux-gnu.so" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/backends/_backend_agg.cpython-36m-x86_64-linux-gnu.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/backends/_gtk3_compat.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/backends/_gtk3_compat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/backends/_tkagg.cpython-36m-x86_64-linux-gnu.so" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/backends/_tkagg.cpython-36m-x86_64-linux-gnu.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/backends/backend_cairo.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/backends/backend_cairo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/backends/backend_ps.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/backends/backend_ps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/backends/qt_editor/figureoptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/backends/qt_editor/figureoptions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/backends/web_backend/all_figures.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/backends/web_backend/all_figures.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/backends/web_backend/jquery-ui-1.12.1/AUTHORS.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/backends/web_backend/jquery-ui-1.12.1/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/backends/web_backend/jquery-ui-1.12.1/external/jquery/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/backends/web_backend/jquery-ui-1.12.1/images/ui-icons_444444_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/backends/web_backend/jquery-ui-1.12.1/images/ui-icons_555555_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/backends/web_backend/jquery-ui-1.12.1/images/ui-icons_777620_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/backends/web_backend/jquery-ui-1.12.1/images/ui-icons_777777_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/backends/web_backend/jquery-ui-1.12.1/images/ui-icons_cc0000_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/backends/web_backend/jquery-ui-1.12.1/images/ui-icons_ffffff_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/backends/web_backend/jquery-ui-1.12.1/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/backends/web_backend/jquery-ui-1.12.1/jquery-ui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/backends/web_backend/jquery-ui-1.12.1/jquery-ui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/backends/web_backend/jquery-ui-1.12.1/jquery-ui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/backends/web_backend/jquery-ui-1.12.1/jquery-ui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/backends/web_backend/jquery-ui-1.12.1/jquery-ui.structure.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/backends/web_backend/jquery-ui-1.12.1/jquery-ui.structure.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/backends/web_backend/jquery-ui-1.12.1/jquery-ui.theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/backends/web_backend/jquery-ui-1.12.1/jquery-ui.theme.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/backends/web_backend/jquery-ui-1.12.1/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/backends/web_backend/single_figure.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/backends/web_backend/single_figure.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/category.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/category.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/colorbar.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/colorbar.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/contour.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/contour.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/dates.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/dates.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/figure.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/figure.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/ft2font.cpython-36m-x86_64-linux-gnu.so" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/ft2font.cpython-36m-x86_64-linux-gnu.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/image.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/image.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/mlab.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/mlab.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/pyplot.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/pyplot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/scale.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/scale.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/testing/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/testing/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/tests/test_axes.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/tests/test_axes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/tests/test_backend_cairo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/tests/test_bbox_tight.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/tests/test_bbox_tight.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/tests/test_dates.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/tests/test_dates.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/tests/test_figure.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/tests/test_figure.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/tests/test_image.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/tests/test_image.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/tests/test_preprocess_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/tests/test_preprocess_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/tests/test_ticker.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/tests/test_ticker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/ticker.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/ticker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/widgets.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/widgets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/mpl_toolkits/mplot3d/axes3d.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/mpl_toolkits/mplot3d/axes3d.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/mpl_toolkits/tests/test_axes_grid1.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/mpl_toolkits/tests/test_axes_grid1.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,43 +193,12 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/criterios/urls.py">
+        <entry file="file://$PROJECT_DIR$/categorizacion_caletas/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="37" column="60" selection-start-line="37" selection-start-column="50" selection-end-line="37" selection-end-column="60" />
+            <state relative-caret-position="315">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
               <folding>
-                <element signature="e#0#46#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/criterios/templates/iniciar.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/criterios/templates/obtenerBarcos.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="38" column="36" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/criterios/templates/barcosParaCSV.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="65" column="4" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="4" />
-              <folding>
-                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="e#646#678#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -86,41 +207,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/css/cssParaTablas.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/criterios/templates/dashboard.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
-              <folding>
-                <element signature="n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/criterios/templates/formulario.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="94" column="6" selection-start-line="94" selection-start-column="6" selection-end-line="94" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/criterios/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="191" column="28" selection-start-line="191" selection-start-column="28" selection-end-line="191" selection-end-column="28" />
-              <folding>
-                <element signature="e#0#64#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="60">
+              <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -128,10 +216,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/criterios/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="233" column="15" selection-start-line="233" selection-start-column="15" selection-end-line="233" selection-end-column="15" />
+            <state relative-caret-position="170">
+              <caret line="378" column="33" lean-forward="true" selection-start-line="378" selection-start-column="33" selection-end-line="378" selection-end-column="33" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/criterios/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="559" column="26" selection-start-line="559" selection-start-column="26" selection-end-line="559" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#64#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/criterios/templates/barcosParaCSV.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="138" column="8" selection-start-line="138" selection-start-column="8" selection-end-line="138" selection-end-column="8" />
+              <folding>
+                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
               </folding>
             </state>
           </provider>
@@ -152,7 +265,18 @@
       <find>Workbook</find>
       <find>usuariomodelo</find>
       <find>salida</find>
+      <find>eliminados</find>
+      <find>django.core.urlresolvers</find>
+      <find>progres</find>
     </findStrings>
+    <replaceStrings>
+      <replace>e</replace>
+      <replace>mostrar</replace>
+      <replace>visualizar</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -164,15 +288,22 @@
         <option value="$PROJECT_DIR$/settings.py" />
         <option value="$PROJECT_DIR$/criterios/models.py" />
         <option value="$PROJECT_DIR$/criterios/Utils/ProcesarCSV.py" />
-        <option value="$PROJECT_DIR$/criterios/utils.py" />
-        <option value="$PROJECT_DIR$/static/css/cssParaTablas.css" />
-        <option value="$PROJECT_DIR$/criterios/views.py" />
-        <option value="$PROJECT_DIR$/criterios/urls.py" />
         <option value="$PROJECT_DIR$/criterios/templates/iniciar.html" />
         <option value="$PROJECT_DIR$/criterios/templates/dashboard.html" />
+        <option value="$PROJECT_DIR$/criterios/urls.py" />
+        <option value="$PROJECT_DIR$/categorizacion_caletas/settings.py" />
+        <option value="$PROJECT_DIR$/categorizacion_caletas/urls.py" />
+        <option value="$PROJECT_DIR$/criterios/views.py" />
+        <option value="$PROJECT_DIR$/static/css/cssParaTablas.css" />
+        <option value="$PROJECT_DIR$/criterios/utils.py" />
         <option value="$PROJECT_DIR$/criterios/templates/barcosParaCSV.html" />
       </list>
     </option>
+  </component>
+  <component name="InvalidFacetManager">
+    <ignored-facets>
+      <facet id="categorizacion_caletas/invalid/Django" />
+    </ignored-facets>
   </component>
   <component name="ProjectConfigurationFiles">
     <option name="files">
@@ -207,6 +338,11 @@
             <path>
               <item name="categorizacion_caletas" type="b2602c69:ProjectViewProjectNode" />
               <item name="categorizacion_caletas" type="462c0819:PsiDirectoryNode" />
+              <item name="categorizacion_caletas" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="categorizacion_caletas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="categorizacion_caletas" type="462c0819:PsiDirectoryNode" />
               <item name="criterios" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -215,17 +351,6 @@
               <item name="criterios" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="categorizacion_caletas" type="b2602c69:ProjectViewProjectNode" />
-              <item name="categorizacion_caletas" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="categorizacion_caletas" type="b2602c69:ProjectViewProjectNode" />
-              <item name="categorizacion_caletas" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -233,6 +358,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/criterios/templates" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -360,7 +486,7 @@
     <frame x="-1" y="28" width="1368" height="713" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24720775" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.24720775" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -373,8 +499,8 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4981385" weight="0.32876712" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50335073" side_tool="true" visible="true" weight="0.35787672" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4966493" visible="true" weight="0.35787672" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5063291" side_tool="true" weight="0.35787672" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49367088" visible="true" weight="0.35787672" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32876712" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -382,9 +508,43 @@
       <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="right" id="Database" order="4" weight="0.32954547" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24720775" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4973939" weight="0.2380137" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4996277" weight="0.32876712" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4981385" weight="0.32876712" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5063291" side_tool="true" weight="0.35787672" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49367088" visible="true" weight="0.35787672" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32876712" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32954547" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/criterios/utils.py</url>
+          <line>13</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/anaconda3/envs/pytorch/lib/python3.6/site-packages/django/contrib/admin/sites.py">
@@ -401,39 +561,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/categorizacion_caletas/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/categorizacion_caletas/wsgi.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/categorizacion_caletas/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-          <folding>
-            <element signature="e#646#678#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/criterios/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/criterios/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/criterios/apps.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/criterios/templates/registration/reset_complete.html">
@@ -455,19 +586,10 @@
     <entry file="file://$PROJECT_DIR$/dataCriterios.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="9" selection-start-column="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/databarcos_S5LFJwZ.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/databarcos_S5LFJwZ.csv" />
     <entry file="file://$PROJECT_DIR$/runtime.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -493,10 +615,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/criterios/templates/iniciar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/criterios/templates/registrar.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/criterios/templates/formulario.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/criterios/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/criterios/templates/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="56" column="29" lean-forward="true" selection-start-line="56" selection-start-column="29" selection-end-line="56" selection-end-column="29" />
+          <folding>
+            <element signature="n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/criterios/templates/obtenerBarcos.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/criterios/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="165" column="24" selection-start-line="165" selection-start-column="24" selection-end-line="165" selection-end-column="24" />
+        <state relative-caret-position="499">
+          <caret line="169" column="15" selection-start-line="169" selection-start-column="4" selection-end-line="169" selection-end-column="15" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
@@ -504,85 +666,90 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/criterios/templates/vistaCSV.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/cssParaTablas.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/criterios/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="191" column="28" selection-start-line="191" selection-start-column="28" selection-end-line="191" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/criterios/templates/formulario.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="94" column="6" selection-start-line="94" selection-start-column="6" selection-end-line="94" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/criterios/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="233" column="15" selection-start-line="233" selection-start-column="15" selection-end-line="233" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/criterios/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="37" column="60" selection-start-line="37" selection-start-column="50" selection-end-line="37" selection-end-column="60" />
+        <state>
           <folding>
             <element signature="e#0#46#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/criterios/templates/dashboard.html">
+    <entry file="file://$PROJECT_DIR$/criterios/apps.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/criterios/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+        <state>
           <folding>
-            <element signature="n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Procfile">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/criterios/templates/iniciar.html">
+    <entry file="file://$PROJECT_DIR$/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+        <state>
+          <caret column="9" selection-start-column="9" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/criterios/templates/obtenerBarcos.html">
+    <entry file="file://$PROJECT_DIR$/categorizacion_caletas/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="136" selection-start-line="136" selection-end-line="136" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/categorizacion_caletas/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#646#678#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/cssParaTablas.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/criterios/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="559" column="26" selection-start-line="559" selection-start-column="26" selection-end-line="559" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/criterios/utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="38" column="36" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
+          <caret line="378" column="33" lean-forward="true" selection-start-line="378" selection-start-column="33" selection-end-line="378" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/criterios/templates/barcosParaCSV.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="65" column="4" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="4" />
+        <state relative-caret-position="90">
+          <caret line="138" column="8" selection-start-line="138" selection-start-column="8" selection-end-line="138" selection-end-column="8" />
           <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
             <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>

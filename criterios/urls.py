@@ -13,8 +13,7 @@ urlpatterns = [
     re_path(r'resultado/categoryD/', views.resultadoD),
     re_path(r'form_eval$', views.criterios_list),
     re_path(r'prossc_eval$', views.prossc_eval),
-
-    #botones de página principal 
+    #botones de página principal
     re_path(r'register$', views.register),     
     re_path(r'addUsuario$', views.addUsuario, name='addUser'),
     
