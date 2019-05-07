@@ -69,7 +69,8 @@ $("#maria").attr("disabled", true);
 </script>
 
 <body>
-  <nav class="navbar navbar-light bg-light">
+	
+	<nav class="navbar navbar-light bg-light">
 		<a class="navbar-brand">Bienvenid@:{{user}}</a>
 		<form class="form-inline">
 			<a href="{% url 'logout'%}" >Salir</a>
@@ -77,18 +78,13 @@ $("#maria").attr("disabled", true);
 	</nav>
 	<div id="content" class="container">
      <div class="row">
-        <input id ="funciona" type="button" class ="btn btn-primary" onclick="unhide(this, 'about') " value="Propuesta 1">
+        <input id ="funciona" type="button" class ="btn btn-primary" onclick="unhide(this, 'about') " value="evaluar">
 
-            <input id ="funciona2" type="button"  class ="btn btn-primary" onclick="unhide(this, 'about') " value="Propuesta 2">
+            <input id ="funciona2" type="button"  class ="btn btn-primary" onclick="unhide(this, 'about') " value="clasificar">
+
+
      </div>
-  <div class="leyenda">
-    <p>Propuesta 1</p> 
-    <p>Clasificacion de embarcaciones artesanales</p>
- 
-    <p>Propuesta 2</p>
-    <p>Clasificacion de desembarcaderos pesqueros artesanales (DPAS)</p>
-  </div>
-	<div id="maria" class="hidden">
+		<div id="maria" class="hidden">
         <div id="crit_head" class="row">
 			<h2>Evaluación de Desembarcaderos Pesqueros Artesanales</h2>	
 		</div>

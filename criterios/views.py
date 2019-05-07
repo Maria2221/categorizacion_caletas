@@ -15,7 +15,7 @@ from django.shortcuts import render
 from django.core.files.storage import FileSystemStorage
 from django import forms
 from .models import Barco
-from  .utils import procesar
+from  .utils import procesar,procesar2
 from .models import CSV
 import logging
 from django.contrib.messages import constants as messages
@@ -211,8 +211,6 @@ def re_desembarco(request, formulario_id):
 def prossc_eval(request):
     context = {'form': LoginForm}
     return render(request, 'resultado.html', context)
-
-
 # pagina principal para el usuario
 def register(request):
     context = {'form': RegistrationForm}
@@ -240,8 +238,6 @@ def addUsuario(request):
 
 def dash(request):
     return render(request, 'dashboard.html')
-
-
 # devolver solo los ultimos 25 o 30
 
 # pagina de resultados en xls
@@ -323,6 +319,7 @@ class getBarcosFormularioBorrego(TemplateView):
 
 
 # PDF
+import os
 from django.conf import settings
 from io import BytesIO
 from reportlab.pdfgen import canvas
@@ -333,6 +330,7 @@ from reportlab.lib import colors
 from reportlab.lib.pagesizes import letter, landscape
 from reportlab.platypus import Table
 from reportlab.lib.units import inch, cm
+import numpy as np
 
 
 class ReporteFormulariosPDF(View):
@@ -597,25 +595,28 @@ def upload_csv(request):
         #userdjango = request.user.get_username()
        # nombreArchivo =  CSV.objects.get(nombreArchivo=filename)
 
-        eliminadosLogica,eliminadosEsloraManga,eliminadosNoArtesanales,eliminadosPaper,eliminadosRegresion, total,x,y,l1,l2,l3,l4,resto = procesar(filename)
-        csv = CSV(nombreArchivo= filename,eliminados1 = eliminadosLogica ,eliminados2=eliminadosEsloraManga,eliminados3=eliminadosNoArtesanales,eliminados4 =eliminadosPaper)
+        eLogica,eEsloraManga,eNoArtesanales,ePaper,eRegresion, total,data,l1,l2,l3,l4,l5 = procesar2(filename)
+        csv = CSV(nombreArchivo=filename,eliminados1=eLogica,eliminados2=eEsloraManga,eliminados3=eNoArtesanales,eliminados4=ePaper)
         csv.save()
 
-        id = range(len(x))
+        datalongo = np.arange(len(data))
+        datalongo = datalongo+1
+
         return render(request, 'barcosParaCSV.html', {
             'uploaded_file_url': uploaded_file_url,
  #           'other_content': other_content,
-            'e1':eliminadosLogica,
-            'e2':eliminadosEsloraManga,
-            'e3':eliminadosNoArtesanales,
-            'e4':eliminadosPaper,
-            'z':list(zip(id,x,y)),
-
+            'e1':eLogica,
+            'e2':eEsloraManga,
+            'e3':eNoArtesanales,
+            'e4':ePaper,
+            'z':zip(datalongo,data['EMBARCACION'],data['MATRICULA'],data['REGIMEN'],data['ESLORA'].round(2),data['MANGA'].round(2),data['PUNTAL'].round(2),data['CAPBOD_M3'].round(2),data['PERMISO PESCA']),
             'l1':l1,
-            'l2':l2,
-            'l3':l3,
-            'l4':l4,
-            'resto':resto,
+            'l2': l2,
+            'l3': l3,
+            'l4': l4,
+            'l5': l5,
+
+            'total': total,
 
         })
     return render(request, "barcosParaCSV.html", data)

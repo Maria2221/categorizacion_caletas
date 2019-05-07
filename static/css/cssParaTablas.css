@@ -5,4 +5,28 @@ overflow: auto;
 }
 .table-wrapper-scroll-y {
 display: block;
+<<<<<<< HEAD
 }
+=======
+}
+
+tr.categoria1 {
+    background-color:rgba(0, 0, 51, 0.7);
+    color:white;
+}
+
+tr.categoria2 {
+    background-color:rgba(0, 0, 0, 0.7);
+    color:white;
+}
+
+tr.categoria3 {
+    background-color:rgba(102, 0, 0, 0.7);
+    color:white;
+}
+
+tr.categoria4 {
+    background-color:rgba(0, 153, 0, 0.7);
+    color:white;
+}
+>>>>>>> origin/borrego2

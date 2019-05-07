@@ -3,7 +3,11 @@
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
   </component>
+<<<<<<< HEAD
   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.6 (local)" project-jdk-type="Python SDK" />
+=======
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.6 (categorizacion_caletas)" project-jdk-type="Python SDK" />
+>>>>>>> origin/borrego2
   <component name="PyCharmProfessionalAdvertiser">
     <option name="shown" value="true" />
   </component>
