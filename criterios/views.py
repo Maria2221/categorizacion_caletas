@@ -15,7 +15,7 @@ from django.shortcuts import render
 from django.core.files.storage import FileSystemStorage
 from django import forms
 from .models import Barco
-from  .utils import procesar,procesar2
+from  .utils import procesar,procesar2, contenidoTablaCategorias, contenidoTablaRiesgos
 from .models import CSV
 import logging
 from django.contrib.messages import constants as messages
@@ -379,15 +379,10 @@ class ReporteFormulariosPDF(View):
         t.drawOn(pdf, 30, 520)
 
         pdf.setFont("Helvetica", 7)
-        pdf.drawString(30, 480, u"Que significa las Categorias:")
-
-        pie_pagin = [('Categoria I: ', 'Su puntuación se encuentra entre un 76-100 de la escala de evaluación, por ende, representa un nivel de desarrollo muy optimo, con la tendencia de convertirse en uno de los desembarcaderos optimizados a nivel de Desarrollo. ESTADO BUENO.'),
-                    ('Categoria II:', 'Su puntuación se encuentra entre un 75-50 de la escala de evaluación, por ende, representa un nivel de desarrollo optimo, con la tendencia de ser desembarcaderos normales. ESTADO REGULAR.'),
-                    ('Categoria III:', 'Su puntuación se encuentra entre un 26-50 de la escala de evaluación, por ende, representa un nivel de desarrollo bajo, con la tendencia de convertirse en uno de los desembarcaderos que necesita focalizar recursos económicos. ESTADO MALO'),
-                    ('Categoria IV:', 'Su puntuación se encuentra entre un 0-25 de la escala de evaluación, por ende, representa un nivel de desarrollo malo, con la tendencia de convertirse en uno de los desembarcaderos con mucha precariedad y habría que focalizar recursos económicos. ESTADO MUY MALO.'),
-                    ]
-
-        t_pie = Table(pie_pagin)
+        pdf.drawString(30, 495, u"Que significa las Categorias:")
+          
+        pie_pagin = contenidoTablaCategorias()
+        t_pie = Table(pie_pagin,colWidths=[2* cm, 16 * cm])
         t_pie.setStyle(TableStyle(
             [
                 ('GRID', (0, 0), (3, -1), 1, colors.black),
@@ -396,19 +391,14 @@ class ReporteFormulariosPDF(View):
                 ('FONTSIZE', (0, 0), (-1, -1), 7)
             ]
         ))
-        t_pie.wrapOn(pdf, 800, 600)
+        t_pie.wrapOn(pdf, 400, 400)
         t_pie.drawOn(pdf, 30, 400)
 
         pdf.setFont("Helvetica", 7)
         pdf.drawString(30, 380, u"Que significa Nivel de Riesgo Productivo:")
-
-        pie_pagin_riesgo = [('Productividad Alta: ','Aquel Desembarcadero que se encuentra entre los rangos oscilados de 76-100'),
-                 ('Productividad Mediana:','Aquel Desembarcadero que se encuentra entre los rangos oscilados de 51-75. (Tomar medidas de implementación y revisar procesos de implementación)'),
-                 ('Productividad Mediana Baja:','Aquel Desembarcadero que se encuentra entre los rangos oscilados de 26-50. (Tomar medidas urgentes)'),
-                 ('Productividad Muy Baja:', 'Aquel Desembarcadero que se encuentra entre los rangos oscilados de 0-25. (Tomar medidas urgentes)'),
-                 ]
-
-        t_pie_riesgo = Table(pie_pagin_riesgo)
+        pie_pagin_riesgo = contenidoTablaRiesgos()
+        
+        t_pie_riesgo = Table(pie_pagin_riesgo,colWidths=[2* cm, 16 * cm])
         t_pie_riesgo.setStyle(TableStyle(
         [
             ('GRID', (0, 0), (3, -1), 1, colors.black),
@@ -418,7 +408,7 @@ class ReporteFormulariosPDF(View):
         ]
     ))
         t_pie_riesgo.wrapOn(pdf, 800, 500)
-        t_pie_riesgo.drawOn(pdf, 30, 300)
+        t_pie_riesgo.drawOn(pdf, 30, 275)
 
     def tablacuadro(self, pdf, doc, y, userdjango, formulario_id):
         usuariomodelo = Usuario.objects.get(usuario=userdjango)
@@ -548,9 +538,9 @@ class ReporteFormulariosPDF(View):
             y=10
 #Con show page hacemos un corte de página para pasar a la siguiente
             self.tabla(pdf,doc, y, userdjango, formulario_id)
-
             pdf.showPage()
             self.tablacuadro(pdf,doc,y,userdjango,formulario_id)
+            pdf.showPage()
             pdf.save()
             pdf = buffer.getvalue()
             buffer.close()

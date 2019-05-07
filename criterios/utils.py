@@ -10,6 +10,12 @@ import sklearn.linear_model
 from matplotlib.pylab import hist, show
 from sklearn.cluster import KMeans
 from sklearn.datasets import make_blobs
+from reportlab.platypus import SimpleDocTemplate, Paragraph, TableStyle
+from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+from reportlab.lib import colors
+from reportlab.lib.pagesizes import letter, landscape
+from reportlab.platypus import Table
+from reportlab.lib.units import inch, cm
 import math
 from sklearn.linear_model import LinearRegression
 import pandas as pd
@@ -484,3 +490,45 @@ def procesar2(archivoNombre):
     l5 = newlen -l1-l2-l3-l4
 
     return eliminadosLogica,eliminadosEsloraManga,eliminadosNoArtesanales,eliminadosPaper,eliminadosRegresion, total,data,l1,l2,l3,l4,l5
+
+def contenidoTablaCategorias():
+    styles = getSampleStyleSheet()
+    cates_estilo = ParagraphStyle(name='right', parent=styles['Normal'], fontName='Helvetica',
+                               fontSize=7, leading=8)
+    cate1 = Paragraph("Categoria I", cates_estilo)
+    cate2 = Paragraph("Categoria II", cates_estilo)
+    cate3 = Paragraph("Categoria III", cates_estilo)
+    cate4 = Paragraph("Categoria IV", cates_estilo)
+    des1 = Paragraph("Su puntuación se encuentra entre un 76-100 de la escala de evaluación, por ende, representa un nivel de desarrollo muy optimo, con la tendencia de \n convertirse en uno de los desembarcaderos optimizados a nivel de Desarrollo. ESTADO BUENO.", cates_estilo)
+    des2 = Paragraph("Su puntuación se encuentra entre un 75-50 de la escala de evaluación, por ende, representa un nivel de desarrollo optimo, con la tendencia de ser desembarcaderos normales. ESTADO REGULAR.", cates_estilo)
+    des3 = Paragraph("Su puntuación se encuentra entre un 26-50 de la escala de evaluación, por ende, representa un nivel de desarrollo bajo, con la tendencia de convertirse en uno de los desembarcaderos que necesita focalizar recursos económicos. ESTADO MALO", cates_estilo)
+    des4 = Paragraph("Su puntuación se encuentra entre un 0-25 de la escala de evaluación, por ende, representa un nivel de desarrollo malo, con la tendencia de convertirse en uno de los desembarcaderos con mucha precariedad y habría que focalizar recursos económicos. ESTADO MUY MALO.", cates_estilo)
+    
+    contenidoTabla = [(cate1,des1),
+                    (cate2,des2),
+                    (cate3,des3),
+                    (cate4,des4),]
+
+    return contenidoTabla
+
+def contenidoTablaRiesgos():
+    styles = getSampleStyleSheet()
+    cates_estilo = ParagraphStyle(name='right', parent=styles['Normal'], fontName='Helvetica',
+                               fontSize=7, leading=8)
+    ries1 = Paragraph("Productividad Alta:", cates_estilo)
+    ries2 = Paragraph("Productividad Mediana:", cates_estilo)
+    ries3 = Paragraph("Productividad Mediana Baja:", cates_estilo)
+    ries4 = Paragraph("Productividad Muy Baja:", cates_estilo)
+    des_ries1 = Paragraph("Aquel Desembarcadero que se encuentra entre los rangos oscilados de 76-100:", cates_estilo)
+    des_ries2 = Paragraph("Aquel Desembarcadero que se encuentra entre los rangos oscilados de 51-75. (Tomar medidas de implementación y revisar procesos de implementación)", cates_estilo)
+    des_ries3 = Paragraph("Aquel Desembarcadero que se encuentra entre los rangos oscilados de 26-50. (Tomar medidas urgentes)", cates_estilo)
+    des_ries4 = Paragraph("Aquel Desembarcadero que se encuentra entre los rangos oscilados de 0-25. (Tomar medidas urgentes)", cates_estilo)
+    
+    contenidoTablaRiesgos = [(ries1,des_ries1),
+                    (ries2,des_ries2),
+                    (ries3,des_ries3),
+                    (ries4,des_ries4),]
+
+    return contenidoTablaRiesgos
+
+
