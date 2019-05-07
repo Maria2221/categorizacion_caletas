@@ -323,7 +323,6 @@ class getBarcosFormularioBorrego(TemplateView):
 
 
 # PDF
-import os
 from django.conf import settings
 from io import BytesIO
 from reportlab.pdfgen import canvas
@@ -331,38 +330,110 @@ from django.views.generic import View
 from reportlab.platypus import SimpleDocTemplate, Paragraph, TableStyle
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib import colors
-from reportlab.lib.pagesizes import letter
+from reportlab.lib.pagesizes import letter, landscape
 from reportlab.platypus import Table
 from reportlab.lib.units import inch, cm
 
 
 class ReporteFormulariosPDF(View):
 
-    def cabecera(self, pdf):
-        archivo_imagen = 'static/img/logos/citesoft.jpg'
-        pdf.drawImage(archivo_imagen, 30, 750, 120, 90, preserveAspectRatio=True)
-        pdf.setFont("Helvetica", 16)
-        # Dibujamos una cadena en la ubicación X,Y especificada
-        pdf.drawString(280, 800, u"PDF")
-        pdf.setFont("Helvetica", 14)
-        pdf.drawString(200, 780, u"REPORTE DE FORMULARIOS")
 
-    def tabla(self, pdf, y, userdjango, formulario_id):
+    def tabla(self,pdf, doc , y, userdjango, formulario_id):
+        usuariomodelo = Usuario.objects.get(usuario=userdjango)
+        formularios = usuariomodelo.formulario_set.get(pk= formulario_id) #lista delformulario
+
+        archivo_imagen = 'static/img/logos/cite.jpg'
+        archivo_imagensec = 'static/img/logos/unsa.jpg'
+        pdf.drawImage(archivo_imagensec, 30, 750, 90, 90, preserveAspectRatio=True)
+        pdf.setFont("Helvetica", 14)
+        pdf.drawString(190, 800, u"Reporte de Formulario de " + formularios.nombreFormulario)
+        pdf.setFont("Helvetica", 12)
+        pdf.drawString(170, 780, u"UNIVERSIDAD NACIONAL DE SAN AGUSTIN")
+        pdf.drawImage(archivo_imagen, 470, 750, 90, 90, preserveAspectRatio=True)
+        # pdf.drawString(500, 750, u"cuadro")
+        pdf.setFont("Helvetica", 14)
+        pdf.drawString(30, 730, u"Datos del Evaluador")
+
+        todasevaluador = [('Reporte Nro:', ' '),
+    ('GeneradoBR:',' '),('Apellidos y Nombre:',usuariomodelo.apellido+" "+usuariomodelo.nombre),
+    ('Usuario:',usuariomodelo.usuario),('DNI:',usuariomodelo.dni),
+    ('Correo:',usuariomodelo.correo),('Institucion:',usuariomodelo.instituto)]
+        tabla = Table(todasevaluador)
+        tabla.setStyle(TableStyle([('BACKGROUND',(1,1),(-2,-2),colors.white),
+                   ('TEXTCOLOR',(0,0),(1,-1),colors.black)]))
+        tabla.wrapOn(pdf, 800, 600)
+        #Definimos la coordenada donde se dibujará la tabl
+        tabla.drawOn(pdf, 25,600)
+
+        pdf.drawString(30,560,u"Resultado de la Evaluacion del Desembarcadero")
+        headings = ('Tipo de Desembarcadero', 'Nivel de Desembarcadero')
+        todascategorias = [(formularios.tipo, formularios.nivel)]
+        t = Table([headings] + todascategorias)
+        t.setStyle(TableStyle(
+        [
+            ('GRID', (0, 0), (3, -1), 1, colors.black),
+            ('LINEBELOW', (0, 0), (-1, 0), 2, colors.black),
+            ('BACKGROUND', (0, 0), (-1, 0), colors.lightblue)
+        ]
+        ))
+        t.wrapOn(pdf, 800, 600)
+        # Definimos la coordenada donde se dibujará la tabl
+        t.drawOn(pdf, 30, 520)
+
+        pdf.setFont("Helvetica", 7)
+        pdf.drawString(30, 480, u"Que significa las Categorias:")
+
+        pie_pagin = [('Categoria I: ', 'Su puntuación se encuentra entre un 76-100 de la escala de evaluación, por ende, representa un nivel de desarrollo muy optimo, con la tendencia de convertirse en uno de los desembarcaderos optimizados a nivel de Desarrollo. ESTADO BUENO.'),
+                    ('Categoria II:', 'Su puntuación se encuentra entre un 75-50 de la escala de evaluación, por ende, representa un nivel de desarrollo optimo, con la tendencia de ser desembarcaderos normales. ESTADO REGULAR.'),
+                    ('Categoria III:', 'Su puntuación se encuentra entre un 26-50 de la escala de evaluación, por ende, representa un nivel de desarrollo bajo, con la tendencia de convertirse en uno de los desembarcaderos que necesita focalizar recursos económicos. ESTADO MALO'),
+                    ('Categoria IV:', 'Su puntuación se encuentra entre un 0-25 de la escala de evaluación, por ende, representa un nivel de desarrollo malo, con la tendencia de convertirse en uno de los desembarcaderos con mucha precariedad y habría que focalizar recursos económicos. ESTADO MUY MALO.'),
+                    ]
+
+        t_pie = Table(pie_pagin)
+        t_pie.setStyle(TableStyle(
+            [
+                ('GRID', (0, 0), (3, -1), 1, colors.black),
+                ('LINEBELOW', (0, 0), (-1, 0), 1, colors.black),
+                ('BACKGROUND', (0, 0), (-1, 0), colors.white),
+                ('FONTSIZE', (0, 0), (-1, -1), 7)
+            ]
+        ))
+        t_pie.wrapOn(pdf, 800, 600)
+        t_pie.drawOn(pdf, 30, 400)
+
+        pdf.setFont("Helvetica", 7)
+        pdf.drawString(30, 380, u"Que significa Nivel de Riesgo Productivo:")
+
+        pie_pagin_riesgo = [('Productividad Alta: ','Aquel Desembarcadero que se encuentra entre los rangos oscilados de 76-100'),
+                 ('Productividad Mediana:','Aquel Desembarcadero que se encuentra entre los rangos oscilados de 51-75. (Tomar medidas de implementación y revisar procesos de implementación)'),
+                 ('Productividad Mediana Baja:','Aquel Desembarcadero que se encuentra entre los rangos oscilados de 26-50. (Tomar medidas urgentes)'),
+                 ('Productividad Muy Baja:', 'Aquel Desembarcadero que se encuentra entre los rangos oscilados de 0-25. (Tomar medidas urgentes)'),
+                 ]
+
+        t_pie_riesgo = Table(pie_pagin_riesgo)
+        t_pie_riesgo.setStyle(TableStyle(
+        [
+            ('GRID', (0, 0), (3, -1), 1, colors.black),
+            ('LINEBELOW', (0, 0), (-1, 0), 1, colors.black),
+            ('BACKGROUND', (0, 0), (-1, 0), colors.white),
+            ('FONTSIZE', (0, 0), (-1, -1), 7)
+        ]
+    ))
+        t_pie_riesgo.wrapOn(pdf, 800, 500)
+        t_pie_riesgo.drawOn(pdf, 30, 300)
+
+    def tablacuadro(self, pdf, doc, y, userdjango, formulario_id):
         usuariomodelo = Usuario.objects.get(usuario=userdjango)
         formularios = usuariomodelo.formulario_set.get(pk=formulario_id)  # lista delformulario
         nuevas_condiciones = formularios.condiciones.split(",")  # arreglo de string ['0.0121', '0.0106']
         condiciones_id = [int(valor_condi) for valor_condi in nuevas_condiciones]  # arreglo de enteros
-        # condic = {}
-        # for condi in condiciones_id:
-        #	condic[condi]=[Condicion.objects.get(idCondicion=condi)]
 
         styles = getSampleStyleSheet()
         style = ParagraphStyle(name='right', parent=styles['Normal'], fontName='Helvetica',
-                fontSize=8.2,leading=8)
+                               fontSize=8.2, leading=8)
         stylecondi = ParagraphStyle(name='right', parent=styles['Normal'], fontName='Helvetica',
-                fontSize=8,leading=5)
-        
-        # Creamos una tupla de encabezados para neustra tabla
+                                    fontSize=8, leading=5)
+
         encabezados = ('Criterio 1', 'Criterio 2', 'Parámetro y criterio 3', 'Condición')
         # Creamos una lista de tuplas que van a contener a las personas
         tabla1 = []
@@ -453,32 +524,42 @@ class ReporteFormulariosPDF(View):
                 ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
             ]
         ))
-        # Establecemos el tamaño de la hoja que ocupará la tabla
         detalle_orden.wrapOn(pdf, 800, 600)
-        # Definimos la coordenada donde se dibujará la tabla
-        detalle_orden.drawOn(pdf, 50, y)
+        # Definimos la coordenada donde se dibujará la tabl
+        detalle_orden.drawOn(pdf, 30, 20)
 
     def get(self, request, formulario_id, *args, **kwargs):
+        print("hola")
         if request.user.is_authenticated:
             userdjango = request.user.get_username()
             response = HttpResponse(content_type='application/pdf')
-            # La clase io.BytesIO permite tratar un array de bytes como un fichero binario, se utiliza como almacenamiento temporal
+            #La clase io.BytesIO permite tratar un array de bytes como un fichero binario, se utiliza como almacenamiento temporal
             buffer = BytesIO()
-            # Canvas nos permite hacer el reporte con coordenadas X y Y
+            #Canvas nos permite hacer el reporte con coordenadas X y Y
             pdf = canvas.Canvas(buffer)
-            # Llamo al método cabecera donde están definidos los datos que aparecen en la cabecera del reporte.
-            self.cabecera(pdf)
-            y = 12
-            self.tabla(pdf, y, userdjango, formulario_id)
-            # Con show page hacemos un corte de página para pasar a la siguiente
+            doc = SimpleDocTemplate(buffer,
+               pagesize=landscape(letter),  
+               rightMargin=inch/2,  #40
+               leftMargin=inch/2,  #40
+               topMargin=inch/2,  #60
+               bottomMargin=inch/2,  #18
+               )
+        #Llamo al método cabecera donde están definidos los datos que aparecen en la cabecera del reporte.
+
+            y=10
+#Con show page hacemos un corte de página para pasar a la siguiente
+            self.tabla(pdf,doc, y, userdjango, formulario_id)
+
             pdf.showPage()
+            self.tablacuadro(pdf,doc,y,userdjango,formulario_id)
             pdf.save()
             pdf = buffer.getvalue()
             buffer.close()
             response.write(pdf)
             return response
-
-
+        else:
+            return None
+            
 def downloadCSV(request, path):
     print("Si esta llegando por aqui" + path)
 
