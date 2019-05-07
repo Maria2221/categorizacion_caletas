@@ -468,6 +468,7 @@ class ReporteFormulariosPDF(View):
                             # ('BOX',(0,0),(-1,-1),0,colors.white),
                             # El tamaño de las letras de cada una de las celdas será de 10
                             ('FONTSIZE', (0, 0), (-1, -1), 8),
+                            ('FONTSIZE', (0, 0), (-1, -1), 7),
                             ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
                         ]
                     ))

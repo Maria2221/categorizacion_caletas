@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/criterios/views.py" line="704" mnemonic="2" />
+    <bookmark url="file://$PROJECT_DIR$/criterios/views.py" line="705" mnemonic="2" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd3b5cdf-9b7b-47e1-b1ed-6a17b006d519" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/categorizacion_caletas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/categorizacion_caletas.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/criterios/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/criterios/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -110,8 +107,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/criterios/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="414" selection-start-line="414" selection-end-line="414" />
+            <state relative-caret-position="345">
+              <caret line="470" column="62" selection-start-line="470" selection-start-column="62" selection-end-line="470" selection-end-column="62" />
               <folding>
                 <element signature="e#0#64#0" expanded="true" />
               </folding>
@@ -560,8 +557,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/criterios/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="414" selection-start-line="414" selection-end-line="414" />
+        <state relative-caret-position="345">
+          <caret line="470" column="62" selection-start-line="470" selection-start-column="62" selection-end-line="470" selection-end-column="62" />
           <folding>
             <element signature="e#0#64#0" expanded="true" />
           </folding>
