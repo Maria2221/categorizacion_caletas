@@ -334,7 +334,7 @@ from reportlab.lib import colors
 from reportlab.lib.pagesizes import letter
 from reportlab.platypus import Table
 from reportlab.lib.units import inch, cm
-
+import numpy as np
 
 class ReporteFormulariosPDF(View):
 
@@ -514,6 +514,8 @@ def upload_csv(request):
         csv = CSV(nombreArchivo=filename,eliminados1=eLogica,eliminados2=eEsloraManga,eliminados3=eNoArtesanales,eliminados4=ePaper)
         csv.save()
 
+        datalongo = np.arange(len(data))
+        datalongo = datalongo+1
 
         return render(request, 'barcosParaCSV.html', {
             'uploaded_file_url': uploaded_file_url,
@@ -522,7 +524,7 @@ def upload_csv(request):
             'e2':eEsloraManga,
             'e3':eNoArtesanales,
             'e4':ePaper,
-            'z':zip(data['EMBARCACION'],data['MATRICULA'],data['REGIMEN'],data['ESLORA'],data['MANGA'],data['PUNTAL'],data['CAPBOD_M3'],data['PERMISO PESCA']),
+            'z':zip(datalongo,data['EMBARCACION'],data['MATRICULA'],data['REGIMEN'],data['ESLORA'].round(2),data['MANGA'].round(2),data['PUNTAL'].round(2),data['CAPBOD_M3'].round(2),data['PERMISO PESCA']),
             'l1':l1,
             'l2': l2,
             'l3': l3,

@@ -175,7 +175,39 @@ def procesar(archivoNombre):
 #    s =
     x = data['es']
     y = data['bo']
+    frequencies = [eliminadosLogica,eliminadosEsloraManga,eliminadosNoArtesanales,eliminadosPaper]
 
+    freq_series = pd.Series(frequencies)
+
+    y_labels = ['condición 1','condición 2','condición 3','condición 4']
+
+    plt.figure(figsize=(12, 8))
+    ax = freq_series.plot(kind='barh')
+    ax.set_title('Amount Frequency')
+    ax.set_xlabel('Embarcaciones eliminadas')
+    ax.set_ylabel('Condiciones')
+    ax.set_yticklabels(y_labels)
+    ax.set_xlim(-40, 300)  # expand xlim to make labels easier to read
+
+    rects = ax.patches
+
+    # For each bar: Place a label
+    for rect in rects:
+        # Get X and Y placement of label from rect.
+        x_value = rect.get_width()
+        y_value = rect.get_y() + rect.get_height() / 2
+
+        # Number of points between bar and label. Change to your liking.
+        space = 5
+        # Vertical alignment for positive values
+        ha = 'left'
+
+        # If value of bar is negative: Place label left of bar
+        if x_value < 0:
+            # Invert space to place label to the left
+            space *= -1
+            # Horizontally align label at right
+    plt.savefig("static/img/histogramaEliminados.png")
     x = x.tolist()
     y = y.tolist()
 
@@ -201,7 +233,7 @@ def procesar(archivoNombre):
     plt.xlabel('Eslora m')
     plt.ylabel('Capacidad de bodega m3')
 
-    plt.title("Ventas en Europa")
+    plt.title("V")
     # Make fake dataset
     height = [1.09,2.17,10.87, 32.6]
     colors = (0, 0, 0)
@@ -340,6 +372,38 @@ def procesar2(archivoNombre):
     #    s =
     x = data['ESLORA']
     y = data['CAPBOD_M3']
+    frequencies = [eliminadosLogica,eliminadosEsloraManga,eliminadosNoArtesanales,eliminadosPaper]
+
+    freq_series = pd.Series(frequencies)
+
+    y_labels = ['condición 1','condición 2','condición 3','condición 4']
+
+    plt.figure(figsize=(8, 6))
+    ax = freq_series.plot(kind='barh')
+    ax.set_title('Grafico Barras')
+    ax.set_xlabel('Embarcaciones eliminadas')
+    ax.set_yticklabels(y_labels)
+    #ax.set_xlim(-40, 300)  # expand xlim to make labels easier to read
+
+    rects = ax.patches
+
+    # For each bar: Place a label
+    for rect in rects:
+        # Get X and Y placement of label from rect.
+        x_value = rect.get_width()
+        y_value = rect.get_y() + rect.get_height() / 2
+
+        # Number of points between bar and label. Change to your liking.
+        space = 5
+        # Vertical alignment for positive values
+        ha = 'left'
+
+        # If value of bar is negative: Place label left of bar
+        if x_value < 0:
+            # Invert space to place label to the left
+            space *= -1
+            # Horizontally align label at right
+    plt.savefig("static/img/histogramaEliminados.png")
 
     x = x.tolist()
     y = y.tolist()
@@ -361,10 +425,10 @@ def procesar2(archivoNombre):
     # histo[1].set_color('#33B577')
 
     # histo[0].set_color('#7E5E83')
-    plt.figure(figsize=(12, 6))
+    plt.figure(figsize=(8, 6))
     # plt.yticks(posicion_y, paises)
-    plt.xlabel('Eslora m')
-    plt.ylabel('Capacidad de Bodega m3')
+    plt.xlabel('Eslora(metros)')
+    plt.ylabel('Capacidad de Bodega (metros Cubicos)')
 
     plt.title("Grafica")
     # Make fake dataset
@@ -372,7 +436,7 @@ def procesar2(archivoNombre):
     colors = (0, 0, 0)
     plt.xticks(range(1, 19))
     plt.yticks(range(1, 33))
-    area = np.pi * 4
+    area = np.pi * 2
     bars = ('grupo1', 'grupo2', 'grupo3', 'grupo4')
     xlinea = np.linspace(1, 18)
     ylinea = xlinea *0+32.6

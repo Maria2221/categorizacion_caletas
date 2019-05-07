@@ -170,19 +170,23 @@ $(document).ready(function(){
     <button type="submit">Subir</button>
 </form>
                <p>Data de muestra en : <a href="../../documentos/databarcos.csv">databarcos.csv</a></p>
+        <p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
 
 
 </div>
-        <p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
 
-    <div id ="mostrar" class="row hidden">
-
+    <div id ="mostrar" class="hidden">
+        <br>
+        <br>
+        <div class="row">
 
         <div class="table-wrapper-scroll-y my-custom-scrollbar">
 
   <table class="table table-bordered table-striped mb-0">
     <thead>
       <tr>
+        <th scope="col">#</th>
+
         <th scope="col">Nombre de Embarcacion</th>
         <th scope="col">Matricula</th>
         <th scope="col">Regimen</th>
@@ -195,10 +199,12 @@ $(document).ready(function(){
       </tr>
     </thead>
     <tbody>
-{% for nombre,matricula,regimen,eslora,manga,puntal,bodega,permiso in z %}
+{% for indice,nombre,matricula,regimen,eslora,manga,puntal,bodega,permiso in z %}
       <tr>
-        <th scope="row">{{nombre}}</th>
-        <td>{{matricula}}</td>
+        <th scope="row">{{indice}}</th>
+        <td>{{nombre}}</td>
+
+          <td>{{matricula}}</td>
           <td>{{regimen}}</td>
         <td>{{eslora}}</td>
           <td>{{manga}}</td>
@@ -211,10 +217,22 @@ $(document).ready(function(){
     </tbody>
   </table>
             </div>
+    </div>
+        <br>
+        <br>
+        <div class="row">
+        <div class="col-md-12 d-flex align-middle  justify-content-center">
+                <h3>Descripción Eliminados</h3>
+            </div>
+        </div>
+
+
+        <div class="row">
 
             <div class="col-md-6">
-
-<ul >
+<br>
+                <br>
+                <ul >
 <li>Eliminación de datos imposibles son la
 negatividad de las variables, valores
 vacio . y el valor altamente amplio del
@@ -230,14 +248,22 @@ medidas descritas en el paper:{{e4}} </li>
 </ul>
 
        </div>
+        <div class="col-md-6">
+
+
+<img src="{% static 'img/histogramaEliminados.png' %}" class="img-fluid" alt="Responsive image">
+            </div>
+</div>
     </div>
- <div id = "visualizar" class="hidden">
+    <div id = "visualizar" class="hidden">
 
 
 
 <div class="row">
 
 <div class="col-md-8">
+    <br>
+    <br>
 <img src="{% static 'img/histograma.png' %}" class="img-fluid" alt="Responsive image">
 </div>
 
