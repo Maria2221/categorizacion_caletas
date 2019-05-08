@@ -15,7 +15,7 @@ from django.shortcuts import render
 from django.core.files.storage import FileSystemStorage
 from django import forms
 from .models import Barco
-from  .utils import procesar,procesar2, contenidoTablaCategorias, contenidoTablaRiesgos
+from  .utils import procesar,procesar2, contenidoTablaCategorias, contenidoTablaRiesgos, contenidoSellos
 from .models import CSV
 import logging
 from django.contrib.messages import constants as messages
@@ -342,18 +342,18 @@ class ReporteFormulariosPDF(View):
 
         archivo_imagen = 'static/img/logos/cite.jpg'
         archivo_imagensec = 'static/img/logos/unsa.jpg'
-        pdf.drawImage(archivo_imagensec, 30, 750, 90, 90, preserveAspectRatio=True)
+        pdf.drawImage(archivo_imagensec, 30, 740, 120, 120, preserveAspectRatio=True)
         pdf.setFont("Helvetica", 14)
         pdf.drawString(190, 800, u"Reporte de Formulario de " + formularios.nombreFormulario)
         pdf.setFont("Helvetica", 12)
         pdf.drawString(170, 780, u"UNIVERSIDAD NACIONAL DE SAN AGUSTIN")
-        pdf.drawImage(archivo_imagen, 470, 750, 90, 90, preserveAspectRatio=True)
+        pdf.drawImage(archivo_imagen, 470, 740, 90, 90, preserveAspectRatio=True)         
         # pdf.drawString(500, 750, u"cuadro")
         pdf.setFont("Helvetica", 14)
         pdf.drawString(30, 730, u"Datos del Evaluador")
 
         todasevaluador = [('Reporte Nro:', ' '),
-    ('GeneradoBR:',' '),('Apellidos y Nombre:',usuariomodelo.apellido+" "+usuariomodelo.nombre),
+    ('Generado por:',usuariomodelo.usuario),('Apellidos y Nombre:',usuariomodelo.apellido+" "+usuariomodelo.nombre),
     ('Usuario:',usuariomodelo.usuario),('DNI:',usuariomodelo.dni),
     ('Correo:',usuariomodelo.correo),('Institucion:',usuariomodelo.instituto)]
         tabla = Table(todasevaluador)
@@ -516,6 +516,40 @@ class ReporteFormulariosPDF(View):
         detalle_orden.wrapOn(pdf, 800, 600)
         # Definimos la coordenada donde se dibujará la tabl
         detalle_orden.drawOn(pdf, 30, 20)
+    
+    def sellos(self, pdf, doc):
+        pdf.setFont("Helvetica", 14)
+        pdf.drawString(30, 780, u"Conformidad de Evaluacion")
+        headings_sellos = ('ELABORADO POR', '','','SELLO DE APROBADO')
+        tablafirmar = [(' ', ' ',' ',' '),
+        ("FIRMA","JEFE DE AREA","JEDE DE DEPENDENCIA","SELLO Y FIRMA"),]
+        firma = Table([headings_sellos] + tablafirmar,colWidths=[4* cm, 5* cm ,5* cm, 5* cm])
+        firma.setStyle(TableStyle(
+        [
+            ('GRID', (0, 0), (3, -1), 1, colors.black),
+            ('ALIGN',(0,0),(3,2),'CENTER'),
+            ('BOTTOMPADDING',(0,1),(-1,1), 100),
+
+        ]
+        ))
+        firma.wrapOn(pdf, 800, 600)
+        # Definimos la coordenada donde se dibujará la tabl
+        firma.drawOn(pdf, 30, 610)
+
+        fin_sellos = contenidoSellos()
+
+        sellos = Table(fin_sellos,colWidths=[16* cm, 2 * cm])
+        sellos.setStyle(TableStyle(
+        [
+            ('INNERGRID', (0, 0), (3, -1), 1, colors.white),
+            ('LINEBELOW', (0, 0), (-1, 0), 1, colors.white),
+            ('FONTSIZE', (0, 0), (-1, -1), 7)
+        ]
+    ))
+        sellos.wrapOn(pdf, 800, 500)
+        sellos.drawOn(pdf, 30, 540)
+
+        
 
     def get(self, request, formulario_id, *args, **kwargs):
         print("hola")
@@ -534,13 +568,17 @@ class ReporteFormulariosPDF(View):
                bottomMargin=inch/2,  #18
                )
         #Llamo al método cabecera donde están definidos los datos que aparecen en la cabecera del reporte.
-
+            doc.sample_no = 3
             y=10
 #Con show page hacemos un corte de página para pasar a la siguiente
+            pdf.drawString(510, 820, "Pagina %d de %d" %((doc.sample_no-2),doc.sample_no))
             self.tabla(pdf,doc, y, userdjango, formulario_id)
             pdf.showPage()
+            pdf.drawString(510, 820, "Pagina %d de %d" %((doc.sample_no-1),doc.sample_no))         
             self.tablacuadro(pdf,doc,y,userdjango,formulario_id)
             pdf.showPage()
+            pdf.drawString(510, 820, "Pagina %d de %d" %(doc.sample_no,doc.sample_no))
+            self.sellos(pdf,doc)
             pdf.save()
             pdf = buffer.getvalue()
             buffer.close()

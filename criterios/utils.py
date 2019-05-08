@@ -531,4 +531,21 @@ def contenidoTablaRiesgos():
 
     return contenidoTablaRiesgos
 
+def contenidoSellos():
+    styles = getSampleStyleSheet()
+    cates_estilo = ParagraphStyle(name='right', parent=styles['Normal'], fontName='Helvetica',
+                               fontSize=7, leading=8)
+    nota1 = Paragraph("- El Evaluador debe de adjuntar su conformidad por Evaluación(Adjuntar documento)", cates_estilo)
+    nota2 = Paragraph("- El Evaluador debe de Acreditar la Evaluación-INSISTO con Documentos", cates_estilo)
+    nota3 = Paragraph("- El dicho formulario solo con fines de Acreditar la Evaluación de un DPA, caso contrario someterse a las Respectivas Actividades Legales", cates_estilo)
+    
+    contenidoSellos = [(nota1,''),
+                    (nota2,''),
+                    (nota3,''),
+                    ]
+
+    return contenidoSellos
+
+
+
 
