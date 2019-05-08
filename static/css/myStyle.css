@@ -6,10 +6,10 @@ body{
 	margin: 100px 100px 0px 100px;	
   border: 1px solid #BFBFBF;
   padding: 25px 50px;
-  box-shadow: 5px 5px 5px #aaaaaa;
+  /*box-shadow: 5px 5px 5px #aaaaaa;*/
 }
 #res_title{
-	color: green;
+	color: black;
 	padding: 20px 20px;
 	margin: 10px 0px;
 	text-align:  center;

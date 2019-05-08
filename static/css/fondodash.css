@@ -1,0 +1,42 @@
+body{
+    background-image: url(../img/celeste.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment:fixed;
+  }
+  a.espaciodea{
+    padding-right: 10px;
+  }
+  .btn-primary {
+    color:#fff;
+    background-color:#566c81dc;
+    border-color:#566c81dc;
+   }
+   .btn-primary:hover {
+    color:#fff;
+    background-color:#3f71a7;
+    border-color:#3f71a7;
+   }
+   .btn-primary.focus,
+   .btn-primary:focus {
+    box-shadow:0 0 0 .2rem rgba(0,123,255,.5)
+   }
+   .btn-primary.disabled,
+   .btn-primary:disabled {
+    color:#fff;
+    background-color:#007bff;
+    border-color:#007bff
+   }
+   .btn-primary:not(:disabled):not(.disabled).active,
+   .btn-primary:not(:disabled):not(.disabled):active,
+   .show>.btn-primary.dropdown-toggle {
+    color:#fff;
+    background-color:#0062cc;
+    border-color:#005cbf
+   }
+   .btn-primary:not(:disabled):not(.disabled).active:focus,
+   .btn-primary:not(:disabled):not(.disabled):active:focus,
+   .show>.btn-primary.dropdown-toggle:focus {
+    box-shadow:0 0 0 .2rem rgba(0,123,255,.5)
+   }

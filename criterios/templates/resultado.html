@@ -5,7 +5,7 @@
   <title>Resultado del formulario</title>
   <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
   <link rel="stylesheet" href="{% static 'css/myStyle.css' %}" />
-    
+  <link rel="stylesheet" href="{% static 'css/fondodash.css' %}" />  
   <!--script type="text/javascript">
     function valor(){
   nuevototal = 0.345; //totEval
@@ -16,7 +16,7 @@
  </head>
  <body>
     {% csrf_token %}
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar navbar-light bg-primary-light">
         <a class="navbar-brand">Bienvenid@:{{user}}</a>
         <form class="form-inline">
           <a id="resultado" class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{% url 'dash'%}" role= "button">Dashboard</a>

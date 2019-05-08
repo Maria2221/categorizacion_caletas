@@ -5,7 +5,7 @@ body {
 }
 
 .header {
-   background-color: #398B93;
+   background-color: #788082;
    color: white;
    font-size: 1.5em;
    padding: 1rem;
@@ -25,19 +25,21 @@ body {
    border: 1px solid #BFBFBF;
    padding: 25px 50px;
    box-shadow: 5px 5px 5px #aaaaaa;
+   height: 290px;
 
 }
 
 table {
    width: 100%;
-   border: 1px solid #398B93;
+   border: 1px solid rgb(138, 168, 170);
    border-radius: 10px;
-   box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+   box-shadow: 3px 3px 0 rgba(110, 107, 107, 0.1);
    margin: 1em auto;
    overflow: hidden;
+   text-align: center;
 }
    th,td{ 
-      color: #398B93;
+      color: rgb(93, 126, 129);
       padding: 3px; 
    }
    
@@ -52,14 +54,15 @@ table {
       }
    }
    
-   th { 
-      background-color: #4b933940;
+   th {  
+      background-color: #58615540;
       font-weight: 300;
+      text-align: center;
    }
    
    tr {     
       &:nth-child(2n) { background-color: white; }
-      &:nth-child(2n+1) { background-color: #398B93) }
+      &:nth-child(2n+1) { background-color: rgb(82, 96, 97)) }
    }
 
 
@@ -106,7 +109,7 @@ table {
 @media screen and (max-width: 500px) {
    .header {
       background-color: transparent;
-      color: #398B93;
+      color: rgb(148, 181, 184);
       font-size: 2em;
       font-weight: 700;
       padding: 0;

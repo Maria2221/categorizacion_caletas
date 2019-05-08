@@ -5,11 +5,31 @@
 	
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="{% static 'css/form_crit.css' %}" />
-	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
-
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/fondodash.css' %}" />  
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <style>
+.cols {
+  height: 600px;
+  }
+
+.izquier {
+  position: left;
+  width: 20%;
+  padding-top:50px;
+  padding-left: 30px;
+  }
+.container {
+  width: 50%;
+  }
+
+.izquier,
+.container {
+  display: inline-table;
+  height: 100%;
+  }
+
 .hidden{
     display:none;
 }
@@ -17,6 +37,7 @@
 .unhidden{
     display:block;
 }
+
 </style>
 <script type="text/javascript">
 $(document).ready(function(){
@@ -70,19 +91,24 @@ $("#maria").attr("disabled", true);
 
 <body>
 	
-	<nav class="navbar navbar-light bg-light">
+	<nav class="navbar navbar-light bg-primary-light">
 		<a class="navbar-brand">Bienvenid@:{{user}}</a>
 		<form class="form-inline">
 			<a href="{% url 'logout'%}" >Salir</a>
 		</form>
-	</nav>
+  </nav>
+  <div class = "cols">
+  <div class="izquier">
+    <p>Propuesta 1 :</p>
+    <p>Clasificación de los Desembarcaderos</p> 
+    <p>Propuesta 2 :</p>
+    <p>Evaluación de los DPAS:</p>
+  </div>
 	<div id="content" class="container">
      <div class="row">
-        <input id ="funciona" type="button" class ="btn btn-primary" onclick="unhide(this, 'about') " value="evaluar">
-
-            <input id ="funciona2" type="button"  class ="btn btn-primary" onclick="unhide(this, 'about') " value="clasificar">
-
-
+        <input id ="funciona2" type="button"  class ="btn btn-primary" onclick="unhide(this, 'about') " value="Propuesta 1">
+        <input id ="funciona" type="button" class ="btn btn-primary " onclick="unhide(this, 'about') " value="Propuesta 2">
+        
      </div>
 		<div id="maria" class="hidden">
         <div id="crit_head" class="row">
@@ -92,8 +118,10 @@ $("#maria").attr("disabled", true);
 		<div id ="results">
 				{% for formulario in user.usuario.formulario_set.all %}
     				<ul>
-    				<a href="{% url 'result_desembarco' formulario.pk %}">
-					{{ formulario.nombreFormulario }}
+    				<a id="espaciodea" href="{% url 'result_desembarco' formulario.pk %}">
+          {{ formulario.nombreFormulario }}
+            <a title="Descarga" href="{% url 'reporte_formularios_pdf' formulario.pk%}" target="_blank"><img width="30" src="{% static 'img/descarga.png' %}" alt="Descarga"/></a>
+
 					</a>
 					</ul>
 				{% endfor %}			
@@ -117,6 +145,7 @@ $("#maria").attr("disabled", true);
             </div>
         </div>
         </div>
+  </div>
 </body>
 </html>
 

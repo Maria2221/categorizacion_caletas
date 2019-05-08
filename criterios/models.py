@@ -64,7 +64,8 @@ class Criterio(models.Model):
     )
 
     multipleOptions = models.BooleanField( default=False)
-
+    def __str__(self):
+        return self.nombre
   
     def getStr(self):
         return self.nombre

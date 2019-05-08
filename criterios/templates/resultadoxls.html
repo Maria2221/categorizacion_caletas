@@ -4,11 +4,19 @@
 <html>
  <head>
     <link rel="stylesheet" href="{% static 'css/xls.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/fondodash.css' %}" /> 
  </head>
 
  <body>
   {% csrf_token %}
-
+	<nav class="navbar navbar-light bg-primary-light">
+      <a class="navbar-brand">Bienvenid@:{{user}}</a>
+      <form class="form-inline">
+          <a id="resultado" class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{% url 'dash'%}" role= "button">Dashboard</a>
+        <a href="{% url 'logout'%}" >Salir</a>
+      </form>
+    </nav>
   <div class="table-users">
     <div class="header">Resultado</div>
    

@@ -427,8 +427,11 @@ class ReporteFormulariosPDF(View):
         tabla1 = []
         tabla2 = []
         tabla3 = []
+        filasPagina =28
         tabla4 = []
-
+        cantidad = 0 ; 
+        tablitas = []
+        dimensiones=[]
         for criterios1 in Criterio.objects.filter(nivel=0):
             for criterios2 in Criterio.objects.filter(nivel=1, idCriterioPadre=criterios1.idCriterio):
                 for criterios3 in Criterio.objects.filter(nivel=2, idCriterioPadre=criterios2.idCriterio):
@@ -441,6 +444,81 @@ class ReporteFormulariosPDF(View):
 
                             C4 = Paragraph(nuevovalor.nombre, stylecondi)
                             tabla4 = tabla4 + [(C4, '')]
+                            cantidad = cantidad +1 
+                            if cantidad >filasPagina:
+                                dimensiones.append(cantidad)
+                                if len(tabla4)<1:
+                                    print ("hola")
+                                if True:
+                                    tablaCriterio4 = Table(tabla4, colWidths=[4.6 * cm, 0 * cm])
+                                    # Estilos para las tablas de criterios 4
+                                    tablaCriterio4.setStyle(TableStyle(
+                                        [
+                                            # La primera fila(encabezados) va a estar centrada
+                                            ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
+                                            # Los bordes de todas las celdas serán de color negro y con un grosor de 1
+                                            ('LINEBELOW', (0, 0), (-1, -1), 0, colors.white),
+                                            # ('BOX',(0,0),(-1,-1),0,colors.white),
+                                            # El tamaño de las letras de cada una de las celdas será de 10
+                                            ('FONTSIZE', (0, 0), (-1, -1), 8),
+                                            ('FONTSIZE', (0, 0), (-1, -1), 7),
+                                            ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+                                        ]
+                                    ))
+                                    c3 = Paragraph(criterios3.nombre, style)
+                                    tabla3 = tabla3 + [(c3, tablaCriterio4)]
+                                    
+                                    print ("hola")
+
+                                if True:
+                                    tablaCriterio3 = Table(tabla3, colWidths=[7 * cm, 4.6 * cm])
+                                    # Estilos para las tablas de criterios 3
+                                    tablaCriterio3.setStyle(TableStyle(
+                                        [
+                                            # La primera fila(encabezados) va a estar centrada
+                                            ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
+                                            # Los bordes de todas las celdas serán de color negro y con un grosor de 1
+                                            ('LINEBELOW', (0, 0), (-1, -1), 0, colors.black),
+                                            # ('BOX',(0,0),(-1,-1),0,colors.white),
+                                            # El tamaño de las letras de cada una de las celdas será de 10
+                                            ('FONTSIZE', (0, 0), (-1, -1), 8),
+                                            ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+                                        ]
+                                    ))
+                                    c2 = Paragraph(criterios2.nombre, style)
+                                    tabla2 = tabla2 + [(c2, tablaCriterio3)]
+                                    tabla3 = []
+
+                                    print ("hola")    
+                                if True:
+                                    tablaCriterio2 = Table(tabla2, colWidths=[2.8 * cm, 7 * cm])
+                                    # Estilos para las tablas de criterios 2
+                                    tablaCriterio2.setStyle(TableStyle(
+                                        [
+                                            # La primera fila(encabezados) va a estar centrada
+                                            ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
+                                            # Los bordes de todas las celdas serán de color negro y con un grosor de 1
+                                            ('INNERGRID', (0, 0), (-1, -1), 1, colors.black),
+                                            # El tamaño de las letras de cada una de las celdas será de 10
+                                            ('FONTSIZE', (0, 0), (-1, -1), 8),
+                                            ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+                                        ]
+                                    ))
+                                    c1 = Paragraph(criterios1.nombre, style)
+                                    tabla1 = tabla1 + [(c1, tablaCriterio2, '', '')]
+                                
+                                    print ("hola")
+                                tablitas.append(tabla1)
+                                cantidad = 0
+                                tabla1=[]
+                                tabla2=[]
+                                tabla3=[]
+                                tabla4=[]
+                                C4 = Paragraph(nuevovalor.nombre, stylecondi)
+                                tabla4 = tabla4 + [(C4, '')]
+                                cantidad = cantidad +1 
+                         
+
 
                     if not tabla4:
                         tabla4 = tabla4 + [('', '')]
@@ -498,24 +576,39 @@ class ReporteFormulariosPDF(View):
             c1 = Paragraph(criterios1.nombre, style)
             tabla1 = tabla1 + [(c1, tablaCriterio2, '', '')]
             tabla2 = []
-
+        tablitas.append(tabla1)
+        dimensiones.append(cantidad)
         # Establecemos el tamaño de cada una de las columnas de la tabla
-        detalle_orden = Table([encabezados] + tabla1, colWidths=[2.7 * cm, 3 * cm, 7 * cm, 5 * cm])
-        # Aplicamos estilos a la celda principal de la tabla
-        detalle_orden.setStyle(TableStyle(
-            [
-                # La primera fila(encabezados) va a estar centrada
-                ('ALIGN', (0, 0), (-1, -3), 'CENTER'),
-                # Los bordes de todas las celdas serán de color negro y con un grosor de 1
-                ('GRID', (0, 0), (-1, -1), 1, colors.black),
-                # El tamaño de las letras de cada una de las celdas será de 10
-                ('FONTSIZE', (0, 0), (-1, -1), 8),
-                ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
-            ]
-        ))
-        detalle_orden.wrapOn(pdf, 800, 600)
-        # Definimos la coordenada donde se dibujará la tabl
-        detalle_orden.drawOn(pdf, 30, 20)
+        for tablita,dim in zip(tablitas,dimensiones):    
+            print ("debe de haber varias"+str(dim))
+            detalle_orden = Table([encabezados] + tablita, colWidths=[2.7 * cm, 3 * cm, 7 * cm, 5 * cm], repeatRows=1)
+            tblStyle = TableStyle([('TEXTCOLOR',(0,0),(-1,-1),colors.black),
+                        ('VALIGN',(0,0),(-1,-1),'TOP'),
+                        ('LINEBELOW',(0,0),(-1,-1),1,colors.black),
+                        ('BOX',(0,0),(-1,-1),1,colors.black),
+                        ('BOX',(0,0),(0,-1),1,colors.black)])
+            tblStyle.add('BACKGROUND',(0,0),(1,0),colors.lightblue)
+            tblStyle.add('BACKGROUND',(0,1),(-1,-1),colors.white)# Aplicamos estilos a la celda principal de la tabla
+            detalle_orden
+            detalle_orden.setStyle(TableStyle(
+                [
+                    # La primera fila(encabezados) va a estar centrada
+                    ('ALIGN', (0, 0), (-1, -3), 'CENTER'),
+                    # Los bordes de todas las celdas serán de color negro y con un grosor de 1
+                    ('GRID', (0, 0), (-1, -1), 1, colors.black),
+                    # El tamaño de las letras de cada una de las celdas será de 10
+                    ('FONTSIZE', (0, 0), (-1, -1), 8),
+
+
+                    ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+                ]
+            ))
+            
+            detalle_orden.wrapOn(pdf, 800, 600)
+            # Definimos la coordenada donde se dibujará la tabl
+            detalle_orden.drawOn(pdf, 30, 20*(filasPagina+1-dim)+50)
+            pdf.showPage()
+        #return tabla1
     
     def sellos(self, pdf, doc):
         pdf.setFont("Helvetica", 14)
@@ -576,7 +669,7 @@ class ReporteFormulariosPDF(View):
             pdf.showPage()
             pdf.drawString(510, 820, "Pagina %d de %d" %((doc.sample_no-1),doc.sample_no))         
             self.tablacuadro(pdf,doc,y,userdjango,formulario_id)
-            pdf.showPage()
+          #  pdf.showPage()
             pdf.drawString(510, 820, "Pagina %d de %d" %(doc.sample_no,doc.sample_no))
             self.sellos(pdf,doc)
             pdf.save()

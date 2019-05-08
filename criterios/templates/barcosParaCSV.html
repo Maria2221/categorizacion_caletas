@@ -1,32 +1,21 @@
 {% load static %}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/borrego2
 <!DOCTYPE html>
 <html lang="es">
 <head>
   
   <meta charset="UTF-8">
-    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
   <link rel="stylesheet" href="{% static 'css/cssParaTablas.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/fondodash.css' %}" /> 
+  
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <style>
-
 .hidden{
     display:none;
 }
 .unhidden{
     display:block;
 }
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
 .main {
   padding: 16px;
   margin-top: 30px;
@@ -42,18 +31,14 @@ function goToByScroll(id) {
         scrollTop: $("#" + id).offset().top
     }, 'slow');
 }
-
 $(document).ready(function(){
   var contarDatos = 0 ;
-
   $("#ingresoDatosbtn").click(function(){
     $("#ingresoDatos").addClass("unhidden");
     $("#ingresoDatos").removeClass("hidden");
     $("#ingresoDatosbtn").addClass("btn-primary");
     $("#ingresoDatosbtn").removeClass("btn-default");
     $("#ingresoDatos").focus();
-
-
     $("#mostrar").addClass("hidden");
     $("#mostrar").removeClass("unhidden");
     $("#mostrarbtn").addClass("btn-default");
@@ -62,10 +47,8 @@ $(document).ready(function(){
     $("#visualizar").removeClass("unhidden");
     $("#visualizarbtn").addClass("btn-default");
     $("#visualizarbtn").removeClass("btn-primary");
-
   });
    var contarMostrar = 0 ;
-
   $("#mostrarbtn").click(function(){
     $("#mostrar").addClass("unhidden");
     $("#mostrar").removeClass("hidden");
@@ -79,10 +62,6 @@ $(document).ready(function(){
     $("#ingresoDatos").removeClass("unhidden");
     $("#ingresoDatosbtn").addClass("btn-default");
     $("#ingresoDatosbtn").removeClass("btn-primary");
-
-
-
-
   });
    var contarVisualizar = 0 ;
   $("#visualizarbtn").click(function(){
@@ -98,19 +77,24 @@ $(document).ready(function(){
     $("#ingresoDatos").removeClass("unhidden");
     $("#ingresoDatosbtn").addClass("btn-default");
     $("#ingresoDatosbtn").removeClass("btn-primary");
-
-
-
   });
-
 });
 </script>
 </head>
 
 <body>
-<nav class="navbar fixed-top  navbar-light bg-light">
+      <nav class="navbar navbar-light bg-secondary-light" >
+        <a class="navbar-brand">Bienvenid@:{{user}}</a>
+        <form class="form-inline">
+          <a id="resultado" class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{% url 'dash'%}" role= "button">Dashboard</a>
+          <a href="{% url 'logout'%}" >Salir</a>
+        </form>
+      </nav>
+
+  <article>
+<nav class="navbar-light bg-secondary-light">
    <div class="col-md-12 d-flex justify-content-center">
-    <h2>Clasificación de Embarcaciones</h2>
+    <h2>Clasificación de Embarcaciones Artesanales</h2>
    </div>
     <div class="col-md-12 d-flex justify-content-center">
 <div class="btn-group btn-group-justified" role="group" aria-label="...">
@@ -128,15 +112,6 @@ $(document).ready(function(){
         </div>
 </nav>
 <div class="container">
-<div class = "row text-center">
-        <div class = "col-md-12 ">
-            <h1>
-                Clasificación de embarcaciones
-
-            </h1>
-        </div>
-    </div>
-
 
   {% if uploaded_file_url == None  %}
 <br>
@@ -146,10 +121,10 @@ $(document).ready(function(){
     {% csrf_token %}
 
       <input type="file" name="myfile">
+      <input type="submit" class="btn btn-secondary" value="Subir"></input>
 
-    <button type="submit">Subir</button>
 </form>
-               <p>Data de muestra en : <a href="../../documentos/databarcos.csv">databarcos.csv</a></p>
+      <p>Data de muestra en : <a href="../../documentos/databarcos.csv">databarcos.csv</a></p>
 
 
 </div>
@@ -318,6 +293,6 @@ medidas descritas en el paper:{{e4}} </li>
 {% endblock %}
 {% block extrajs %}
 {% endblock %}
+</article>
 </body>
-</html>    
-      
+</html> 

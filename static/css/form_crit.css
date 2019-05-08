@@ -47,10 +47,10 @@ body{
 
 #contentprimero{
 	background-color:  white;
-	margin: 50px 200px 100px 200px;	
+	/*margin: 50px 200px 100px 200px;	*/
     border: 1px solid #BFBFBF;
     padding: 25px 50px;
-    box-shadow: 5px 5px 5px #aaaaaa;
+    /*box-shadow: 5px 5px 5px #aaaaaa;*/
 }
 
 #crit_head{
@@ -87,7 +87,7 @@ body{
 }
 
 .crit1_title{
-	background-color: #f2dede;
+	background-color: #d9edf7;
 	font-weight: bold;
 	padding: 10px 20px;	
 	box-sizing: border-box;
