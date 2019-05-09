@@ -64,9 +64,7 @@ class Criterio(models.Model):
     )
 
     multipleOptions = models.BooleanField( default=False)
-    def __str__(self):
-        return self.nombre
-  
+      
     def getStr(self):
         return self.nombre
 
@@ -190,4 +188,3 @@ class Barco(models.Model):
 
     def __str__(self):
          return str("{:10.4f}".format(self.eslora))+str("{:10.4f}".format(self.manga))+str("{:10.4f}".format(self.puntal))
-

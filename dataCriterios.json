@@ -54,7 +54,7 @@
   "pk": 23,
   "fields": {
     "idCriterioPadre":19 ,
-    "nombre": "Organización",
+    "nombre": "Organizacion",
     "porcentaje": 25,
     "nivel": 0,
     "multipleOptions": false,
@@ -103,7 +103,7 @@
   "pk": 27,
   "fields": {
     "idCriterioPadre":21,
-    "nombre": "Migración de pescadores de la caleta",
+    "nombre": "Migracion de pescadores de la caleta",
     "porcentaje": 5,
     "nivel": 0,
     "multipleOptions": false,
@@ -163,7 +163,7 @@
   "pk": 32,
   "fields": {
     "idCriterioPadre":21,
-    "nombre": "Número de Pescadores",
+    "nombre": "Numero de Pescadores",
     "porcentaje": 25,
     "nivel": 0,
     "multipleOptions": false,
@@ -175,7 +175,7 @@
   "pk": 33,
   "fields": {
     "idCriterioPadre":21,
-    "nombre": "Número de Embarcaciones",
+    "nombre": "Numero de Embarcaciones",
     "porcentaje": 15,
     "nivel": 0,
     "multipleOptions": false,
@@ -187,7 +187,7 @@
   "pk": 34,
   "fields": {
     "idCriterioPadre":22,
-    "nombre": "Localización",
+    "nombre": "Localizacion",
     "porcentaje": 30,
     "nivel": 0,
     "multipleOptions": false,
@@ -199,7 +199,7 @@
   "pk": 35,
   "fields": {
     "idCriterioPadre":22,
-    "nombre": "Vías de acceso",
+    "nombre": "Vias de acceso",
     "porcentaje": 30,
     "nivel": 0,
     "multipleOptions": false,
@@ -211,7 +211,7 @@
   "pk": 36,
   "fields": {
     "idCriterioPadre":22,
-    "nombre": "Disponibilidad de terreno para intervención de mejoras",
+    "nombre": "Disponibilidad de terreno para intervencion de mejoras",
     "porcentaje": 20,
     "nivel": 0,
     "multipleOptions": false,
@@ -223,7 +223,7 @@
   "pk": 37,
   "fields": {
     "idCriterioPadre":22,
-    "nombre": "Actividad turística aledaña",
+    "nombre": "Actividad turistica aledania",
     "porcentaje": 10,
     "nivel": 0,
     "multipleOptions": false,
@@ -235,7 +235,7 @@
   "pk": 38,
   "fields": {
     "idCriterioPadre":22,
-    "nombre": "Relación de la caleta con el turismo",
+    "nombre": "Relacion de la caleta con el turismo",
     "porcentaje": 10,
     "nivel": 0,
     "multipleOptions": false,
@@ -247,7 +247,7 @@
   "pk": 39,
   "fields": {
     "idCriterioPadre":23,
-    "nombre": "Comercialización",
+    "nombre": "Comercializacion",
     "porcentaje": 15,
     "nivel": 0,
     "multipleOptions": false,
@@ -259,7 +259,7 @@
   "pk": 40,
   "fields": {
     "idCriterioPadre":23,
-    "nombre": "Tipo de Comercialización",
+    "nombre": "Tipo de Comercializacion",
     "porcentaje": 10,
     "nivel": 0,
     "multipleOptions": false,
@@ -283,7 +283,7 @@
   "pk": 42,
   "fields": {
     "idCriterioPadre":23,
-    "nombre": "Cursos de capacitación no realizados",
+    "nombre": "Cursos de capacitacion no realizados",
     "porcentaje": 15,
     "nivel": 0,
     "multipleOptions": true,
@@ -355,7 +355,7 @@
   "pk": 48,
   "fields": {
     "idCriterioPadre":24,
-    "nombre": "Servicios básicos que no dispone la caleta",
+    "nombre": "Servicios basicos que no dispone la caleta",
     "porcentaje": 15,
     "nivel": 0,
     "multipleOptions": true,
@@ -542,7 +542,7 @@
   "pk": 17,
   "fields": {
     "idCriterio": 32,
-    "nombre": "Alto número",
+    "nombre": "Alto numero",
     "porcentaje": 40,
     "isSelected": false
   }
@@ -552,7 +552,7 @@
   "pk": 18,
   "fields": {
     "idCriterio": 32,
-    "nombre": "Bajo número",
+    "nombre": "Bajo numero",
     "porcentaje": 60,
     "isSelected": false
   }
@@ -562,7 +562,7 @@
   "pk": 19,
   "fields": {
     "idCriterio": 33,
-    "nombre": "Alto número",
+    "nombre": "Alto numero",
     "porcentaje": 35,
     "isSelected": false
   }
@@ -572,7 +572,7 @@
   "pk": 20,
   "fields": {
     "idCriterio": 33,
-    "nombre": "Bajo número",
+    "nombre": "Bajo numero",
     "porcentaje": 65,
     "isSelected": false
   }
@@ -642,7 +642,7 @@
   "pk": 27,
   "fields": {
     "idCriterio": 36,
-    "nombre": "Amplia área disponible",
+    "nombre": "Amplia area disponible",
     "porcentaje": 10,
     "isSelected": false
   }
@@ -762,7 +762,7 @@
   "pk": 39,
   "fields": {
     "idCriterio": 41,
-    "nombre": "Concesión de acuicultura",
+    "nombre": "Concesion de acuicultura",
     "porcentaje": 25,
     "isSelected": false
   }
@@ -792,7 +792,7 @@
   "pk": 42,
   "fields": {
     "idCriterio": 42,
-    "nombre": "Administración o Gestión",
+    "nombre": "Administracion o Gestion",
     "porcentaje": 33,
     "isSelected": false
   }
@@ -802,7 +802,7 @@
   "pk": 43,
   "fields": {
     "idCriterio": 42,
-    "nombre": "Comercialización",
+    "nombre": "Comercializacion",
     "porcentaje": 34,
     "isSelected": false
   }
@@ -882,7 +882,7 @@
   "pk": 51,
   "fields": {
     "idCriterio": 44,
-    "nombre": "Organización Grupal",
+    "nombre": "Organizacion Grupal",
     "porcentaje": 20,
     "isSelected": false
   }
@@ -942,7 +942,7 @@
   "pk": 57,
   "fields": {
     "idCriterio": 46,
-    "nombre": "Cámara de Refrigeracion",
+    "nombre": "Camara de Refrigeracion",
     "porcentaje": 5,
     "isSelected": false
   }
@@ -962,7 +962,7 @@
   "pk": 59,
   "fields": {
     "idCriterio": 46,
-    "nombre": "Oficinas de administración",
+    "nombre": "Oficinas de administracion",
     "porcentaje": 5,
     "isSelected": false
   }
@@ -992,7 +992,7 @@
   "pk": 62,
   "fields": {
     "idCriterio": 46,
-    "nombre": "Comisaría",
+    "nombre": "Comisaria",
     "porcentaje": 10,
     "isSelected": false
   }
@@ -1032,7 +1032,7 @@
   "pk": 66,
   "fields": {
     "idCriterio": 46,
-    "nombre": "Galpón",
+    "nombre": "Galpon",
     "porcentaje": 20,
     "isSelected": false
   }
@@ -1062,7 +1062,7 @@
   "pk": 69,
   "fields": {
     "idCriterio": 47,
-    "nombre": "Grupo electrógeno y pluma",
+    "nombre": "Grupo electrogeno y pluma",
     "porcentaje": 30,
     "isSelected": false
   }
