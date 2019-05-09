@@ -320,6 +320,7 @@ class getBarcosFormularioBorrego(TemplateView):
 
 # PDF
 import os
+import datetime
 from django.conf import settings
 from io import BytesIO
 from reportlab.pdfgen import canvas
@@ -347,15 +348,31 @@ class ReporteFormulariosPDF(View):
         pdf.drawString(190, 800, u"Reporte de Formulario de " + formularios.nombreFormulario)
         pdf.setFont("Helvetica", 12)
         pdf.drawString(170, 780, u"UNIVERSIDAD NACIONAL DE SAN AGUSTIN")
-        pdf.drawImage(archivo_imagen, 470, 740, 90, 90, preserveAspectRatio=True)         
+        pdf.drawImage(archivo_imagen, 470, 740, 90, 90, preserveAspectRatio=True) 
+        pdf.setFont("Helvetica", 9)
+        pdf.drawString(485, 740, u"Fecha de Reporte:")
+        fecha_hoy = datetime.datetime.now()
+        tablafecha=[('Dia','Mes','Año'),(fecha_hoy.day,fecha_hoy.month,fecha_hoy.year),]   
+        fecha = Table(tablafecha)
+        fecha.setStyle(TableStyle(
+        [
+            ('GRID', (0, 0), (3, -1), 1, colors.black),
+            ('LINEBELOW', (0, 0), (-1, 0), 2, colors.black),
+            ('ALIGN',(0,0),(1,1),'CENTER'),
+        ]
+        ))
+        fecha.wrapOn(pdf, 50, 600)
+        #Definimos la coordenada donde se dibujará la tabl
+        fecha.drawOn(pdf, 475,700)
+
         # pdf.drawString(500, 750, u"cuadro")
         pdf.setFont("Helvetica", 14)
         pdf.drawString(30, 730, u"Datos del Evaluador")
 
         todasevaluador = [('Reporte Nro:', ' '),
-    ('Generado por:',usuariomodelo.usuario),('Apellidos y Nombre:',usuariomodelo.apellido+" "+usuariomodelo.nombre),
-    ('Usuario:',usuariomodelo.usuario),('DNI:',usuariomodelo.dni),
-    ('Correo:',usuariomodelo.correo),('Institucion:',usuariomodelo.instituto)]
+        ('Generado por:',usuariomodelo.usuario),('Apellidos y Nombre:',usuariomodelo.apellido+" "+usuariomodelo.nombre),
+        ('Usuario:',usuariomodelo.usuario),('DNI:',usuariomodelo.dni),
+        ('Correo:',usuariomodelo.correo),('Institucion:',usuariomodelo.instituto)]
         tabla = Table(todasevaluador)
         tabla.setStyle(TableStyle([('BACKGROUND',(1,1),(-2,-2),colors.white),
                    ('TEXTCOLOR',(0,0),(1,-1),colors.black)]))
@@ -611,8 +628,8 @@ class ReporteFormulariosPDF(View):
         #return tabla1
     
     def sellos(self, pdf, doc):
-        pdf.setFont("Helvetica", 14)
-        pdf.drawString(30, 780, u"Conformidad de Evaluacion")
+        pdf.setFont("Helvetica", 12)
+        pdf.drawString(30, 770, u"Conformidad de Evaluacion")
         headings_sellos = ('ELABORADO POR', '','','SELLO DE APROBADO')
         tablafirmar = [(' ', ' ',' ',' '),
         ("FIRMA","JEFE DE AREA","JEDE DE DEPENDENCIA","SELLO Y FIRMA"),]
