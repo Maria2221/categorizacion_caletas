@@ -108,9 +108,6 @@ class Condicion(models.Model):
         decimal_places=4
     )
 
-    def __str__(self):
-        return self.nombre
-
     def getPorcentaje(self):
         return self.porcentaje
 

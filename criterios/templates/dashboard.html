@@ -13,7 +13,6 @@
 .cols {
   height: 600px;
   }
-
 .izquier {
   position: left;
   width: 20%;
@@ -23,21 +22,17 @@
 .container {
   width: 50%;
   }
-
 .izquier,
 .container {
   display: inline-table;
   height: 100%;
   }
-
 .hidden{
     display:none;
 }
-
 .unhidden{
     display:block;
 }
-
 </style>
 <script type="text/javascript">
 $(document).ready(function(){
@@ -49,19 +44,13 @@ $(document).ready(function(){
     $("#maria").removeClass("hidden");
     $("#funciona").addClass("btn-secondary");
     $("#funciona").removeClass("btn-primary");
-
     }
-
     else{
-
     $("#maria").addClass("hidden");
     $("#maria").removeClass("unhidden");
     $("#funciona").addClass("btn-primary");
     $("#funciona").removeClass("btn-secondary");
-
-
     }
-
 $("#maria").attr("disabled", true);
   });
     var contarElvis = 0 ;
@@ -72,17 +61,14 @@ $("#maria").attr("disabled", true);
     $("#elvis").removeClass("hidden");
     $("#funciona2").addClass("btn-secondary");
     $("#funciona2").removeClass("btn-primary");
-
       }else{
     $("#elvis").addClass("hidden");
     $("#elvis").removeClass("unhidden");
-
     $("#funciona2").addClass("btn-primary");
     $("#funciona2").removeClass("btn-secondary");
   }
   });
   var category;
-
     $('radio[name="category"]').click(function(){
       category=this.value;
     });
@@ -148,6 +134,3 @@ $("#maria").attr("disabled", true);
   </div>
 </body>
 </html>
-
-
-
