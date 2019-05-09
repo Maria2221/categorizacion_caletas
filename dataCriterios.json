@@ -832,7 +832,7 @@
   "pk": 46,
   "fields": {
     "idCriterio": 43,
-    "nombre": "Débil",
+    "nombre": "Debil",
     "porcentaje": 70,
     "isSelected": false
   }

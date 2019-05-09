@@ -4,8 +4,6 @@ from django.core.exceptions import ValidationError
 from django.contrib.auth.models import User
 from math import floor
 
-
-
 #VALIDADORES
 def MaxValueValidator(value):
     if value > 100:
@@ -41,7 +39,7 @@ def roundDecimal(number, decs):
     if num_eval >=  5:
         inc = 1/(10**(decs))
         trunk_number = inc+trunk_number
-    
+
     return round(trunk_number,4)
 
 
@@ -64,7 +62,8 @@ class Criterio(models.Model):
     )
 
     multipleOptions = models.BooleanField( default=False)
-      
+
+
     def getStr(self):
         return self.nombre
 
@@ -73,7 +72,7 @@ class Criterio(models.Model):
 
     def getId(self):
         return self.idCriterio
-        
+
     def getPorcentaje(self):
         return self.porcentaje
 
@@ -90,7 +89,7 @@ class Criterio(models.Model):
 
 
 
-#Condiciones
+ #Condiciones
 class Condicion(models.Model):
     idCondicion = models.AutoField(primary_key=True)
     idCriterio = models.ForeignKey(Criterio, on_delete=models.CASCADE)
@@ -105,6 +104,9 @@ class Condicion(models.Model):
         max_digits=5,
         decimal_places=4
     )
+
+    def __str__(self):
+        return self.nombre
 
     def getPorcentaje(self):
         return self.porcentaje
@@ -128,7 +130,7 @@ class Condicion(models.Model):
                 crit1 = crit2
 
             total = temp_pond/div
-            
+
             self.ponderado = roundDecimal(total,4)
 
 
@@ -145,7 +147,7 @@ class Usuario(models.Model):
     def __str__(self):
          return self.usuario
 
-           
+
 class Formulario(models.Model):
     usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE, blank=True, null=True)
     idFormulario = models.AutoField(primary_key=True)
@@ -156,8 +158,7 @@ class Formulario(models.Model):
     condiciones = models.CharField(max_length=100,blank=True,null=True)
 
     def __str__(self):
-         return self.nombreFormulario
-
+         return self.nombreFormulario 
 
 class CSV(models.Model):
     idCSV = models.AutoField(primary_key=True)
