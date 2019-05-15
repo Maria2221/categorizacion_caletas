@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -78,14 +79,23 @@ WSGI_APPLICATION = 'categorizacion_caletas.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
-
+"""
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+    # COMMENT OUT:
+    # 'default': dj_database_url.config(default='sqlite:////full/path/to/your/database/file.sqlite'),
+    # ADD THIS INSTEAD:
+    'default': dj_database_url.config(default='postgres://localhost:5432/dbcatego'),
 }
-
+"""
+DATABASES = {
+'default': {
+    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    'NAME': 'catego',
+    'USER': 'admin',
+    'PASSWORD': 'sistemas',
+    'HOST': 'localhost',
+    'PORT': '5432',
+}}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
