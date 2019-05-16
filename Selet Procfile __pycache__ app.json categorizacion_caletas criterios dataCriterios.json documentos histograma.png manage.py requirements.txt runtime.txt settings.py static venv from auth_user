@@ -1,0 +1,36 @@
+                         List of relations
+ Schema |                 Name                  |   Type   | Owner 
+--------+---------------------------------------+----------+-------
+ public | auth_group                            | table    | admin
+ public | auth_group_id_seq                     | sequence | admin
+ public | auth_group_permissions                | table    | admin
+ public | auth_group_permissions_id_seq         | sequence | admin
+ public | auth_permission                       | table    | admin
+ public | auth_permission_id_seq                | sequence | admin
+ public | auth_user                             | table    | admin
+ public | auth_user_groups                      | table    | admin
+ public | auth_user_groups_id_seq               | sequence | admin
+ public | auth_user_id_seq                      | sequence | admin
+ public | auth_user_user_permissions            | table    | admin
+ public | auth_user_user_permissions_id_seq     | sequence | admin
+ public | criterios_barco                       | table    | admin
+ public | criterios_barco_id_seq                | sequence | admin
+ public | criterios_condicion                   | table    | admin
+ public | criterios_condicion_idCondicion_seq   | sequence | admin
+ public | criterios_criterio                    | table    | admin
+ public | criterios_criterio_idCriterio_seq     | sequence | admin
+ public | criterios_csv                         | table    | admin
+ public | criterios_csv_idCSV_seq               | sequence | admin
+ public | criterios_formulario                  | table    | admin
+ public | criterios_formulario_idFormulario_seq | sequence | admin
+ public | criterios_usuario                     | table    | admin
+ public | criterios_usuario_id_seq              | sequence | admin
+ public | django_admin_log                      | table    | admin
+ public | django_admin_log_id_seq               | sequence | admin
+ public | django_content_type                   | table    | admin
+ public | django_content_type_id_seq            | sequence | admin
+ public | django_migrations                     | table    | admin
+ public | django_migrations_id_seq              | sequence | admin
+ public | django_session                        | table    | admin
+(31 rows)
+
