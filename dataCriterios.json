@@ -307,7 +307,7 @@
   "pk": 44,
   "fields": {
     "idCriterioPadre":23,
-    "nombre": "Comisiones y actividades en otras áreas que no se practican en las caletas",
+    "nombre": "Comisiones y actividades en otras areas que no se practican en las caletas",
     "porcentaje": 5,
     "nivel": 0,
     "multipleOptions": true,
