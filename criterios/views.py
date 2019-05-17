@@ -177,7 +177,7 @@ def groupedCondition(listCondiciones):
 
 
 def criterios_list(request):
-    items = Criterio.objects.raw("SELECT * FROM 'criterios_criterio' ORDER BY 'nivel'")  # WHERE nivel == 0
+    items = Criterio.objects.raw("SELECT * FROM criterios_criterio ORDER BY nivel")  # WHERE nivel == 0
     ListOrdered = []
     newFunction(ListOrdered, items, None, 0)
 
@@ -195,7 +195,7 @@ def criterios_list(request):
                 del temp_crit[:]
 
     # Get Condiciones
-    lsit_condiciones = Condicion.objects.raw("SELECT * FROM 'criterios_condicion' ORDER BY 'idCriterio'")
+    lsit_condiciones = Condicion.objects.raw("SELECT * FROM criterios_condicion ORDER BY idCriterio")
     ListOrderedCond = groupedCondition(lsit_condiciones)
 
     contexto = {'criterios': criterios, 'condiciones': ListOrderedCond}
