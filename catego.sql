@@ -877,7 +877,7 @@ COPY public.criterios_criterio ("idCriterio", nombre, children, porcentaje, nive
 41	Otras actividades que no realizan	4	15	2	t	23
 42	Cursos de capacitacion no realizados	3	15	2	t	23
 43	Comportamiento organizacional	2	40	2	f	23
-44	Comisiones y actividades en otras áreas que no se practican en las caletas	5	5	2	t	23
+44	Comisiones y actividades en otras areas que no se practican en las caletas	5	5	2	t	23
 45	Infraestructura portuaria existente	5	25	2	t	24
 46	Infraestructura Complementaria que disponen	10	20	2	t	24
 47	Equipos que no poseen	3	15	2	t	24
