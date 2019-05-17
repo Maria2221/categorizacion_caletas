@@ -195,7 +195,8 @@ def criterios_list(request):
                 del temp_crit[:]
 
     # Get Condiciones
-    lsit_condiciones = Condicion.objects.raw("SELECT * FROM criterios_condicion ORDER BY idCriterio_id")
+    lsit_condiciones = Condicion.objects.order_by('-idCriterio')
+
     ListOrderedCond = groupedCondition(lsit_condiciones)
 
     contexto = {'criterios': criterios, 'condiciones': ListOrderedCond}
