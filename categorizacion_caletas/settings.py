@@ -84,10 +84,10 @@ WSGI_APPLICATION = 'categorizacion_caletas.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd9gl8fptaej6ok',
-        'USER': 'hreaycoutycndc',
-        'PASSWORD': '6140a4f4286c2f9cf87bd70cd6b7a99e57fa3623167dc1d378ccdd0d255f9130',
-        'HOST': 'ec2-54-243-241-62.compute-1.amazonaws.com',
+        'NAME': 'dfgvasrh8uedvi',
+        'USER': 'pcvrhrmwongrar',
+        'PASSWORD': '80c2a4fd96acad839a3f8626bb419d79014fca3f79df0a4c8608c8756f2a9c3b',
+        'HOST': 'ec2-54-243-197-120.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
