@@ -438,7 +438,7 @@ class ReporteFormulariosPDF(View):
         style = ParagraphStyle(name='right', parent=styles['Normal'], fontName='Helvetica',
                                fontSize=8.2, leading=8)
         stylecondi = ParagraphStyle(name='right', parent=styles['Normal'], fontName='Helvetica',
-                                    fontSize=8, leading=5)
+                                    fontSize=8, leading=8)
 
         encabezados = ('Criterio 1', 'Criterio 2', 'Parámetro y criterio 3', 'Condición')
         # Creamos una lista de tuplas que van a contener a las personas
