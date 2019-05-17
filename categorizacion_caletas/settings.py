@@ -83,8 +83,12 @@ WSGI_APPLICATION = 'categorizacion_caletas.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd9gl8fptaej6ok',
+        'USER': 'hreaycoutycndc',
+        'PASSWORD': '6140a4f4286c2f9cf87bd70cd6b7a99e57fa3623167dc1d378ccdd0d255f9130',
+        'HOST': 'ec2-54-243-241-62.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 # Password validation
