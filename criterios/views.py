@@ -74,7 +74,6 @@ def resultadoD(request):
                 'condicion': condicion}
     return render(request, 'resultado.html', contexto)
 
-
 @login_required
 def saveResult(request):
     condicion_nombre = []
