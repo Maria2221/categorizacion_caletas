@@ -407,9 +407,19 @@
     "isSelected": false
   }
 },
-{  
+{
   "model": "criterios.condicion",
   "pk": 4,
+  "fields": {
+    "idCriterio": 25,
+    "nombre": "Ninguno",
+    "porcentaje": 0,
+    "isSelected": false
+  }
+},
+{  
+  "model": "criterios.condicion",
+  "pk": 5,
   "fields": {
     "idCriterio": 26,
     "nombre": "Local y de Otras Caletas",
@@ -419,7 +429,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 5,
+  "pk": 6,
   "fields": {
     "idCriterio": 26,
     "nombre": "Local Solamente",
@@ -427,9 +437,19 @@
     "isSelected": false
   }
 },
+{
+  "model": "criterios.condicion",
+  "pk": 7,
+  "fields": {
+    "idCriterio": 26,
+    "nombre": "Ninguno",
+    "porcentaje": 0,
+    "isSelected": false
+  }
+},
 {  
   "model": "criterios.condicion",
-  "pk": 6,
+  "pk": 8,
   "fields": {
     "idCriterio": 27,
     "nombre": "Alta",
@@ -439,7 +459,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 7,
+  "pk": 9,
   "fields": {
     "idCriterio": 27,
     "nombre": "Baja",
@@ -447,9 +467,19 @@
     "isSelected": false
   }
 },
+{
+  "model": "criterios.condicion",
+  "pk": 10,
+  "fields": {
+    "idCriterio": 27,
+    "nombre": "Ninguno",
+    "porcentaje": 0,
+    "isSelected": false
+  }
+},
 {  
   "model": "criterios.condicion",
-  "pk": 8,
+  "pk": 11,
   "fields": {
     "idCriterio": 28,
     "nombre": "Pesca de Alta Variedad",
@@ -459,7 +489,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 9,
+  "pk": 12,
   "fields": {
     "idCriterio": 28,
     "nombre": "Pesca Monoespecifica",
@@ -467,9 +497,19 @@
     "isSelected": false
   }
 },
+{
+  "model": "criterios.condicion",
+  "pk": 13,
+  "fields": {
+    "idCriterio": 28,
+    "nombre": "Ninguno",
+    "porcentaje": 0,
+    "isSelected": false
+  }
+},
 {  
   "model": "criterios.condicion",
-  "pk": 10,
+  "pk": 14,
   "fields": {
     "idCriterio": 29,
     "nombre": "Pesca exclusiva",
@@ -479,7 +519,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 11,
+  "pk": 15,
   "fields": {
     "idCriterio": 29,
     "nombre": "Alterna la pesca con otras actividades",
@@ -487,9 +527,19 @@
     "isSelected": false
   }
 },
+{
+  "model": "criterios.condicion",
+  "pk": 16,
+  "fields": {
+    "idCriterio": 29,
+    "nombre": "Ninguno",
+    "porcentaje": 0,
+    "isSelected": false
+  }
+},
 {  
   "model": "criterios.condicion",
-  "pk": 12,
+  "pk": 17,
   "fields": {
     "idCriterio": 30,
     "nombre": "Lanchas y naves mayores",
@@ -499,7 +549,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 13,
+  "pk": 18,
   "fields": {
     "idCriterio": 30,
     "nombre": "Embarcaciones Menores",
@@ -507,9 +557,19 @@
     "isSelected": false
   }
 },
+{
+  "model": "criterios.condicion",
+  "pk": 19,
+  "fields": {
+    "idCriterio": 30,
+    "nombre": "Ninguno",
+    "porcentaje": 0,
+    "isSelected": false
+  }
+},
 {  
   "model": "criterios.condicion",
-  "pk": 14,
+  "pk": 20,
   "fields": {
     "idCriterio": 31,
     "nombre": "Alto Volumen > 30%",
@@ -519,7 +579,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 15,
+  "pk": 21,
   "fields": {
     "idCriterio": 31,
     "nombre": "Volumen Medio <30; >20",
@@ -529,7 +589,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 16,
+  "pk": 22,
   "fields": {
     "idCriterio": 31,
     "nombre": "Volumen Bajo",
@@ -537,9 +597,19 @@
     "isSelected": false
   }
 },
+{
+  "model": "criterios.condicion",
+  "pk": 23,
+  "fields": {
+    "idCriterio": 31,
+    "nombre": "Ninguno",
+    "porcentaje": 0,
+    "isSelected": false
+  }
+},
 {  
   "model": "criterios.condicion",
-  "pk": 17,
+  "pk": 24,
   "fields": {
     "idCriterio": 32,
     "nombre": "Alto numero",
@@ -549,7 +619,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 18,
+  "pk": 25,
   "fields": {
     "idCriterio": 32,
     "nombre": "Bajo numero",
@@ -557,9 +627,19 @@
     "isSelected": false
   }
 },
+{
+  "model": "criterios.condicion",
+  "pk": 26,
+  "fields": {
+    "idCriterio": 32,
+    "nombre": "Ninguno",
+    "porcentaje": 0,
+    "isSelected": false
+  }
+},
 {  
   "model": "criterios.condicion",
-  "pk": 19,
+  "pk": 27,
   "fields": {
     "idCriterio": 33,
     "nombre": "Alto numero",
@@ -569,7 +649,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 20,
+  "pk": 28,
   "fields": {
     "idCriterio": 33,
     "nombre": "Bajo numero",
@@ -577,9 +657,19 @@
     "isSelected": false
   }
 },
+{
+  "model": "criterios.condicion",
+  "pk": 29,
+  "fields": {
+    "idCriterio": 33,
+    "nombre": "Ninguno",
+    "porcentaje": 0,
+    "isSelected": false
+  }
+},
 {  
   "model": "criterios.condicion",
-  "pk": 21,
+  "pk": 30,
   "fields": {
     "idCriterio": 34,
     "nombre": "Urbana",
@@ -589,7 +679,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 22,
+  "pk": 31,
   "fields": {
     "idCriterio": 34,
     "nombre": "Rural",
@@ -597,9 +687,19 @@
     "isSelected": false
   }
 },
+{
+  "model": "criterios.condicion",
+  "pk": 32,
+  "fields": {
+    "idCriterio": 34,
+    "nombre": "Ninguno",
+    "porcentaje": 0,
+    "isSelected": false
+  }
+},
 {  
   "model": "criterios.condicion",
-  "pk": 23,
+  "pk": 33,
   "fields": {
     "idCriterio": 35,
     "nombre": "Pavimentadas",
@@ -609,7 +709,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 24,
+  "pk": 34,
   "fields": {
     "idCriterio": 35,
     "nombre": "Trocha carrosable",
@@ -617,9 +717,19 @@
     "isSelected": false
   }
 },
+{
+  "model": "criterios.condicion",
+  "pk": 35,
+  "fields": {
+    "idCriterio": 35,
+    "nombre": "Ninguno",
+    "porcentaje": 0,
+    "isSelected": false
+  }
+},
 {  
   "model": "criterios.condicion",
-  "pk": 25,
+  "pk": 36,
   "fields": {
     "idCriterio": 36,
     "nombre": "No disponen",
@@ -629,7 +739,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 26,
+  "pk": 37,
   "fields": {
     "idCriterio": 36,
     "nombre": "Limitado",
@@ -639,7 +749,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 27,
+  "pk": 38,
   "fields": {
     "idCriterio": 36,
     "nombre": "Amplia area disponible",
@@ -647,9 +757,19 @@
     "isSelected": false
   }
 },
+{
+  "model": "criterios.condicion",
+  "pk": 39,
+  "fields": {
+    "idCriterio": 36,
+    "nombre": "Ninguno",
+    "porcentaje": 0,
+    "isSelected": false
+  }
+},
 {  
   "model": "criterios.condicion",
-  "pk": 28,
+  "pk": 40,
   "fields": {
     "idCriterio": 37,
     "nombre": "Alta",
@@ -659,7 +779,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 29,
+  "pk": 41,
   "fields": {
     "idCriterio": 37,
     "nombre": "Baja",
@@ -669,7 +789,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 30,
+  "pk": 42,
   "fields": {
     "idCriterio": 37,
     "nombre": "Nula",
@@ -677,9 +797,19 @@
     "isSelected": false
   }
 },
+{
+  "model": "criterios.condicion",
+  "pk": 43,
+  "fields": {
+    "idCriterio": 37,
+    "nombre": "Ninguno",
+    "porcentaje": 0,
+    "isSelected": false
+  }
+},
 {  
   "model": "criterios.condicion",
-  "pk": 31,
+  "pk": 44,
   "fields": {
     "idCriterio": 38,
     "nombre": "Positiva",
@@ -689,7 +819,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 32,
+  "pk": 45,
   "fields": {
     "idCriterio": 38,
     "nombre": "Nula",
@@ -699,7 +829,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 33,
+  "pk": 46,
   "fields": {
     "idCriterio": 38,
     "nombre": "Negativa",
@@ -707,9 +837,19 @@
     "isSelected": false
   }
 },
+{
+  "model": "criterios.condicion",
+  "pk": 47,
+  "fields": {
+    "idCriterio": 38,
+    "nombre": "Ninguno",
+    "porcentaje": 0,
+    "isSelected": false
+  }
+},
 {  
   "model": "criterios.condicion",
-  "pk": 34,
+  "pk": 48,
   "fields": {
     "idCriterio": 39,
     "nombre": "Local e Intermediados",
@@ -719,7 +859,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 35,
+  "pk": 49,
   "fields": {
     "idCriterio": 39,
     "nombre": "Local",
@@ -727,9 +867,19 @@
     "isSelected": false
   }
 },
+{
+  "model": "criterios.condicion",
+  "pk": 50,
+  "fields": {
+    "idCriterio": 39,
+    "nombre": "Ninguno",
+    "porcentaje": 0,
+    "isSelected": false
+  }
+},
 {  
   "model": "criterios.condicion",
-  "pk": 36,
+  "pk": 51,
   "fields": {
     "idCriterio": 40,
     "nombre": "Grupal",
@@ -739,7 +889,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 37,
+  "pk": 52,
   "fields": {
     "idCriterio": 40,
     "nombre": "Individual",
@@ -747,9 +897,19 @@
     "isSelected": false
   }
 },
+{
+  "model": "criterios.condicion",
+  "pk": 53,
+  "fields": {
+    "idCriterio": 40,
+    "nombre": "Ninguno",
+    "porcentaje": 0,
+    "isSelected": false
+  }
+},
 {  
   "model": "criterios.condicion",
-  "pk": 38,
+  "pk": 54,
   "fields": {
     "idCriterio": 41,
     "nombre": "Proyectos PNIPA en ejecucion",
@@ -759,7 +919,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 39,
+  "pk": 55,
   "fields": {
     "idCriterio": 41,
     "nombre": "Concesion de acuicultura",
@@ -769,7 +929,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 40,
+  "pk": 56,
   "fields": {
     "idCriterio": 41,
     "nombre": "Planta  de proceso",
@@ -779,7 +939,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 41,
+  "pk": 57,
   "fields": {
     "idCriterio": 41,
     "nombre": "Restaurante",
@@ -787,9 +947,19 @@
     "isSelected": false
   }
 },
+{
+  "model": "criterios.condicion",
+  "pk": 58,
+  "fields": {
+    "idCriterio": 41,
+    "nombre": "Ninguno",
+    "porcentaje": 0,
+    "isSelected": false
+  }
+},
 {  
   "model": "criterios.condicion",
-  "pk": 42,
+  "pk": 59,
   "fields": {
     "idCriterio": 42,
     "nombre": "Administracion o Gestion",
@@ -799,7 +969,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 43,
+  "pk": 60,
   "fields": {
     "idCriterio": 42,
     "nombre": "Comercializacion",
@@ -809,7 +979,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 44,
+  "pk": 61,
   "fields": {
     "idCriterio": 42,
     "nombre": "Manipuleo y Proceso",
@@ -817,9 +987,19 @@
     "isSelected": false
   }
 },
+{
+  "model": "criterios.condicion",
+  "pk": 62,
+  "fields": {
+    "idCriterio": 42,
+    "nombre": "Ninguno",
+    "porcentaje": 0,
+    "isSelected": false
+  }
+},
 {  
   "model": "criterios.condicion",
-  "pk": 45,
+  "pk": 63,
   "fields": {
     "idCriterio": 43,
     "nombre": "Fuerte",
@@ -829,7 +1009,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 46,
+  "pk": 64,
   "fields": {
     "idCriterio": 43,
     "nombre": "Debil",
@@ -837,9 +1017,19 @@
     "isSelected": false
   }
 },
+{
+  "model": "criterios.condicion",
+  "pk": 65,
+  "fields": {
+    "idCriterio": 43,
+    "nombre": "Ninguno",
+    "porcentaje": 0,
+    "isSelected": false
+  }
+},
 {  
   "model": "criterios.condicion",
-  "pk": 47,
+  "pk": 66,
   "fields": {
     "idCriterio": 44,
     "nombre": "Aseo",
@@ -849,7 +1039,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 48,
+  "pk": 67,
   "fields": {
     "idCriterio": 44,
     "nombre": "Deporte",
@@ -859,7 +1049,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 49,
+  "pk": 68,
   "fields": {
     "idCriterio": 44,
     "nombre": "Fiscalizacion",
@@ -869,7 +1059,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 50,
+  "pk": 69,
   "fields": {
     "idCriterio": 44,
     "nombre": "Ordenamiento",
@@ -879,7 +1069,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 51,
+  "pk": 70,
   "fields": {
     "idCriterio": 44,
     "nombre": "Organizacion Grupal",
@@ -887,9 +1077,19 @@
     "isSelected": false
   }
 },
+{
+  "model": "criterios.condicion",
+  "pk": 71,
+  "fields": {
+    "idCriterio": 44,
+    "nombre": "Ninguno",
+    "porcentaje": 0,
+    "isSelected": false
+  }
+},
 {  
   "model": "criterios.condicion",
-  "pk": 52,
+  "pk": 72,
   "fields": {
     "idCriterio": 45,
     "nombre": "Muelle",
@@ -899,7 +1099,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 53,
+  "pk": 73,
   "fields": {
     "idCriterio": 45,
     "nombre": "Varadero",
@@ -909,7 +1109,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 54,
+  "pk": 74,
   "fields": {
     "idCriterio": 45,
     "nombre": "Zona de abrigo",
@@ -919,7 +1119,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 55,
+  "pk": 75,
   "fields": {
     "idCriterio": 45,
     "nombre": "Explanada de Trabajo",
@@ -929,7 +1129,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 56,
+  "pk": 76,
   "fields": {
     "idCriterio": 45,
     "nombre": "Panioles o bodegas",
@@ -937,9 +1137,19 @@
     "isSelected": false
   }
 },
+{
+  "model": "criterios.condicion",
+  "pk": 77,
+  "fields": {
+    "idCriterio": 45,
+    "nombre": "Ninguno",
+    "porcentaje": 0,
+    "isSelected": false
+  }
+},
 {  
   "model": "criterios.condicion",
-  "pk": 57,
+  "pk": 78,
   "fields": {
     "idCriterio": 46,
     "nombre": "Camara de Refrigeracion",
@@ -949,7 +1159,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 58,
+  "pk": 79,
   "fields": {
     "idCriterio": 46,
     "nombre": "Planta de procesamiento primario",
@@ -959,7 +1169,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 59,
+  "pk": 80,
   "fields": {
     "idCriterio": 46,
     "nombre": "Oficinas de administracion",
@@ -969,7 +1179,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 60,
+  "pk": 81,
   "fields": {
     "idCriterio": 46,
     "nombre": "Puestos de Venta",
@@ -979,7 +1189,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 61,
+  "pk": 82,
   "fields": {
     "idCriterio": 46,
     "nombre": "Redes de incendio",
@@ -989,7 +1199,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 62,
+  "pk": 83,
   "fields": {
     "idCriterio": 46,
     "nombre": "Comisaria",
@@ -999,7 +1209,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 63,
+  "pk": 84,
   "fields": {
     "idCriterio": 46,
     "nombre": "Local social y sede",
@@ -1009,7 +1219,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 64,
+  "pk": 85,
   "fields": {
     "idCriterio": 46,
     "nombre": "Servicio de Combustible",
@@ -1019,7 +1229,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 65,
+  "pk": 86,
   "fields": {
     "idCriterio": 46,
     "nombre": "Talleres",
@@ -1029,7 +1239,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 66,
+  "pk": 87,
   "fields": {
     "idCriterio": 46,
     "nombre": "Galpon",
@@ -1037,9 +1247,19 @@
     "isSelected": false
   }
 },
+{
+  "model": "criterios.condicion",
+  "pk": 88,
+  "fields": {
+    "idCriterio": 46,
+    "nombre": "Ninguno",
+    "porcentaje": 0,
+    "isSelected": false
+  }
+},
 {  
   "model": "criterios.condicion",
-  "pk": 67,
+  "pk": 89,
   "fields": {
     "idCriterio": 47,
     "nombre": "Planta de Hielo",
@@ -1049,7 +1269,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 68,
+  "pk": 90,
   "fields": {
     "idCriterio": 47,
     "nombre": "Winche",
@@ -1059,7 +1279,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 69,
+  "pk": 91,
   "fields": {
     "idCriterio": 47,
     "nombre": "Grupo electrogeno y pluma",
@@ -1067,9 +1287,19 @@
     "isSelected": false
   }
 },
+{
+  "model": "criterios.condicion",
+  "pk": 92,
+  "fields": {
+    "idCriterio": 47,
+    "nombre": "Ninguno",
+    "porcentaje": 0,
+    "isSelected": false
+  }
+},
 {  
   "model": "criterios.condicion",
-  "pk": 70,
+  "pk": 93,
   "fields": {
     "idCriterio": 48,
     "nombre": "Agua potable",
@@ -1079,7 +1309,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 71,
+  "pk": 94,
   "fields": {
     "idCriterio": 48,
     "nombre": "Electricidad",
@@ -1089,7 +1319,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 72,
+  "pk": 95,
   "fields": {
     "idCriterio": 48,
     "nombre": "Alcantarillado",
@@ -1099,7 +1329,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 73,
+  "pk": 96,
   "fields": {
     "idCriterio": 48,
     "nombre": "Comunicaciones",
@@ -1109,7 +1339,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 74,
+  "pk": 97,
   "fields": {
     "idCriterio": 48,
     "nombre": "Posta sanitaria",
@@ -1119,7 +1349,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 75,
+  "pk": 98,
   "fields": {
     "idCriterio": 48,
     "nombre": "Agencia Bancaria",
@@ -1127,9 +1357,19 @@
     "isSelected": false
   }
 },
+{
+  "model": "criterios.condicion",
+  "pk": 99,
+  "fields": {
+    "idCriterio": 48,
+    "nombre": "Ninguno",
+    "porcentaje": 0,
+    "isSelected": false
+  }
+},
 {  
   "model": "criterios.condicion",
-  "pk": 76,
+  "pk": 100,
   "fields": {
     "idCriterio": 49,
     "nombre": "Amplia",
@@ -1139,7 +1379,7 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 77,
+  "pk": 101,
   "fields": {
     "idCriterio": 49,
     "nombre": "Escasa",
@@ -1147,9 +1387,19 @@
     "isSelected": false
   }
 },
+{
+  "model": "criterios.condicion",
+  "pk": 102,
+  "fields": {
+    "idCriterio": 49,
+    "nombre": "Ninguno",
+    "porcentaje": 0,
+    "isSelected": false
+  }
+},
 {  
   "model": "criterios.condicion",
-  "pk": 78,
+  "pk": 103,
   "fields": {
     "idCriterio": 50,
     "nombre": "Con mantenimiento",
@@ -1159,11 +1409,21 @@
 },
 {  
   "model": "criterios.condicion",
-  "pk": 79,
+  "pk": 104,
   "fields": {
     "idCriterio": 50,
     "nombre": "Muy Deterioradas",
     "porcentaje": 70,
+    "isSelected": false
+  }
+},
+{
+  "model": "criterios.condicion",
+  "pk": 105,
+  "fields": {
+    "idCriterio": 50,
+    "nombre": "Ninguno",
+    "porcentaje": 0,
     "isSelected": false
   }
 }
