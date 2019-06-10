@@ -82,7 +82,7 @@
     "nombre": "Actividad",
     "porcentaje": 10,
     "nivel": 0,
-    "multipleOptions": false,
+    "multipleOptions": true,
     "children":2
   }
 },
@@ -94,7 +94,7 @@
     "nombre": "Punto de Desembarque",
     "porcentaje": 5,
     "nivel": 0,
-    "multipleOptions": false,
+    "multipleOptions": true,
     "children":2
   }
 },
@@ -106,7 +106,7 @@
     "nombre": "Migracion de pescadores de la caleta",
     "porcentaje": 5,
     "nivel": 0,
-    "multipleOptions": false,
+    "multipleOptions": true,
     "children":2
   }
 },
@@ -118,7 +118,7 @@
     "nombre": "Diversidad de Recursos desembarcados",
     "porcentaje": 10,
     "nivel": 0,
-    "multipleOptions": false,
+    "multipleOptions": true,
     "children":2
   }
 },
@@ -130,7 +130,7 @@
     "nombre": "Diversidad de actividades del Pescador",
     "porcentaje": 5,
     "nivel": 0,
-    "multipleOptions": false,
+    "multipleOptions": true,
     "children":2
   }
 },
@@ -142,7 +142,7 @@
     "nombre": "Tipo de embarcaciones en la caleta",
     "porcentaje": 10,
     "nivel": 0,
-    "multipleOptions": false,
+    "multipleOptions": true,
     "children":2
   }
 },
@@ -154,7 +154,7 @@
     "nombre": "Volumenes de desembarque",
     "porcentaje": 15,
     "nivel": 0,
-    "multipleOptions": false,
+    "multipleOptions": true,
     "children":3
   }
 },
@@ -166,7 +166,7 @@
     "nombre": "Numero de Pescadores",
     "porcentaje": 25,
     "nivel": 0,
-    "multipleOptions": false,
+    "multipleOptions": true,
     "children":2
   }
 },
@@ -178,7 +178,7 @@
     "nombre": "Numero de Embarcaciones",
     "porcentaje": 15,
     "nivel": 0,
-    "multipleOptions": false,
+    "multipleOptions": true,
     "children":2
   }
 },
@@ -190,7 +190,7 @@
     "nombre": "Localizacion",
     "porcentaje": 30,
     "nivel": 0,
-    "multipleOptions": false,
+    "multipleOptions": true,
     "children":2
   }
 },
@@ -202,7 +202,7 @@
     "nombre": "Vias de acceso",
     "porcentaje": 30,
     "nivel": 0,
-    "multipleOptions": false,
+    "multipleOptions": true,
     "children":2
   }
 },
@@ -214,7 +214,7 @@
     "nombre": "Disponibilidad de terreno para intervencion de mejoras",
     "porcentaje": 20,
     "nivel": 0,
-    "multipleOptions": false,
+    "multipleOptions": true,
     "children":3
   }
 },
@@ -226,7 +226,7 @@
     "nombre": "Actividad turistica aledaña",
     "porcentaje": 10,
     "nivel": 0,
-    "multipleOptions": false,
+    "multipleOptions": true,
     "children":3
   }
 },
@@ -238,7 +238,7 @@
     "nombre": "Relacion de la caleta con el turismo",
     "porcentaje": 10,
     "nivel": 0,
-    "multipleOptions": false,
+    "multipleOptions": true,
     "children":3
   }
 },
@@ -250,7 +250,7 @@
     "nombre": "Comercializacion",
     "porcentaje": 15,
     "nivel": 0,
-    "multipleOptions": false,
+    "multipleOptions": true,
     "children":2
   }
 },
@@ -262,7 +262,7 @@
     "nombre": "Tipo de Comercializacion",
     "porcentaje": 10,
     "nivel": 0,
-    "multipleOptions": false,
+    "multipleOptions": true,
     "children":2
   }
 },
@@ -298,7 +298,7 @@
     "nombre": "Comportamiento organizacional",
     "porcentaje": 40,
     "nivel": 0,
-    "multipleOptions": false,
+    "multipleOptions": true,
     "children":2
   }
 },
