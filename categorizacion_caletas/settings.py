@@ -80,11 +80,14 @@ WSGI_APPLICATION = 'categorizacion_caletas.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd7c5c7sdblt33n',
+        'USER': 'bxdhpojpwibbca',
+        'PASSWORD': '0e010c34261928e7fbae40ce480c463e7497b9580598b24b577c60dd8ff0fccb',
+        'HOST': 'ec2-54-163-226-238.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 # Password validation
