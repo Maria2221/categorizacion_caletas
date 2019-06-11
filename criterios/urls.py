@@ -26,7 +26,7 @@ urlpatterns = [
     
     #dashboard
     re_path(r'dash$', views.dash, name='dash'),
-    re_path(r'^(?P<formulario_id>[1-9]+)/result_desembarco/$',views.re_desembarco, name='result_desembarco'),
+    re_path(r'^(?P<formulario_id>[0-9]+)/result_desembarco/$',views.re_desembarco, name='result_desembarco'),
     
     #result de agregar usuarios
     re_path(r'saveResult$', views.saveResult, name='save'),
@@ -42,6 +42,6 @@ urlpatterns = [
     url(r'^vistaBarco$', views.getVistaCSV),
 
     url(r'^documentos/(?P<path>.*)$', views.downloadCSV),
-    re_path(r'^reporte_formularios_pdf/(?P<formulario_id>[1-9]+)/$', views.ReporteFormulariosPDF.as_view(), name="reporte_formularios_pdf"),
+    re_path(r'^reporte_formularios_pdf/(?P<formulario_id>[0-9]+)/$', views.ReporteFormulariosPDF.as_view(), name="reporte_formularios_pdf"),
     # url(r'^generate/pdf/$', views.generate_pdf, name='generate_pdf'),
 ]

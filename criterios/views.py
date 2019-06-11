@@ -74,7 +74,6 @@ def resultadoD(request):
                 'condicion': condicion}
     return render(request, 'resultado.html', contexto)
 
-
 @login_required
 def saveResult(request):
     condicion_nombre = []
@@ -177,7 +176,7 @@ def groupedCondition(listCondiciones):
 
 
 def criterios_list(request):
-    items = Criterio.objects.raw("SELECT * FROM 'criterios_criterio' ORDER BY 'nivel'")  # WHERE nivel == 0
+    items = Criterio.objects.raw("SELECT * FROM criterios_criterio ORDER BY nivel")  # WHERE nivel == 0
     ListOrdered = []
     newFunction(ListOrdered, items, None, 0)
 
@@ -195,7 +194,8 @@ def criterios_list(request):
                 del temp_crit[:]
 
     # Get Condiciones
-    lsit_condiciones = Condicion.objects.raw("SELECT * FROM 'criterios_condicion' ORDER BY 'idCriterio'")
+    lsit_condiciones = Condicion.objects.order_by('-idCriterio')
+
     ListOrderedCond = groupedCondition(lsit_condiciones)
 
     contexto = {'criterios': criterios, 'condiciones': ListOrderedCond}
@@ -437,7 +437,7 @@ class ReporteFormulariosPDF(View):
         style = ParagraphStyle(name='right', parent=styles['Normal'], fontName='Helvetica',
                                fontSize=8.2, leading=8)
         stylecondi = ParagraphStyle(name='right', parent=styles['Normal'], fontName='Helvetica',
-                                    fontSize=8, leading=5)
+                                    fontSize=8, leading=8)
 
         encabezados = ('Criterio 1', 'Criterio 2', 'Parámetro y criterio 3', 'Condición')
         # Creamos una lista de tuplas que van a contener a las personas

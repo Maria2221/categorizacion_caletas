@@ -155,7 +155,7 @@ class Formulario(models.Model):
     tipo = models.CharField(max_length=50)
     nivel = models.CharField(max_length=50)
     ponderado = models.CharField(max_length=5,blank=True,null=True)
-    condiciones = models.CharField(max_length=100,blank=True,null=True)
+    condiciones = models.CharField(max_length=200,blank=True,null=True)
 
     def __str__(self):
          return self.nombreFormulario 
