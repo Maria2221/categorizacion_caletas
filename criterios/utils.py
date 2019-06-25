@@ -270,9 +270,27 @@ def procesar(archivoNombre):
     plt.savefig("static/img/histograma.png")
     return eliminadosLogica,eliminadosEsloraManga,eliminadosNoArtesanales,eliminadosPaper,eliminadosRegresion, total,x,y
 def procesar2(archivoNombre):
-    data = pd.read_csv(archivoNombre, delimiter=',')
-    # data = np.genfromtxt(origen+'databarcos.csv', skip_header=1 ,delimiter=',', usecols=(0, 5, 6, 7,14), dtype=None, names=['no','es','ma','pu','bo'])
+    print ("no sube")
+    if (archivoNombre[-3]=='csv'):
+        data = pd.read_csv(archivoNombre, delimiter=',')
+# data = np.genfromtxt(origen+'databarcos.csv', skip_header=1 ,delimiter=',', usecols=(0, 5, 6, 7,14), dtype=None, names=['no','es','ma','pu','bo'])
 
+    else:
+        data = pd.read_excel(archivoNombre,header=2, encoding="utf-8")
+#    data =data.rename(index=str, columns={"Eslora (m.)": "ESLORA", "Manga (m.)": "MANGA","Puntal (m.)":"PUNTAL","Capacida de  Bodega (m3.)":"CAPBOD_M3"
+#                                          , "Nombre de la Embarcacion ":"EMBARCACION","N° de Matricula ":"MATRICULA","Direccion Zonal":"REGIMEN","N° de Resolucion Gerencial Regional":"PERMISO PESCA"})
+        data.columns = ["as","PERMISO PESCA","EMBARCACION","MATRICULA","REGIMEN","Propietario","Casco","Arqueo Bruto","ESLORA","MANGA","PUNTAL","CAPBOD_M3","XD"]
+        print(len(data))
+        #data = data.str.encode(encoding = 'UTF-8')
+
+    data = data[data.ESLORA != '-']
+    print(len(data))
+    data =  data[pd.to_numeric(data['ESLORA'], errors='coerce').notnull()]
+    data = data[data.MANGA != '-']
+    print(len(data))
+    data =  data[pd.to_numeric(data['MANGA'], errors='coerce').notnull()]
+    #data  = pd.to_numeric(data.MANGA)
+    print(len(data))
     initlen = len(data)
     print('Embarcaciones en excel')
     print(initlen)
@@ -282,14 +300,14 @@ def procesar2(archivoNombre):
     # print(data['es'].shape)
 
     print('Eliminando embarcaciones sin eslora...')
-    data = data.dropna(thresh=5)
+    data = data.dropna(subset=['ESLORA'])
     data = data[data.ESLORA > 0]
     print(initlen - len(data))
     eliminados1 = initlen - len(data)
     newlen = len(data)
 
     print('Eliminando embarcaciones sin manga...')
-    data = data.dropna(thresh=6)
+    data = data.dropna(subset=['MANGA'])
     data = data[data.MANGA > 0]
 
     print('Embarcaciones eliminadas')
@@ -299,14 +317,14 @@ def procesar2(archivoNombre):
     newlen = len(data)
     print('Eliminando embarcaciones sin puntal...')
     data = data.dropna(thresh=7)
-    data = data[data.PUNTAL > 0]
+    data = data.dropna(subset=['PUNTAL'])
     print('Embarcaciones eliminadas')
     print(newlen - len(data))
     eliminados3 = newlen - len(data)
     newlen = len(data)
 
     print('Eliminando embarcaciones sin capacidad de bodega en M3...')
-    data = data.dropna(thresh=14)
+    data = data.dropna(subset=['CAPBOD_M3'])
     data = data[data.CAPBOD_M3 > 0]
     print('Embarcaciones eliminadas')
     print(newlen - len(data))

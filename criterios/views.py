@@ -739,8 +739,8 @@ def upload_csv(request):
 
         datalongo = np.arange(len(data))
         datalongo = datalongo+1
-
-        return render(request, 'barcosParaCSV.html', {
+        try:
+           return render(request, 'barcosParaCSV.html', {
             'uploaded_file_url': uploaded_file_url,
  #           'other_content': other_content,
             'e1':eLogica,
@@ -756,7 +756,26 @@ def upload_csv(request):
 
             'total': total,
 
-        })
+        })        
+        except :
+             return render(request, 'barcosParaCSV.html', {
+            'uploaded_file_url': uploaded_file_url,
+ #           'other_content': other_content,
+            'e1':eLogica,
+            'e2':eEsloraManga,
+            'e3':eNoArtesanales,
+            'e4':ePaper,
+            'z':zip(datalongo,data['EMBARCACION'],data['MATRICULA'],data['REGIMEN'],data['ESLORA'],data['MANGA'],data['PUNTAL'],data['CAPBOD_M3'],data['PERMISO PESCA']),
+            'l1':l1,
+            'l2': l2,
+            'l3': l3,
+            'l4': l4,
+            'l5': l5,
+
+            'total': total,
+
+        })     
+        
     return render(request, "barcosParaCSV.html", data)
 
 
