@@ -271,7 +271,7 @@ def procesar(archivoNombre):
     return eliminadosLogica,eliminadosEsloraManga,eliminadosNoArtesanales,eliminadosPaper,eliminadosRegresion, total,x,y
 def procesar2(archivoNombre):
     print ("no sube")
-    if (archivoNombre[-3]=='csv'):
+    if (True):
         data = pd.read_csv(archivoNombre, delimiter=',')
 # data = np.genfromtxt(origen+'databarcos.csv', skip_header=1 ,delimiter=',', usecols=(0, 5, 6, 7,14), dtype=None, names=['no','es','ma','pu','bo'])
 
