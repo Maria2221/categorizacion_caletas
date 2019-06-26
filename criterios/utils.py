@@ -290,7 +290,7 @@ def procesar2(archivoNombre):
         data.columns[8] = "ESLORA"
         data.columns[9] = "MANGA"
         data.columns[10] = "PUNTAL"
-        data.columns[11] = "CAPBOD_M3
+        data.columns[11] = "CAPBOD_M3"
 
         print(len(data))
         #data = data.str.encode(encoding = 'UTF-8')
