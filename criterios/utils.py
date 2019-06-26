@@ -279,9 +279,22 @@ def procesar2(archivoNombre):
         data = pd.read_excel(archivoNombre,header=2, encoding="utf-8")
 #    data =data.rename(index=str, columns={"Eslora (m.)": "ESLORA", "Manga (m.)": "MANGA","Puntal (m.)":"PUNTAL","Capacida de  Bodega (m3.)":"CAPBOD_M3"
 #                                          , "Nombre de la Embarcacion ":"EMBARCACION","N° de Matricula ":"MATRICULA","Direccion Zonal":"REGIMEN","N° de Resolucion Gerencial Regional":"PERMISO PESCA"})
-        data.columns = ["as","PERMISO PESCA","EMBARCACION","MATRICULA","REGIMEN","Propietario","Casco","Arqueo Bruto","ESLORA","MANGA","PUNTAL","CAPBOD_M3","XD"]
+       # data.columns = ["as","PERMISO PESCA","EMBARCACION","MATRICULA","REGIMEN","Propietario","Casco","Arqueo Bruto","ESLORA","MANGA","PUNTAL","CAPBOD_M3","XD"]
+        data.columns[1] = "PERMISO PESCA"
+        data.columns[2] = "EMBARCACIONA"
+        data.columns[3] = "MATRICULA"
+        data.columns[4] = "REGIMEN"
+        data.columns[5] = "Propietario"
+        data.columns[6] = "Casco"
+        data.columns[7] = "Arqueo Bruto"
+        data.columns[8] = "ESLORA"
+        data.columns[9] = "MANGA"
+        data.columns[10] = "PUNTAL"
+        data.columns[11] = "CAPBOD_M3
+
         print(len(data))
         #data = data.str.encode(encoding = 'UTF-8')
+    initlen = len(data)
 
     data = data[data.ESLORA != '-']
     print(len(data))
@@ -291,7 +304,6 @@ def procesar2(archivoNombre):
     data =  data[pd.to_numeric(data['MANGA'], errors='coerce').notnull()]
     #data  = pd.to_numeric(data.MANGA)
     print(len(data))
-    initlen = len(data)
     print('Embarcaciones en excel')
     print(initlen)
 
