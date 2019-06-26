@@ -280,17 +280,29 @@ def procesar2(archivoNombre):
 #    data =data.rename(index=str, columns={"Eslora (m.)": "ESLORA", "Manga (m.)": "MANGA","Puntal (m.)":"PUNTAL","Capacida de  Bodega (m3.)":"CAPBOD_M3"
 #                                          , "Nombre de la Embarcacion ":"EMBARCACION","N° de Matricula ":"MATRICULA","Direccion Zonal":"REGIMEN","N° de Resolucion Gerencial Regional":"PERMISO PESCA"})
        # data.columns = ["as","PERMISO PESCA","EMBARCACION","MATRICULA","REGIMEN","Propietario","Casco","Arqueo Bruto","ESLORA","MANGA","PUNTAL","CAPBOD_M3","XD"]
-        data.columns[1] = "PERMISO PESCA"
-        data.columns[2] = "EMBARCACIONA"
-        data.columns[3] = "MATRICULA"
-        data.columns[4] = "REGIMEN"
-        data.columns[5] = "Propietario"
-        data.columns[6] = "Casco"
-        data.columns[7] = "Arqueo Bruto"
-        data.columns[8] = "ESLORA"
-        data.columns[9] = "MANGA"
-        data.columns[10] = "PUNTAL"
-        data.columns[11] = "CAPBOD_M3"
+        data.rename(columns = {list(data)[1]:'PERMISO PESCA'}, inplace=True)
+        data.rename(columns = {list(data)[2]:'EMBARCACION'}, inplace=True)
+        data.rename(columns = {list(data)[3]:'MATRICULA'}, inplace=True)
+        data.rename(columns = {list(data)[4]:'REGIMEN'}, inplace=True)
+        data.rename(columns = {list(data)[5]:'Propietario'}, inplace=True)
+        data.rename(columns = {list(data)[6]:'Casco'}, inplace=True)
+        data.rename(columns = {list(data)[7]:'Arqueo Bruto'}, inplace=True)
+        data.rename(columns = {list(data)[8]:'ESLORA'}, inplace=True)
+        data.rename(columns = {list(data)[9]:'MANGA'}, inplace=True)
+        data.rename(columns = {list(data)[10]:'PUNTAL'}, inplace=True)
+        data.rename(columns = {list(data)[11]:'CAPBOD_M3'}, inplace=True)
+
+        #data.columns[1] = "PERMISO PESCA"
+        #data.columns[2] = "EMBARCACIONA"
+        #data.columns[3] = "MATRICULA"
+        #data.columns[4] = "REGIMEN"
+        #data.columns[5] = "Propietario"
+        #data.columns[6] = "Casco"
+        #data.columns[7] = "Arqueo Bruto"
+        #data.columns[8] = "ESLORA"
+        #data.columns[9] = "MANGA"
+        #data.columns[10] = "PUNTAL"
+        #data.columns[11] = "CAPBOD_M3"
 
         print(len(data))
         #data = data.str.encode(encoding = 'UTF-8')
