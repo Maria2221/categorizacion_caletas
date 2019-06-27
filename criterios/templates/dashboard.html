@@ -10,6 +10,12 @@
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <style>
+table{
+  width: 100%;
+  margin: 1em auto;
+  overflow: hidden;
+  /*text-align: center;*/
+}
 .cols {
   height: 600px;
   }
@@ -107,12 +113,14 @@ $("#maria").attr("disabled", true);
     </div>
 		<div id ="results">
         {% for formulario in user.usuario.formulario_set.all %}  
-    			<ul>
+          <table>
+          <tr>
     				<td><a>{{ forloop.counter }}. </a><a id="espaciodea" href="{% url 'result_desembarco' formulario.pk %}">{{ formulario.nombreFormulario }}</a></td>
             <td><a title="Descarga" href="{% url 'reporte_formularios_pdf' formulario.pk%}" target="_blank"><img width="30" src="{% static 'img/descarga.png' %}" alt="Descarga"/></a></td>
             <td><a title="Editar" href=" " target="_blank"><img width="30" src="{% static 'img/editar.png' %}" alt="Editar"/></a></td>
             <td><a title="Eliminar" href=" " target="_blank"><img width="30" src="{% static 'img/eliminar.png' %}" alt="Eliminar"/></a></td>
-          </ul>
+          </tr>
+        </table>
 				{% endfor %}			
 		</div>
         </div>
