@@ -100,21 +100,20 @@ $("#maria").attr("disabled", true);
         <div id="crit_head" class="row">
 			<h2>Evaluación de Desembarcaderos Pesqueros Artesanales</h2>	
 		</div>
-		<hr>
+    <hr>
+    <div class="d-flex justify-content-around">
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="form_eval" role= "button">Nuevo Formulario</a>
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="resultadoxls" role= "button">Resultados</a>
+    </div>
 		<div id ="results">
-				{% for formulario in user.usuario.formulario_set.all %}
-    				<ul>
-    				<a id="espaciodea" href="{% url 'result_desembarco' formulario.pk %}">
-          {{ formulario.nombreFormulario }}
-            <a title="Descarga" href="{% url 'reporte_formularios_pdf' formulario.pk%}" target="_blank"><img width="30" src="{% static 'img/descarga.png' %}" alt="Descarga"/></a>
-
-					</a>
-					</ul>
+        {% for formulario in user.usuario.formulario_set.all %}  
+    			<ul>
+    				<td><a>{{ forloop.counter }}. </a><a id="espaciodea" href="{% url 'result_desembarco' formulario.pk %}">{{ formulario.nombreFormulario }}</a></td>
+            <td><a title="Descarga" href="{% url 'reporte_formularios_pdf' formulario.pk%}" target="_blank"><img width="30" src="{% static 'img/descarga.png' %}" alt="Descarga"/></a></td>
+            <td><a title="Editar" href=" " target="_blank"><img width="30" src="{% static 'img/editar.png' %}" alt="Editar"/></a></td>
+            <td><a title="Eliminar" href=" " target="_blank"><img width="30" src="{% static 'img/eliminar.png' %}" alt="Eliminar"/></a></td>
+          </ul>
 				{% endfor %}			
-				<div class="d-flex justify-content-around">
-					<a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="form_eval" role= "button">Nuevo Formulario</a>
-					<a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="resultadoxls" role= "button">Resultados</a>
-				</div>
 		</div>
         </div>
 
