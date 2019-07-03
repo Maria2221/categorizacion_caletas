@@ -10,7 +10,6 @@ urlpatterns = [
     re_path(r'resultado/categoryA/', views.resultadoA),
     re_path(r'resultado/categoryB/', views.resultadoB),
     re_path(r'resultado/categoryC/', views.resultadoC),
-    re_path(r'resultado/categoryD/', views.resultadoD),
     re_path(r'form_eval$', views.criterios_list),
     re_path(r'prossc_eval$', views.prossc_eval),
     #botones de página principal

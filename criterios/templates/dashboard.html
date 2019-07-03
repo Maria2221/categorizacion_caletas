@@ -10,11 +10,17 @@
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <style>
-table{
-  width: 100%;
-  margin: 1em auto;
-  overflow: hidden;
-  /*text-align: center;*/
+table {
+    width: 100%; 
+    /*border-radius: 10px; 
+    box-shadow: 1px 1px 0 rgba(110, 107, 107, 0.1);*/
+    margin: 1em auto;
+    overflow: hidden; 
+    text-align: center;
+}
+td{
+  text-align: center;
+  vertical-align: middle;
 }
 .cols {
   height: 600px;
@@ -112,17 +118,19 @@ $("#maria").attr("disabled", true);
         <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="resultadoxls" role= "button">Resultados</a>
     </div>
 		<div id ="results">
-        {% for formulario in user.usuario.formulario_set.all %}  
-          <table>
+        <table>
+          <tbody>
+          {% for formulario in user.usuario.formulario_set.all %}  
           <tr>
     				<td><a>{{ forloop.counter }}. </a><a id="espaciodea" href="{% url 'result_desembarco' formulario.pk %}">{{ formulario.nombreFormulario }}</a></td>
             <td><a title="Descarga" href="{% url 'reporte_formularios_pdf' formulario.pk%}" target="_blank"><img width="30" src="{% static 'img/descarga.png' %}" alt="Descarga"/></a></td>
             <td><a title="Editar" href=" " target="_blank"><img width="30" src="{% static 'img/editar.png' %}" alt="Editar"/></a></td>
             <td><a title="Eliminar" href=" " target="_blank"><img width="30" src="{% static 'img/eliminar.png' %}" alt="Eliminar"/></a></td>
           </tr>
-        </table>
-				{% endfor %}			
-		</div>
+          {% endfor %}
+          </tbody>
+         </table>
+    </div>
         </div>
 
         <div id="elvis" class="hidden">

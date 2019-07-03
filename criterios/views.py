@@ -54,7 +54,7 @@ def resultadoA(request):
 def resultadoB(request):
     value = request.GET.get('value', '')
     condicion = request.GET.get('condicion', '')
-    contexto = {'form': ResultForm, 'tipo': "Categoria II", 'nivel': "Productividad Mediana", 'ponderado': value,
+    contexto = {'form': ResultForm, 'tipo': "Categoria II", 'nivel': "Productividad Media", 'ponderado': value,
                 'condicion': condicion}
     return render(request, 'resultado.html', contexto)
 
@@ -62,15 +62,7 @@ def resultadoB(request):
 def resultadoC(request):
     value = request.GET.get('value', '')
     condicion = request.GET.get('condicion', '')
-    contexto = {'form': ResultForm, 'tipo': "Categoria III", 'nivel': "Productividad Media Baja", 'ponderado': value,
-                'condicion': condicion}
-    return render(request, 'resultado.html', contexto)
-
-
-def resultadoD(request):
-    value = request.GET.get('value', '')
-    condicion = request.GET.get('condicion', '')
-    contexto = {'form': ResultForm, 'tipo': "Categoria IV", 'nivel': "Productividad muy Baja", 'ponderado': value,
+    contexto = {'form': ResultForm, 'tipo': "Categoria III", 'nivel': "Productividad Baja", 'ponderado': value,
                 'condicion': condicion}
     return render(request, 'resultado.html', contexto)
 
@@ -92,7 +84,17 @@ def saveResult(request):
         register.save()
     return redirect(dash)
 
-
+@login_required
+def deleteResult(request,formulario_id):
+    formulario = get_object_or_404(Formulario,pk=formulario_id)
+    if request.method == "POST":
+        formulario.delete()
+        return redirect('../')
+        context = {
+        "object": obj
+    }
+    return render(request, "products/product_delete.html", context)
+    
 def newFunction(ListOrdered, listCriterios, pather, index):
     if index >= len(listCriterios):
         return
