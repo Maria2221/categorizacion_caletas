@@ -7,6 +7,9 @@ from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     re_path(r'^$', views.index, name='index'),
+    re_path(r'grafica/$', views.grafica, name='grafica'), 
+    re_path(r'data/', views.graficaData, name='data'), 
+    
     re_path(r'resultado/categoryA/', views.resultadoA),
     re_path(r'resultado/categoryB/', views.resultadoB),
     re_path(r'resultado/categoryC/', views.resultadoC),
@@ -42,5 +45,6 @@ urlpatterns = [
 
     url(r'^documentos/(?P<path>.*)$', views.downloadCSV),
     re_path(r'^reporte_formularios_pdf/(?P<formulario_id>[0-9]+)/$', views.ReporteFormulariosPDF.as_view(), name="reporte_formularios_pdf"),
+    re_path(r'^reporte_grafica_pdf/$', views.ReporteGraficasPDF.as_view(), name="reporte_grafica"),    
     # url(r'^generate/pdf/$', views.generate_pdf, name='generate_pdf'),
 ]

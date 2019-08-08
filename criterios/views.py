@@ -1,6 +1,6 @@
 from django.shortcuts import get_object_or_404, render, redirect
-from django.http import Http404, HttpResponse, HttpResponseRedirect
-from .models import Criterio, Condicion, Usuario, Formulario
+from django.http import Http404, HttpResponse, HttpResponseRedirect, JsonResponse
+from .models import Criterio, Condicion, Usuario, Formulario, Barco, CSV
 from .forms import RegistrationForm, LoginForm, ResultForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.hashers import make_password
@@ -14,21 +14,50 @@ from openpyxl.styles import Alignment
 from django.shortcuts import render
 from django.core.files.storage import FileSystemStorage
 from django import forms
-from .models import Barco
 from  .utils import procesar,procesar2, contenidoTablaCategorias, contenidoTablaRiesgos, contenidoSellos
-from .models import CSV
 import logging
 from django.contrib.messages import constants as messages
 from django.urls import reverse
 from django.template.loader import render_to_string
+from django.db.models import Count, Q
+from rest_framework.views import APIView
+from rest_framework.response import Response
+import json
 
 def index(request):
     return render(request, 'index.html')
 
-
 def getBarcosParaCSV(request):
     return render(request, 'barcosParaCSV.html')
 
+def grafica(request):
+	return render(request,'graficas.html')
+
+
+def graficaData(request):
+	if request.user.is_authenticated:
+		userdjango = request.user.get_username()
+		usuariomodelo = Usuario.objects.get(usuario=userdjango)
+		formularios = usuariomodelo.formulario_set.all()
+		nombre = []#labels
+		tipo = []
+		nivel = []
+		ponderado = []#porcetaje
+
+		for datos in formularios:
+        		nombre.append(datos.nombreFormulario)
+        		tipo.append(datos.tipo)
+        		nivel.append(datos.nivel)
+        		ponderado.append(datos.ponderado)
+
+		data = {
+        	'nombre_data': nombre,
+        	'porcentaje_data': ponderado,
+        	'tipo_data':tipo,
+        	'productividad_data':nivel,
+    	}
+
+	return JsonResponse(data) # http response
 
 class BarcoForm(forms.ModelForm):
     class Meta:
@@ -825,7 +854,139 @@ def upload_csv2(request):
         print(repr(e))
     return HttpResponseRedirect(reverse("upload_csv"))
 
+from reportlab.graphics.shapes import Drawing
+from reportlab.graphics.charts.barcharts import VerticalBarChart, HorizontalBarChart
+from reportlab.graphics import renderPDF
+from reportlab.lib.pagesizes import letter, landscape
 
+class ReporteGraficasPDF(View):
+
+	def cabecera(self, pdf):
+			archivo_imagen = 'static/img/logos/citesoft.jpg'
+			pdf.drawImage(archivo_imagen, 5, 530, 120, 90,preserveAspectRatio=True)
+			pdf.setFont("Helvetica", 14)
+			pdf.drawString(280, 580, u"REPORTE DE LAS GRAFICAS")
+			pdf.setFont("Helvetica", 12)
+			pdf.drawString(250, 560, u"UNIVERSIDAD NACIONAL DE SAN AGUSTIN")
+			pdf.setFont("Helvetica", 14)
+			pdf.drawString(280, 520, u"Fig.1 DPAs vs porcentaje")	
+
+	def bar_chart(self,pdf,userdjango):
+		usuariomodelo = Usuario.objects.get(usuario=userdjango)
+		formularios = usuariomodelo.formulario_set.all()
+		nombre = []#labels
+		ponderado = []#porcetaje
+
+		for datos in formularios:
+			nombre.append(datos.nombreFormulario)
+			ponderado.append(datos.ponderado)
+
+		nuevo_ponderado=[float(i) for i in ponderado] 
+		drawing = Drawing(50,150)
+		data = [nuevo_ponderado]
+		bc = HorizontalBarChart()
+		bc.x = 100
+		bc.y = 40
+		bc.height = 470
+		bc.width = 600
+		bc.data = data
+		#bc.strokeColor = colors.black
+		bc.valueAxis.valueMin = 0
+		bc.valueAxis.valueMax = 60
+		bc.valueAxis.valueStep = 10
+		bc.categoryAxis.labels.boxAnchor = 'ne'
+		bc.categoryAxis.labels.dx = -2
+		bc.categoryAxis.labels.dy = -2
+		bc.categoryAxis.labels.angle = 0
+		bc.categoryAxis.labels.fontSize = 7
+		bc.categoryAxis.categoryNames = nombre
+		drawing.add(bc)
+		return drawing
+
+	def segundo_chart(self,pdf,userdjango):
+		usuariomodelo = Usuario.objects.get(usuario=userdjango)
+		formularios = usuariomodelo.formulario_set.all()
+		tipo = []
+		ponderado = []#porcetaje
+
+		for datos in formularios:
+			tipo.append(datos.tipo)
+			ponderado.append(datos.ponderado)
+
+		nuevo_ponderado=[float(i) for i in ponderado] 
+		drawing = Drawing(50,150)
+		data = [nuevo_ponderado]
+		bc = HorizontalBarChart()
+		bc.x = 100
+		bc.y = 40
+		bc.height = 520
+		bc.width = 600
+		bc.data = data
+		bc.valueAxis.valueMin = 0
+		bc.valueAxis.valueMax = 60
+		bc.valueAxis.valueStep = 10
+		bc.categoryAxis.labels.boxAnchor = 'ne'
+		bc.categoryAxis.labels.dx = -2
+		bc.categoryAxis.labels.dy = -2
+		bc.categoryAxis.labels.angle = 0
+		bc.categoryAxis.labels.fontSize = 7
+		bc.categoryAxis.categoryNames = tipo
+		drawing.add(bc)
+		return drawing		
+
+	def tercero_chart(self,pdf,userdjango):
+		usuariomodelo=Usuario.objects.get(usuario=userdjango)
+		formularios = usuariomodelo.formulario_set.all()
+		nivel = []
+		ponderado = []
+
+		for datos in formularios:
+			nivel.append(datos.nivel)
+			ponderado.append(datos.ponderado)
+		
+		nuevo_ponderado=[float(i) for i in ponderado] 
+		drawing = Drawing(50,150)
+		data = [nuevo_ponderado]
+		bc = HorizontalBarChart()
+		bc.x = 100
+		bc.y = 40
+		bc.height = 520
+		bc.width = 600
+		bc.data = data
+		bc.valueAxis.valueMin = 0
+		bc.valueAxis.valueMax = 60
+		bc.valueAxis.valueStep = 10
+		bc.categoryAxis.labels.boxAnchor = 'ne'
+		bc.categoryAxis.labels.dx = -2
+		bc.categoryAxis.labels.dy = -2
+		bc.categoryAxis.labels.angle = 0
+		bc.categoryAxis.labels.fontSize = 7
+		bc.categoryAxis.categoryNames = nivel
+		drawing.add(bc)
+		return drawing					
+
+	def get(self, request, *args, **kwargs):
+		if request.user.is_authenticated:
+			userdjango = request.user.get_username()
+			response = HttpResponse(content_type='application/pdf')
+			buffer = BytesIO()
+			pdf = canvas.Canvas(buffer, pagesize=(landscape(letter)))
+			self.cabecera(pdf)
+			renderPDF.draw(self.bar_chart(pdf,userdjango),pdf,0,0)
+			pdf.showPage()
+			pdf.setFont("Helvetica", 14)
+			pdf.drawString(280, 570, u"Fig.2 Tipos vs porcentaje")	
+			renderPDF.draw(self.segundo_chart(pdf,userdjango),pdf,0,0)
+			pdf.showPage()
+			pdf.setFont("Helvetica", 14)
+			pdf.drawString(280, 570, u"Fig.3 Nivel vs porcentaje")	
+			renderPDF.draw(self.tercero_chart(pdf,userdjango),pdf,0,0)
+			pdf.showPage()
+			pdf.save()
+			pdf = buffer.getvalue()
+			buffer.close()
+			response.write(pdf)
+			return response
 """
 #PDF VERSION 2 
 from django.http import HttpResponse

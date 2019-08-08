@@ -10,15 +10,24 @@
 
  <body>
   {% csrf_token %}
-	<nav class="navbar navbar-light bg-primary-light">
+  <nav class="navbar navbar-expand-lg navbar-dark" id="mainNav">
       <a class="navbar-brand">Bienvenid@:{{user}}</a>
-      <form class="form-inline">
-          <a id="resultado" class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{% url 'dash'%}" role= "button">Dashboard</a>
-        <a href="{% url 'logout'%}" >Salir</a>
-      </form>
-    </nav>
-  <div class="table-users">
-    <div class="header">Resultado</div>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+          data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+          aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ml-auto">
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{% url 'grafica'%}" role= "button">Estadísticos</a>
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{% url 'dash'%}" role= "button">Dashboard</a>
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{% url 'logout'%}" >Salir</a>
+              </div>
+          </ul>
+        </div>
+  </nav>
    
     <table cellspacing="0">
       <tr>

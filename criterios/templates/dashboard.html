@@ -89,12 +89,24 @@ $("#maria").attr("disabled", true);
 
 <body>
 	
-	<nav class="navbar navbar-light bg-primary-light">
-		<a class="navbar-brand">Bienvenid@:{{user}}</a>
-		<form class="form-inline">
-			<a href="{% url 'logout'%}" >Salir</a>
-		</form>
+ <nav class="navbar navbar-expand-lg navbar-dark" id="mainNav">
+    <a class="navbar-brand">Bienvenid@:{{user}}</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav text-uppercase ml-auto">
+            <div class="btn-group" role="group" aria-label="Basic example">
+               <a id="resultado" class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{% url 'grafica'%}" role= "button">Estadísticos</a>
+		           <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{% url 'logout'%}" >Salir</a>
+            </div>
+        </ul>
+      </div>
   </nav>
+
   <div class = "cols">
   <div class="izquier">
     <p>Propuesta 1 :</p>
@@ -104,8 +116,8 @@ $("#maria").attr("disabled", true);
   </div>
 	<div id="content" class="container">
      <div class="row">
-        <input id ="funciona2" type="button"  class ="btn btn-primary" onclick="unhide(this, 'about') " value="Propuesta 1">
-        <input id ="funciona" type="button" class ="btn btn-primary " onclick="unhide(this, 'about') " value="Propuesta 2">
+        <input id ="funciona2" type="button"  class ="btn btn-primary" onclick="unhide(this, 'about') " name="Propuestaone" value="Propuesta 1">
+        <input id ="funciona" type="button" class ="btn btn-primary " onclick="unhide(this, 'about') " name="Propuestaone" value="Propuesta 2">
         
      </div>
 		<div id="maria" class="hidden">
